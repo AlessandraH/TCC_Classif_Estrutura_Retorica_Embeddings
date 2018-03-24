@@ -3,7 +3,7 @@
 import json
 import numpy as np
 import time
-import fasttext
+# import fasttext
 
 from sklearn import metrics
 from sklearn.metrics import confusion_matrix, classification_report
@@ -86,8 +86,36 @@ def abstracts_to_sentences(abstracts, labels):
 
 
 def classificador():
+
+    corpus = 'corpus/output366.json'
+    # corpus = 'corpus/output466.json'
+    # corpus = 'corpus/output832.json'
+
     print(time.asctime(time.localtime(time.time())))
+
+    print("lendo arquivo")
+    _, _, data, labels, _ = loadFromJson(corpus)
+    X_sentences, _, _, X_pos, Y_sentences, _ = abstracts_to_sentences(data, labels)
+
+    print("Inicializando modelo embedding")
     model = KeyedVectors.load_word2vec_format(fname='glove_s50.txt', binary=False, unicode_errors="ignore")
+
+    print("Inicializando classificador...")
+    # clf = LinearSVC(dual=False, tol=1e-3)
+    clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
+    # clf = MultinomialNB()
+    # clf = DecisionTreeClassifier(random_state=0)
+    clf = clf.fit(X_sentences, Y_sentences)
+
+    print("Predição...")
+    pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
+
+    print("Classification_report:")
+    print(classification_report(Y_sentences, pred))
+    print("")
+
+    print(confusion_matrix(Y_sentences, pred))
+
     print(time.asctime(time.localtime(time.time())))
 
 
