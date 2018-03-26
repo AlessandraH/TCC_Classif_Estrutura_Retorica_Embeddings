@@ -4,6 +4,7 @@ import json
 import numpy as np
 import time
 # import fasttext
+# import gensim
 
 from sklearn import metrics
 from sklearn.metrics import confusion_matrix, classification_report
@@ -16,6 +17,7 @@ from sklearn import neighbors
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.tree import DecisionTreeClassifier
 from gensim.models import KeyedVectors
+# from gensim.models import word2vec
 
 
 def to_sentences(abstracts, senteces_max=None):
@@ -91,6 +93,10 @@ def classificador():
     # corpus = 'corpus/output466.json'
     # corpus = 'corpus/output832.json'
 
+    model_name = 'glove_s50.txt'
+
+    embedd_size = 50
+
     print(time.asctime(time.localtime(time.time())))
 
     print("lendo arquivo")
@@ -98,23 +104,27 @@ def classificador():
     X_sentences, _, _, X_pos, Y_sentences, _ = abstracts_to_sentences(data, labels)
 
     print("Inicializando modelo embedding")
-    model = KeyedVectors.load_word2vec_format(fname='glove_s50.txt', binary=False, unicode_errors="ignore")
+    embedd = KeyedVectors.load_word2vec_format(fname=model_name, binary=False, unicode_errors="ignore")
+    # print(type(embedd['blue']))
+    teste = KeyedVectors.word_vec(embedd, 'blue', use_norm=False)
+    print(type(teste))
+    print(len(teste))
 
-    print("Inicializando classificador...")
-    # clf = LinearSVC(dual=False, tol=1e-3)
-    clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
-    # clf = MultinomialNB()
-    # clf = DecisionTreeClassifier(random_state=0)
-    clf = clf.fit(X_sentences, Y_sentences)
-
-    print("Predição...")
-    pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
-
-    print("Classification_report:")
-    print(classification_report(Y_sentences, pred))
-    print("")
-
-    print(confusion_matrix(Y_sentences, pred))
+    # print("Inicializando classificador...")
+    # # clf = LinearSVC(dual=False, tol=1e-3)
+    # clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
+    # # clf = MultinomialNB()
+    # # clf = DecisionTreeClassifier(random_state=0)
+    # clf = clf.fit(X_sentences, Y_sentences)
+    #
+    # print("Predição...")
+    # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
+    #
+    # print("Classification_report:")
+    # print(classification_report(Y_sentences, pred))
+    # print("")
+    #
+    # print(confusion_matrix(Y_sentences, pred))
 
     print(time.asctime(time.localtime(time.time())))
 
