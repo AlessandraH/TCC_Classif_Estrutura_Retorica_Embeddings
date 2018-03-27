@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 
+import sys
+import time
 import json
 import numpy as np
-import time
 # import fasttext
 # import gensim
+
 
 from sklearn import metrics
 from sklearn.metrics import confusion_matrix, classification_report
@@ -16,8 +18,11 @@ from sklearn.svm import LinearSVC
 from sklearn import neighbors
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.tree import DecisionTreeClassifier
-from gensim.models import KeyedVectors
-# from gensim.models import word2vec
+from gensim.models import KeyedVectors, Word2Vec
+
+
+def div(n):
+    return n[0]/n[1]
 
 
 def to_sentences(abstracts, senteces_max=None):
@@ -87,15 +92,30 @@ def abstracts_to_sentences(abstracts, labels):
     return ret, ret_prev, ret_next, ret_pos, ret_labels, abstracts_idx
 
 
-def classificador():
+def extract_features(X_sentences, model, model_size):
+    features = []
+    lista_div = [model_size] * model_size
+    for s in X_sentences:
+        sentence_feature = [0] * model_size
+        sentences = str(s).split()
+        for word in sentences:
+            # word_feature = KeyedVectors.word_vec(model, word, use_norm=False) # 1
+            word_feature = model[word]
+            sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
+        # sentence_feature = list(map(div, zip(sentence_feature, lista_div)))
+        features.append(sentence_feature)
+    # print(type(features))
+    return np.array(features)
 
+
+def classificador():
     corpus = 'corpus/output366.json'
     # corpus = 'corpus/output466.json'
     # corpus = 'corpus/output832.json'
 
     model_name = 'glove_s50.txt'
 
-    embedd_size = 50
+    model_size = 50
 
     print(time.asctime(time.localtime(time.time())))
 
@@ -104,29 +124,35 @@ def classificador():
     X_sentences, _, _, X_pos, Y_sentences, _ = abstracts_to_sentences(data, labels)
 
     print("Inicializando modelo embedding")
-    embedd = KeyedVectors.load_word2vec_format(fname=model_name, binary=False, unicode_errors="ignore")
-    # print(type(embedd['blue']))
-    teste = KeyedVectors.word_vec(embedd, 'blue', use_norm=False)
-    print(type(teste))
-    print(len(teste))
+    # model = KeyedVectors.load_word2vec_format(fname=model_name, binary=False, unicode_errors="ignore") # 1
+    model = Word2Vec.load('word2vec_cbow50.bin')
+    # model = dict(zip(model.wv.index2word, model.wv.syn0)) # 1
+    # teste = model.word_vec(model, 'Atualmente', use_norm=False) # 1
+    # teste = model['Atualmente']
+    # print(teste)
+    # print(type(teste))
+    # print(len(teste))
+    X_sentences = extract_features(X_sentences, model, model_size)
 
-    # print("Inicializando classificador...")
-    # # clf = LinearSVC(dual=False, tol=1e-3)
-    # clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
-    # # clf = MultinomialNB()
-    # # clf = DecisionTreeClassifier(random_state=0)
-    # clf = clf.fit(X_sentences, Y_sentences)
-    #
-    # print("Predição...")
-    # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
-    #
-    # print("Classification_report:")
-    # print(classification_report(Y_sentences, pred))
-    # print("")
-    #
-    # print(confusion_matrix(Y_sentences, pred))
+    print("Inicializando classificador...")
+    # clf = LinearSVC(dual=False, tol=1e-3)
+    clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
+    # clf = MultinomialNB()
+    # clf = DecisionTreeClassifier(random_state=0)
+    clf = clf.fit(X_sentences, Y_sentences)
+
+    print("Predição...")
+    pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
+
+    print("Classification_report:")
+    print(classification_report(Y_sentences, pred))
+    print("")
+
+    print(confusion_matrix(Y_sentences, pred))
 
     print(time.asctime(time.localtime(time.time())))
 
 
+reload(sys)
+sys.setdefaultencoding('utf8')
 classificador()
