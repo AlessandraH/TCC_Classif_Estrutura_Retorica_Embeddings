@@ -73,6 +73,8 @@ def abstracts_to_sentences(abstracts, labels):
 reload(sys)
 sys.setdefaultencoding('utf8')
 
+model_name = 'word2vec_cbow1000.txt'
+
 _, _, data, labels, _ = loadFromJson('corpus/output832.json')
 
 new_data = []
@@ -80,13 +82,7 @@ for resumo in data:
     for sentenca in resumo:
         new_data.append(str(sentenca).split())
 
-# X_sentences, _, _, X_pos, Y_sentences, _ = abstracts_to_sentences(data, labels)
-# for s in X_sentences:
-#     print(s)
-#     print("#########################################################################")
-#     sentences = str(s).split()
-#     # for word in sentences:
-model = Word2Vec(new_data, size=50, min_count=1, workers=4, sg=0) # sg: 0 CBOW or 1 Skip-Gram
+model = Word2Vec(new_data, size=1000, min_count=1, workers=4, sg=0) # sg: 0 CBOW or 1 Skip-Gram
 # summarize the loaded model
 print(model)
 # summarize vocabulary
@@ -95,7 +91,7 @@ print(words)
 # access vector for one word
 print(model['Atualmente'])
 # save model
-model.save('word2vec_cbow50.bin')
+model.save(model_name)
 # load model
-new_model = Word2Vec.load('word2vec_cbow50.bin')
-print(new_model)
+# new_model = Word2Vec.load(model_name)
+# print(new_model)
