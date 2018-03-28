@@ -84,14 +84,14 @@ for resumo in data:
 
 model = Word2Vec(new_data, size=1000, min_count=1, workers=4, sg=0) # sg: 0 CBOW or 1 Skip-Gram
 # summarize the loaded model
-print(model)
+# print(model)
 # summarize vocabulary
-words = list(model.wv.vocab)
-print(words)
+# words = list(model.wv.vocab)
+# print(words)
 # access vector for one word
-print(model['Atualmente'])
+# print(model['Atualmente'])
 # save model
 model.save(model_name)
 # load model
-# new_model = Word2Vec.load(model_name)
-# print(new_model)
+new_model = Word2Vec.load(model_name)
+print(new_model)

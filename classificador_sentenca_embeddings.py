@@ -94,18 +94,31 @@ def abstracts_to_sentences(abstracts, labels):
 
 def extract_features(X_sentences, model, model_size):
     features = []
-    lista_div = [model_size] * model_size
+    nvocab = 0
+    # lista_div = [model_size] * model_size
+    n = 0
     for s in X_sentences:
         sentence_feature = [0] * model_size
         sentences = str(s).split()
         for word in sentences:
             if len(word) > 2:
-                # word_feature = KeyedVectors.word_vec(model, word, use_norm=False) # 1
-                word_feature = model[word]
-                sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
+                try:
+                    word_feature = KeyedVectors.word_vec(model, word, use_norm=False)
+                    # word_feature = model[word]
+                    sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
+                    n = n + 1
+                except KeyError:
+                    print word + " nao estah no vocabulario"
+                    nvocab = nvocab + 1
+                    continue
+                # # word_feature = KeyedVectors.word_vec(model, word, use_norm=False) # 1
+                # word_feature = model[word]
+                # sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
+        lista_div = [n] * model_size
         sentence_feature = list(map(div, zip(sentence_feature, lista_div)))
         features.append(sentence_feature)
     # print(type(features))
+    print(nvocab)
     return np.array(features)
 
 
@@ -114,10 +127,10 @@ def classificador():
     # corpus = 'corpus/output466.json'
     # corpus = 'corpus/output832.json'
 
-    # model_name = 'glove_s50.txt'
-    model_name = 'word2vec_cbow1000.txt'
+    model_name = 'glove_s50.txt'
+    # model_name = 'word2vec_cbow1000.txt'
 
-    model_size = 1000
+    model_size = 50
 
     print(time.asctime(time.localtime(time.time())))
 
@@ -126,10 +139,11 @@ def classificador():
     X_sentences, _, _, X_pos, Y_sentences, _ = abstracts_to_sentences(data, labels)
 
     print("Abrindo modelo embedding e extraindo features")
-    # model = KeyedVectors.load_word2vec_format(fname=model_name, binary=False, unicode_errors="ignore") # 1
-    model = Word2Vec.load(model_name)
+    model = KeyedVectors.load_word2vec_format(fname=model_name, binary=False, unicode_errors="ignore") # 1
+    # model = Word2Vec.load(model_name)
     # model = dict(zip(model.wv.index2word, model.wv.syn0)) # 1
-    # teste = model.word_vec(model, 'Atualmente', use_norm=False) # 1
+    teste = model.word_vec(model, word='Tailândia')
+    exit(0)
     # teste = model['Atualmente']
     # print(teste)
     # print(type(teste))
