@@ -42,36 +42,8 @@ def loadFromJson(file):
     return to_sentences(data)
 
 
-def abstracts_to_sentences(abstracts, labels):
-    ret = []
-    ret_prev = []
-    ret_next = []
-    ret_labels = []
-    ret_pos = []
-    abstracts_idx = []
-
-    for i, (sentences_labels, sentences) in enumerate(zip(labels, abstracts)):
-        for j, (label, sentence) in enumerate(zip(sentences_labels, sentences)):
-            ret.append(sentence)
-            ret_pos.append(j)
-            ret_labels.append(label)
-            abstracts_idx.append(i)
-
-            if j - 1 >= 0:
-                ret_prev.append(sentences[j - 1])
-            else:
-                ret_prev.append("")
-
-            if j + 1 < len(sentences):
-                ret_next.append(sentences[j + 1])
-            else:
-                ret_next.append("")
-
-    return ret, ret_prev, ret_next, ret_pos, ret_labels, abstracts_idx
-
-
-reload(sys)
-sys.setdefaultencoding('utf8')
+# reload(sys)
+# sys.setdefaultencoding('utf8')
 
 model_name = 'word2vec_cbow1000.txt'
 
@@ -82,14 +54,19 @@ for resumo in data:
     for sentenca in resumo:
         new_data.append(str(sentenca).split())
 
+"""
+A partir deste ponto, 
+código retirado de 
+<https://machinelearningmastery.com/develop-word-embeddings-python-gensim/>
+"""
 model = Word2Vec(new_data, size=1000, min_count=1, workers=4, sg=0) # sg: 0 CBOW or 1 Skip-Gram
 # summarize the loaded model
-# print(model)
+print(model)
 # summarize vocabulary
-# words = list(model.wv.vocab)
-# print(words)
+words = list(model.wv.vocab)
+print(words)
 # access vector for one word
-# print(model['Atualmente'])
+print(model['Atualmente'])
 # save model
 model.save(model_name)
 # load model

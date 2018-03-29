@@ -14,15 +14,17 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cross_validation import cross_val_predict
 from sklearn.feature_selection import SelectKBest, chi2
 from scipy.sparse import hstack
-from sklearn.svm import LinearSVC
+from sklearn.svm import SVC
 from sklearn import neighbors
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.tree import DecisionTreeClassifier
 from gensim.models import KeyedVectors, Word2Vec
 
+pontuacao = ['.', ',', ' ', '"', '!', '(', ')', '-', '=', '+', '/', '*', ';', ':'
+             '[', ']', '{', '}', '$', '#', '@', '%', '&', '?']
 
 def div(n):
-    return n[0]/n[1]
+    return n[0] / n[1]
 
 
 def to_sentences(abstracts, senteces_max=None):
@@ -92,33 +94,27 @@ def abstracts_to_sentences(abstracts, labels):
     return ret, ret_prev, ret_next, ret_pos, ret_labels, abstracts_idx
 
 
-def extract_features(X_sentences, model, model_size):
+def extract_features(X_sentences, model, model_size, vocabulary):
     features = []
     nvocab = 0
+    palavras_corpus = 0
     # lista_div = [model_size] * model_size
-    n = 0
     for s in X_sentences:
+        n = 0
         sentence_feature = [0] * model_size
         sentences = str(s).split()
         for word in sentences:
-            if len(word) > 2:
-                try:
-                    word_feature = KeyedVectors.word_vec(model, word, use_norm=False)
-                    # word_feature = model[word]
-                    sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
-                    n = n + 1
-                except KeyError:
-                    print word + " nao estah no vocabulario"
-                    nvocab = nvocab + 1
-                    continue
-                # # word_feature = KeyedVectors.word_vec(model, word, use_norm=False) # 1
-                # word_feature = model[word]
-                # sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
+            if len(word) > 2 and word in vocabulary:
+                word_feature = model[word]
+                # word_feature = KeyedVectors.word_vec(model, word, use_norm=False)
+                sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
+                n += 1
+            # elif len(word) > 2 and word not in vocabulary:
+            #     print(word + " nao estah no vocabulario")
+            #     nvocab += 1
         lista_div = [n] * model_size
         sentence_feature = list(map(div, zip(sentence_feature, lista_div)))
         features.append(sentence_feature)
-    # print(type(features))
-    print(nvocab)
     return np.array(features)
 
 
@@ -127,8 +123,7 @@ def classificador():
     # corpus = 'corpus/output466.json'
     # corpus = 'corpus/output832.json'
 
-    model_name = 'glove_s50.txt'
-    # model_name = 'word2vec_cbow1000.txt'
+    model_name = 'cbow_s50.txt'
 
     model_size = 50
 
@@ -139,20 +134,19 @@ def classificador():
     X_sentences, _, _, X_pos, Y_sentences, _ = abstracts_to_sentences(data, labels)
 
     print("Abrindo modelo embedding e extraindo features")
-    model = KeyedVectors.load_word2vec_format(fname=model_name, binary=False, unicode_errors="ignore") # 1
-    # model = Word2Vec.load(model_name)
-    # model = dict(zip(model.wv.index2word, model.wv.syn0)) # 1
-    teste = model.word_vec(model, word='Tailândia')
-    exit(0)
-    # teste = model['Atualmente']
-    # print(teste)
-    # print(type(teste))
-    # print(len(teste))
-    X_sentences = extract_features(X_sentences, model, model_size)
+    try:
+        model = KeyedVectors.load(model_name)
+        print("Loading Embedding")
+    except:
+        # model = KeyedVectors.load_word2vec_format(fname=model_name, binary=False, unicode_errors="ignore") # 1
+        model = KeyedVectors.load_word2vec_format(model_name)
+        print("Loading word2vec embeddings")
+    vocabulary = model.vocab
+    X_sentences = extract_features(X_sentences, model, model_size, vocabulary)
 
     print("Inicializando classificador...")
-    # clf = LinearSVC(dual=False, tol=1e-3)
-    clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
+    clf = SVC(kernel='linear')
+    # clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
     # clf = MultinomialNB()
     # clf = DecisionTreeClassifier(random_state=0)
     clf = clf.fit(X_sentences, Y_sentences)
@@ -169,6 +163,6 @@ def classificador():
     print(time.asctime(time.localtime(time.time())))
 
 
-reload(sys)
-sys.setdefaultencoding('utf8')
+# reload(sys)
+# sys.setdefaultencoding('utf8')
 classificador()
