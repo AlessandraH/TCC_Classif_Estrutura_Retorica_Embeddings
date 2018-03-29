@@ -126,17 +126,19 @@ def classificador():
     # corpus = 'corpus/output832.json'
 
     model_name = 'cbow_s50.txt'
+    # model_name = 'cbow_s300.txt'
 
     model_size = 50
 
     print(time.asctime(time.localtime(time.time())))
 
-    print("lendo arquivo")
+    print("lendo corpus")
     _, _, data, labels, _ = loadFromJson(corpus)
     X_sentences, _, _, X_pos, Y_sentences, _ = abstracts_to_sentences(data, labels)
 
     print("Abrindo modelo embedding e extraindo features")
     try:
+        # model = Word2Vec.load(model_name)
         model = KeyedVectors.load(model_name)
         print("Loading Embedding")
     except:
