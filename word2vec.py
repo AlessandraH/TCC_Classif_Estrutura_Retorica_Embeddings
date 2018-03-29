@@ -59,6 +59,7 @@ A partir deste ponto,
 código retirado de 
 <https://machinelearningmastery.com/develop-word-embeddings-python-gensim/>
 """
+# train model
 model = Word2Vec(new_data, size=1000, min_count=1, workers=4, sg=0) # sg: 0 CBOW or 1 Skip-Gram
 # summarize the loaded model
 print(model)

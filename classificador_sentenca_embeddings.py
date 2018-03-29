@@ -20,8 +20,10 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.tree import DecisionTreeClassifier
 from gensim.models import KeyedVectors, Word2Vec
 
+
 pontuacao = ['.', ',', ' ', '"', '!', '(', ')', '-', '=', '+', '/', '*', ';', ':'
              '[', ']', '{', '}', '$', '#', '@', '%', '&', '?']
+
 
 def div(n):
     return n[0] / n[1]
