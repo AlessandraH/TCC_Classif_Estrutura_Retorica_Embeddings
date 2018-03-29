@@ -18,13 +18,10 @@
       <file leaf-file-name="classificador_sentenca_embeddings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="142" column="31" selection-start-line="142" selection-start-column="31" selection-end-line="142" selection-end-column="31" />
+            <state relative-caret-position="597">
+              <caret line="145" column="12" lean-forward="true" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
               <folding>
                 <element signature="e#25#35#0" expanded="true" />
-                <element signature="e#851#1613#0" />
-                <element signature="e#1644#1762#0" />
-                <element signature="e#1816#2565#0" />
               </folding>
             </state>
           </provider>
@@ -49,6 +46,7 @@
         <option value="$PROJECT_DIR$/conta_palavras.py" />
         <option value="$PROJECT_DIR$/word2vec.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/teste.py" />
         <option value="$PROJECT_DIR$/classificador_sentenca_embeddings.py" />
       </list>
     </option>
@@ -67,7 +65,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -84,6 +81,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -179,20 +177,20 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18545838" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.3295583" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978903" weight="0.32849163" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295583" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.3295583" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978903" weight="0.5284916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3295583" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -201,13 +199,20 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3550">
+          <caret line="142" column="31" selection-start-line="142" selection-start-column="31" selection-end-line="142" selection-end-column="31" />
+          <folding>
+            <element signature="e#25#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1425">
           <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
           <folding>
             <element signature="e#25#35#0" expanded="true" />
-            <element signature="e#851#1613#0" />
-            <element signature="e#1644#1762#0" />
-            <element signature="e#1816#2565#0" />
           </folding>
         </state>
       </provider>
@@ -216,9 +221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1850">
           <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -227,9 +229,6 @@
         <state>
           <folding>
             <element signature="e#25#35#0" expanded="true" />
-            <element signature="e#851#1613#0" />
-            <element signature="e#1644#1762#0" />
-            <element signature="e#1816#2565#0" />
           </folding>
         </state>
       </provider>
@@ -238,9 +237,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1746">
           <caret line="99" column="42" selection-start-line="99" selection-start-column="42" selection-end-line="99" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -249,9 +245,6 @@
         <state>
           <folding>
             <element signature="e#25#35#0" expanded="true" />
-            <element signature="e#851#1613#0" />
-            <element signature="e#1644#1762#0" />
-            <element signature="e#1816#2565#0" />
           </folding>
         </state>
       </provider>
@@ -262,9 +255,6 @@
         <state>
           <folding>
             <element signature="e#25#35#0" expanded="true" />
-            <element signature="e#851#1613#0" />
-            <element signature="e#1644#1762#0" />
-            <element signature="e#1816#2565#0" />
           </folding>
         </state>
       </provider>
@@ -276,9 +266,6 @@
           <caret line="107" column="34" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
           <folding>
             <element signature="e#25#35#0" expanded="true" />
-            <element signature="e#851#1613#0" />
-            <element signature="e#1644#1762#0" />
-            <element signature="e#1816#2565#0" />
           </folding>
         </state>
       </provider>
@@ -289,9 +276,6 @@
         <state>
           <folding>
             <element signature="e#25#35#0" expanded="true" />
-            <element signature="e#851#1613#0" />
-            <element signature="e#1644#1762#0" />
-            <element signature="e#1816#2565#0" />
           </folding>
         </state>
       </provider>
@@ -301,9 +285,6 @@
         <state>
           <folding>
             <element signature="e#25#35#0" expanded="true" />
-            <element signature="e#851#1613#0" />
-            <element signature="e#1644#1762#0" />
-            <element signature="e#1816#2565#0" />
           </folding>
         </state>
       </provider>
@@ -313,9 +294,6 @@
         <state>
           <folding>
             <element signature="e#25#35#0" expanded="true" />
-            <element signature="e#851#1613#0" />
-            <element signature="e#1644#1762#0" />
-            <element signature="e#1816#2565#0" />
           </folding>
         </state>
       </provider>
@@ -325,9 +303,6 @@
         <state>
           <folding>
             <element signature="e#25#35#0" expanded="true" />
-            <element signature="e#851#1613#0" />
-            <element signature="e#1644#1762#0" />
-            <element signature="e#1816#2565#0" />
           </folding>
         </state>
       </provider>
@@ -338,9 +313,6 @@
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#25#35#0" expanded="true" />
-            <element signature="e#851#1613#0" />
-            <element signature="e#1644#1762#0" />
-            <element signature="e#1816#2565#0" />
           </folding>
         </state>
       </provider>
@@ -362,9 +334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
           <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -389,15 +358,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/teste.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1550">
+          <caret line="62" column="22" lean-forward="true" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="142" column="31" selection-start-line="142" selection-start-column="31" selection-end-line="142" selection-end-column="31" />
+        <state relative-caret-position="597">
+          <caret line="145" column="12" lean-forward="true" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
           <folding>
             <element signature="e#25#35#0" expanded="true" />
-            <element signature="e#851#1613#0" />
-            <element signature="e#1644#1762#0" />
-            <element signature="e#1816#2565#0" />
           </folding>
         </state>
       </provider>

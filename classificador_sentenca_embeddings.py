@@ -20,9 +20,9 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.tree import DecisionTreeClassifier
 from gensim.models import KeyedVectors, Word2Vec
 
-
 pontuacao = ['.', ',', ' ', '"', '!', '(', ')', '-', '=', '+', '/', '*', ';', ':'
-             '[', ']', '{', '}', '$', '#', '@', '%', '&', '?']
+                                                                              '[', ']', '{', '}', '$', '#', '@', '%',
+             '&', '?']
 
 
 def div(n):
@@ -127,6 +127,7 @@ def classificador():
 
     model_name = 'cbow_s50.txt'
     # model_name = 'cbow_s300.txt'
+    # model_name = 'skip_s1000.txt'
 
     model_size = 50
 
@@ -148,20 +149,44 @@ def classificador():
     vocabulary = model.vocab
     X_sentences = extract_features(X_sentences, model, model_size, vocabulary)
 
-    print("Inicializando classificador...")
+    print("Inicializando classificador SVM")
     clf = SVC(kernel='linear')
-    # clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
-    # clf = MultinomialNB()
-    # clf = DecisionTreeClassifier(random_state=0)
     clf = clf.fit(X_sentences, Y_sentences)
-
     print("Predição...")
     pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
-
     print("Classification_report:")
     print(classification_report(Y_sentences, pred))
     print("")
+    print(confusion_matrix(Y_sentences, pred))
 
+    print("Inicializando classificador KNN")
+    clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
+    clf = clf.fit(X_sentences, Y_sentences)
+    print("Predição...")
+    pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
+    print("Classification_report:")
+    print(classification_report(Y_sentences, pred))
+    print("")
+    print(confusion_matrix(Y_sentences, pred))
+
+    print("Inicializando classificador NB")
+    clf = MultinomialNB()
+    clf = clf.fit(X_sentences, Y_sentences)
+    print("Predição...")
+    pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
+    print("Classification_report:")
+    print(classification_report(Y_sentences, pred))
+    print("")
+    print(confusion_matrix(Y_sentences, pred))
+
+    print("Inicializando classificador DT")
+    clf = DecisionTreeClassifier(random_state=0)
+    clf = clf.fit(X_sentences, Y_sentences)
+    print("Predição...")
+    pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
+    print("Classification_report:")
+    print(classification_report(Y_sentences, pred))
+    print("")
     print(confusion_matrix(Y_sentences, pred))
 
     print(time.asctime(time.localtime(time.time())))
