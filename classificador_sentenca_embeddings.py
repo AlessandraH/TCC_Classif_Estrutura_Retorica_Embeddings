@@ -20,9 +20,8 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.tree import DecisionTreeClassifier
 from gensim.models import KeyedVectors, Word2Vec
 
-pontuacao = ['.', ',', ' ', '"', '!', '(', ')', '-', '=', '+', '/', '*', ';', ':'
-                                                                              '[', ']', '{', '}', '$', '#', '@', '%',
-             '&', '?']
+pontuacao = ['.', ',', ' ', '"', '!', '(', ')', '-', '=', '+', '/', '*', ';', ':',
+                '[', ']', '{', '}', '$', '#', '@', '%', '&', '?']
 
 
 def div(n):
@@ -98,11 +97,11 @@ def abstracts_to_sentences(abstracts, labels):
 
 def extract_features(X_sentences, model, model_size, vocabulary):
     features = []
-    nvocab = 0
-    palavras_corpus = 0
+    # nvocab = 0
+    # palavras_corpus = 0
     # lista_div = [model_size] * model_size
     for s in X_sentences:
-        n = 0
+        # n = 0
         sentence_feature = [0] * model_size
         sentences = str(s).split()
         for word in sentences:
@@ -110,12 +109,12 @@ def extract_features(X_sentences, model, model_size, vocabulary):
                 word_feature = model[word]
                 # word_feature = KeyedVectors.word_vec(model, word, use_norm=False)
                 sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
-                n += 1
+                # n += 1
             # elif len(word) > 2 and word not in vocabulary:
             #     print(word + " nao estah no vocabulario")
             #     nvocab += 1
-        lista_div = [n] * model_size
-        sentence_feature = list(map(div, zip(sentence_feature, lista_div)))
+        # lista_div = [n] * model_size
+        # sentence_feature = list(map(div, zip(sentence_feature, lista_div)))
         features.append(sentence_feature)
     return np.array(features)
 
@@ -158,36 +157,36 @@ def classificador():
     print(classification_report(Y_sentences, pred))
     print("")
     print(confusion_matrix(Y_sentences, pred))
-
-    print("Inicializando classificador KNN")
-    clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
-    clf = clf.fit(X_sentences, Y_sentences)
-    print("Predição...")
-    pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
-    print("Classification_report:")
-    print(classification_report(Y_sentences, pred))
-    print("")
-    print(confusion_matrix(Y_sentences, pred))
-
-    print("Inicializando classificador NB")
-    clf = MultinomialNB()
-    clf = clf.fit(X_sentences, Y_sentences)
-    print("Predição...")
-    pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
-    print("Classification_report:")
-    print(classification_report(Y_sentences, pred))
-    print("")
-    print(confusion_matrix(Y_sentences, pred))
-
-    print("Inicializando classificador DT")
-    clf = DecisionTreeClassifier(random_state=0)
-    clf = clf.fit(X_sentences, Y_sentences)
-    print("Predição...")
-    pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
-    print("Classification_report:")
-    print(classification_report(Y_sentences, pred))
-    print("")
-    print(confusion_matrix(Y_sentences, pred))
+    #
+    # print("Inicializando classificador KNN")
+    # clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
+    # clf = clf.fit(X_sentences, Y_sentences)
+    # print("Predição...")
+    # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
+    # print("Classification_report:")
+    # print(classification_report(Y_sentences, pred))
+    # print("")
+    # print(confusion_matrix(Y_sentences, pred))
+    #
+    # print("Inicializando classificador NB")
+    # clf = MultinomialNB()
+    # clf = clf.fit(X_sentences, Y_sentences)
+    # print("Predição...")
+    # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
+    # print("Classification_report:")
+    # print(classification_report(Y_sentences, pred))
+    # print("")
+    # print(confusion_matrix(Y_sentences, pred))
+    #
+    # print("Inicializando classificador DT")
+    # clf = DecisionTreeClassifier(random_state=0)
+    # clf = clf.fit(X_sentences, Y_sentences)
+    # print("Predição...")
+    # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
+    # print("Classification_report:")
+    # print(classification_report(Y_sentences, pred))
+    # print("")
+    # print(confusion_matrix(Y_sentences, pred))
 
     print(time.asctime(time.localtime(time.time())))
 
