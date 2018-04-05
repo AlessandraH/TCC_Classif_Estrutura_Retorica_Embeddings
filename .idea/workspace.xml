@@ -18,11 +18,20 @@
       <file leaf-file-name="classificador_sentenca_embeddings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="153" column="24" lean-forward="true" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
+            <state relative-caret-position="624">
+              <caret line="147" selection-start-line="147" selection-end-line="147" />
               <folding>
                 <element signature="e#25#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="word2vec.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/word2vec.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="647">
+              <caret line="73" selection-start-line="73" selection-end-line="73" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -44,9 +53,9 @@
       <list>
         <option value="$PROJECT_DIR$/util.py" />
         <option value="$PROJECT_DIR$/conta_palavras.py" />
-        <option value="$PROJECT_DIR$/word2vec.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/teste.py" />
+        <option value="$PROJECT_DIR$/word2vec.py" />
         <option value="$PROJECT_DIR$/classificador_sentenca_embeddings.py" />
       </list>
     </option>
@@ -172,16 +181,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18545838" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18545838" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.3295583" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978903" weight="0.5284916" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295583" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.3295583" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32849163" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3295583" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32849163" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -370,13 +378,6 @@
     <entry file="file:///usr/local/lib/python2.7/dist-packages/gensim/models/word2vec.py" />
     <entry file="file://$PROJECT_DIR$/conta_palavras.py" />
     <entry file="file:///usr/local/lib/python2.7/dist-packages/gensim/models/keyedvectors.py" />
-    <entry file="file://$PROJECT_DIR$/word2vec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -399,10 +400,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/teste.py" />
+    <entry file="file://$PROJECT_DIR$/word2vec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="73" selection-start-line="73" selection-end-line="73" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="153" column="24" lean-forward="true" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
+        <state relative-caret-position="624">
+          <caret line="147" selection-start-line="147" selection-end-line="147" />
           <folding>
             <element signature="e#25#35#0" expanded="true" />
           </folding>

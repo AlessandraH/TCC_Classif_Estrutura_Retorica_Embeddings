@@ -124,11 +124,11 @@ def classificador():
     # corpus = 'corpus/output466.json'
     # corpus = 'corpus/output832.json'
 
-    model_name = 'cbow_s50.txt'
-    # model_name = 'cbow_s300.txt'
+    # model_name = 'cbow_s50.txt'
+    model_name = 'cbow_s300.txt'
     # model_name = 'skip_s1000.txt'
 
-    model_size = 50
+    model_size = 300
 
     print(time.asctime(time.localtime(time.time())))
 
@@ -148,8 +148,10 @@ def classificador():
     vocabulary = model.vocab
     X_sentences = extract_features(X_sentences, model, model_size, vocabulary)
 
+
     print("Inicializando classificador SVM")
-    clf = SVC(kernel='linear')
+    clf = SVC(kernel='rbf')
+    # clf = SVC(kernel='linear')
     clf = clf.fit(X_sentences, Y_sentences)
     print("Predição...")
     pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
