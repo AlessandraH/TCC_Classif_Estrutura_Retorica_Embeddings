@@ -120,11 +120,11 @@ def classificador():
     # corpus = 'corpus/output466.json'
     # corpus = 'corpus/output832.json'
 
-    model_name = 'cbow_s50.txt'
+    # model_name = 'cbow_s50.txt'
     # model_name = 'cbow_s100.txt'
     # model_name = 'cbow_s300.txt'
     # model_name = 'cbow_s600.txt'
-    # model_name = 'cbow_s1000.txt'
+    model_name = 'cbow_s1000.txt'
 
     # model_name = 'skip_s50.txt'
     # model_name = 'skip_s100.txt'
@@ -132,22 +132,24 @@ def classificador():
     # model_name = 'skip_s600.txt'
     # model_name = 'skip_s1000.txt'
 
-    model_size = 50
+    model_size = 1000
 
     print(time.asctime(time.localtime(time.time())))
 
     print("Abrindo modelo embedding")
-    try:
-        # model = Word2Vec.load(model_name)
-        model = KeyedVectors.load(model_name)
-        print("Loading Embedding")
-    except:
-        # model = KeyedVectors.load_word2vec_format(fname=model_name, binary=False, unicode_errors="ignore") # 1
-        model = KeyedVectors.load_word2vec_format(model_name)
-        print("Loading word2vec embeddings")
+    model = KeyedVectors.load_word2vec_format(model_name)
+    # try:
+    #     # model = Word2Vec.load(model_name)
+    #     model = KeyedVectors.load(model_name)
+    #     print("Loading Embedding")
+    # except:
+    #     # model = KeyedVectors.load_word2vec_format(fname=model_name, binary=False, unicode_errors="ignore") # 1
+    #     model = KeyedVectors.load_word2vec_format(model_name)
+    #     print("Loading word2vec embeddings")
     vocabulary = model.vocab
 
     for corpus in corpi:
+        print("")
         print("lendo corpus ", corpus)
         _, _, data, labels, _ = loadFromJson(corpus)
         X_sentences, _, _, X_pos, Y_sentences, _ = abstracts_to_sentences(data, labels)
