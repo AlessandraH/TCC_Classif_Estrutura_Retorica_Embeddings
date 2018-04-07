@@ -116,15 +116,9 @@ def classificador():
     cross_val = 5
 
     corpi = ['corpus/output366.json', 'corpus/output466.json', 'corpus/output832.json']
-    corpus = 'corpus/output366.json'
+    # corpus = 'corpus/output366.json'
     # corpus = 'corpus/output466.json'
     # corpus = 'corpus/output832.json'
-
-    # model_name = 'cbow_s50.txt'
-    # model_name = 'cbow_s100.txt'
-    # model_name = 'cbow_s300.txt'
-    # model_name = 'cbow_s600.txt'
-    # model_name = 'cbow_s1000.txt'
 
     model_name = 'cbow_s50.txt'
     # model_name = 'cbow_s100.txt'
@@ -132,72 +126,80 @@ def classificador():
     # model_name = 'cbow_s600.txt'
     # model_name = 'cbow_s1000.txt'
 
+    # model_name = 'skip_s50.txt'
+    # model_name = 'skip_s100.txt'
+    # model_name = 'skip_s300.txt'
+    # model_name = 'skip_s600.txt'
+    # model_name = 'skip_s1000.txt'
+
     model_size = 50
 
     print(time.asctime(time.localtime(time.time())))
+
+    print("Abrindo modelo embedding")
+    try:
+        # model = Word2Vec.load(model_name)
+        model = KeyedVectors.load(model_name)
+        print("Loading Embedding")
+    except:
+        # model = KeyedVectors.load_word2vec_format(fname=model_name, binary=False, unicode_errors="ignore") # 1
+        model = KeyedVectors.load_word2vec_format(model_name)
+        print("Loading word2vec embeddings")
+    vocabulary = model.vocab
 
     for corpus in corpi:
         print("lendo corpus ", corpus)
         _, _, data, labels, _ = loadFromJson(corpus)
         X_sentences, _, _, X_pos, Y_sentences, _ = abstracts_to_sentences(data, labels)
 
-        print("Abrindo modelo embedding e extraindo features")
-        try:
-            # model = Word2Vec.load(model_name)
-            model = KeyedVectors.load(model_name)
-            print("Loading Embedding")
-        except:
-            # model = KeyedVectors.load_word2vec_format(fname=model_name, binary=False, unicode_errors="ignore") # 1
-            model = KeyedVectors.load_word2vec_format(model_name)
-            print("Loading word2vec embeddings")
-        vocabulary = model.vocab
+        print("Extraindo caracteristicas")
         X_sentences = extract_features_we(X_sentences, model, model_size, vocabulary)
 
-        print("Inicializando classificador SVM RBF")
+        print("SVM RBF")
         clf = SVC(kernel='rbf')
         clf = clf.fit(X_sentences, Y_sentences)
-        print("Predição...")
+        # print("Predição...")
         pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
         print("Classification_report:")
         print(classification_report(Y_sentences, pred))
         print(confusion_matrix(Y_sentences, pred))
         print("")
 
-        print("Inicializando classificador SVM linear")
+        print("SVM linear")
         clf = SVC(kernel='linear')
         clf = clf.fit(X_sentences, Y_sentences)
-        print("Predição...")
+        # print("Predição...")
         pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
         print("Classification_report:")
         print(classification_report(Y_sentences, pred))
         print(confusion_matrix(Y_sentences, pred))
         print("")
 
-        print("Inicializando classificador KNN")
+        print("KNN")
         clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
         clf = clf.fit(X_sentences, Y_sentences)
-        print("Predição...")
+        # print("Predição...")
         pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
         print("Classification_report:")
         print(classification_report(Y_sentences, pred))
         print(confusion_matrix(Y_sentences, pred))
         print("")
 
-        print("Inicializando classificador NB")
+        print("NB")
         # clf = MultinomialNB()
         clf = GaussianNB()
         clf = clf.fit(X_sentences, Y_sentences)
-        print("Predição...")
+        # print("Predição...")
         pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
         print("Classification_report:")
         print(classification_report(Y_sentences, pred))
         print(confusion_matrix(Y_sentences, pred))
         print("")
 
-        print("Inicializando classificador DT")
+        print("DT")
         clf = DecisionTreeClassifier(random_state=0)
         clf = clf.fit(X_sentences, Y_sentences)
-        print("Predição...")
+        # print("Predição...")
         pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
         print("Classification_report:")
         print(classification_report(Y_sentences, pred))
