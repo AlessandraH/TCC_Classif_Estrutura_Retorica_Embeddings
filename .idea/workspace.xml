@@ -18,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="classificador_sentenca_embeddings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="classificador_sentenca_embeddings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="134" column="21" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
+            <state relative-caret-position="259">
+              <caret line="142" column="45" lean-forward="true" selection-start-line="142" selection-start-column="45" selection-end-line="142" selection-end-column="45" />
               <folding>
                 <element signature="e#25#35#0" expanded="true" />
               </folding>
@@ -30,31 +30,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="366_wang2vec_cbow1000.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/results/wang2vec/cbow/366_wang2vec_cbow1000.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
+      <file leaf-file-name="366_wang2vec_skipgram1000.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/366_wang2vec_skipgram1000.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="466_wang2vec_cbow1000.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/results/wang2vec/cbow/466_wang2vec_cbow1000.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
+      <file leaf-file-name="466_wang2vec_skipgram1000.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/466_wang2vec_skipgram1000.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="832_wang2vec_cbow1000.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/results/wang2vec/cbow/832_wang2vec_cbow1000.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
+      <file leaf-file-name="832_wang2vec_skipgram1000.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/832_wang2vec_skipgram1000.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -72,19 +60,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/util.py" />
-        <option value="$PROJECT_DIR$/conta_palavras.py" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/teste.py" />
-        <option value="$PROJECT_DIR$/word2vec.py" />
-        <option value="$PROJECT_DIR$/results/366_word2vec_cbow50.txt" />
-        <option value="$PROJECT_DIR$/results/366_word2vec_cbow100.txt" />
-        <option value="$PROJECT_DIR$/results/366_word2vec_cbow300.txt" />
-        <option value="$PROJECT_DIR$/results/366_word2vec_cbow600.txt" />
-        <option value="$PROJECT_DIR$/results/366_word2vec_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/results/466_word2vec_cbow50.txt" />
-        <option value="$PROJECT_DIR$/results/466_word2vec_cbow100.txt" />
-        <option value="$PROJECT_DIR$/results/word2vec/466_word2vec_cbow300.txt" />
         <option value="$PROJECT_DIR$/results/word2vec/466_word2vec_cbow600.txt" />
         <option value="$PROJECT_DIR$/results/word2vec/466_word2vec_cbow1000.txt" />
         <option value="$PROJECT_DIR$/results/word2vec/832_word2vec_cbow50.txt" />
@@ -119,10 +94,23 @@
         <option value="$PROJECT_DIR$/results/wang2vec/cbow/366_wang2vec_cbow600.txt" />
         <option value="$PROJECT_DIR$/results/wang2vec/cbow/466_wang2vec_cbow600.txt" />
         <option value="$PROJECT_DIR$/results/wang2vec/cbow/832_wang2vec_cbow600.txt" />
-        <option value="$PROJECT_DIR$/classificador_sentenca_embeddings.py" />
         <option value="$PROJECT_DIR$/results/wang2vec/cbow/832_wang2vec_cbow1000.txt" />
         <option value="$PROJECT_DIR$/results/wang2vec/cbow/466_wang2vec_cbow1000.txt" />
         <option value="$PROJECT_DIR$/results/wang2vec/cbow/366_wang2vec_cbow1000.txt" />
+        <option value="$PROJECT_DIR$/results/wang2vec/skipgram/366_wang2vec_skipgram50.txt" />
+        <option value="$PROJECT_DIR$/results/wang2vec/skipgram/466_wang2vec_skipgram50.txt" />
+        <option value="$PROJECT_DIR$/results/wang2vec/skipgram/832_wang2vec_skipgram50.txt" />
+        <option value="$PROJECT_DIR$/results/wang2vec/skipgram/832_wang2vec_skipgram100.txt" />
+        <option value="$PROJECT_DIR$/results/wang2vec/skipgram/466_wang2vec_skipgram100.txt" />
+        <option value="$PROJECT_DIR$/results/wang2vec/skipgram/366_wang2vec_skipgram100.txt" />
+        <option value="$PROJECT_DIR$/results/wang2vec/skipgram/832_wang2vec_skipgram300.txt" />
+        <option value="$PROJECT_DIR$/results/wang2vec/skipgram/466_wang2vec_skipgram300.txt" />
+        <option value="$PROJECT_DIR$/results/wang2vec/skipgram/366_wang2vec_skipgram300.txt" />
+        <option value="$PROJECT_DIR$/results/wang2vec/skipgram/832_wang2vec_skipgram600.txt" />
+        <option value="$PROJECT_DIR$/results/wang2vec/skipgram/466_wang2vec_skipgram600.txt" />
+        <option value="$PROJECT_DIR$/results/wang2vec/skipgram/366_wang2vec_skipgram600.txt" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/classificador_sentenca_embeddings.py" />
       </list>
     </option>
   </component>
@@ -163,7 +151,7 @@
               <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="462c0819:PsiDirectoryNode" />
               <item name="results" type="462c0819:PsiDirectoryNode" />
               <item name="wang2vec" type="462c0819:PsiDirectoryNode" />
-              <item name="cbow" type="462c0819:PsiDirectoryNode" />
+              <item name="skipgram" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -261,16 +249,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14330874" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.32849163" />
-      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5015806" side_tool="true" weight="0.8916201" />
       <window_info anchor="bottom" id="Inspection Results" weight="0.32960895" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295583" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32849163" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978903" weight="0.9094972" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49841937" visible="true" weight="0.41005588" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32849163" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -287,41 +274,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="69" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/sklearn_crfsuite/estimator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="279" column="8" selection-start-line="279" selection-start-column="8" selection-end-line="279" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/gensim/models/keyedvectors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="198" selection-start-line="198" selection-end-line="198" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teste.py" />
-    <entry file="file://$PROJECT_DIR$/results/366_word2vec_cbow100.txt" />
-    <entry file="file://$PROJECT_DIR$/results/366_word2vec_cbow300.txt" />
-    <entry file="file://$PROJECT_DIR$/results/366_word2vec_cbow600.txt" />
-    <entry file="file://$PROJECT_DIR$/results/366_word2vec_cbow50.txt" />
-    <entry file="file://$PROJECT_DIR$/results/366_word2vec_cbow1000.txt" />
-    <entry file="file://$PROJECT_DIR$/results/466_word2vec_cbow50.txt" />
-    <entry file="file://$PROJECT_DIR$/results/466_word2vec_cbow100.txt" />
-    <entry file="file://$PROJECT_DIR$/results/word2vec/466_word2vec_cbow300.txt" />
-    <entry file="file://$PROJECT_DIR$/results/word2vec/466_word2vec_cbow600.txt" />
-    <entry file="file://$PROJECT_DIR$/results/word2vec/466_word2vec_cbow1000.txt" />
-    <entry file="file://$PROJECT_DIR$/results/word2vec/832_word2vec_cbow50.txt" />
-    <entry file="file://$PROJECT_DIR$/results/word2vec/832_word2vec_cbow100.txt" />
-    <entry file="file://$PROJECT_DIR$/results/word2vec/832_word2vec_cbow300.txt" />
     <entry file="file://$PROJECT_DIR$/results/word2vec/832_word2vec_cbow600.txt" />
     <entry file="file://$PROJECT_DIR$/results/word2vec/cbow/832_word2vec_cbow1000.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -516,34 +468,137 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/cbow/366_wang2vec_cbow1000.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="134" column="21" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
-          <folding>
-            <element signature="e#25#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/wang2vec/cbow/832_wang2vec_cbow1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="-1800">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/results/wang2vec/cbow/466_wang2vec_cbow1000.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="-1630">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/cbow/832_wang2vec_cbow1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1725">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/wang2vec/cbow/366_wang2vec_cbow1000.txt">
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/366_wang2vec_skipgram50.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="-1575">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/466_wang2vec_skipgram50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1805">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/832_wang2vec_skipgram50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1500">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/366_wang2vec_skipgram100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1805">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/466_wang2vec_skipgram100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1805">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/832_wang2vec_skipgram100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1800">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/366_wang2vec_skipgram300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1805">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/466_wang2vec_skipgram300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1805">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/832_wang2vec_skipgram300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="80" column="23" lean-forward="true" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/366_wang2vec_skipgram600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1805">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/466_wang2vec_skipgram600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1805">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/832_wang2vec_skipgram600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1805">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/832v">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/466_wang2vec_skipgram1000.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/832_wang2vec_skipgram1000.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/wang2vec/skipgram/366_wang2vec_skipgram1000.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="142" column="45" lean-forward="true" selection-start-line="142" selection-start-column="45" selection-end-line="142" selection-end-column="45" />
+          <folding>
+            <element signature="e#25#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
