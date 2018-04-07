@@ -4,8 +4,6 @@ import sys
 import time
 import json
 import numpy as np
-import fasttext
-# import gensim
 
 
 from sklearn import metrics
@@ -16,9 +14,9 @@ from sklearn.feature_selection import SelectKBest, chi2
 from scipy.sparse import hstack
 from sklearn.svm import SVC
 from sklearn import neighbors
-from sklearn.naive_bayes import MultinomialNB, GaussianNB, BernoulliNB
+from sklearn.naive_bayes import MultinomialNB, GaussianNB
 from sklearn.tree import DecisionTreeClassifier
-from gensim.models import KeyedVectors, Word2Vec
+from gensim.models import KeyedVectors, wrappers
 
 pontuacao = ['.', ',', ' ', '"', '!', '(', ')', '-', '=', '+', '/', '*', ';', ':',
                 '[', ']', '{', '}', '$', '#', '@', '%', '&', '?']
@@ -120,7 +118,7 @@ def classificador():
     # corpus = 'corpus/output466.json'
     # corpus = 'corpus/output832.json'
 
-    # model_name = 'cbow_s50.txt'
+    model_name = 'cbow_s50.txt'
     # model_name = 'cbow_s100.txt'
     # model_name = 'cbow_s300.txt'
     # model_name = 'cbow_s600.txt'
@@ -130,15 +128,21 @@ def classificador():
     # model_name = 'skip_s100.txt'
     # model_name = 'skip_s300.txt'
     # model_name = 'skip_s600.txt'
-    model_name = 'skip_s1000.txt'
+    # model_name = 'skip_s1000.txt'
 
-    model_size = 1000
+    # model_name = 'glove_s50.txt'
+    # model_name = 'glove_s100.txt'
+    # model_name = 'glove_s300.txt'
+    # model_name = 'glove_s600.txt'
+    # model_name = 'glove_s1000.txt'
+
+    model_size = 50
 
     print(time.asctime(time.localtime(time.time())))
 
     print("Abrindo modelo embedding")
-    # model = KeyedVectors.load_word2vec_format(model_name)
     model = KeyedVectors.load_word2vec_format(fname=model_name, unicode_errors="ignore")
+    # model = wrappers.FastText.load_word2vec_format(fname=model_name, unicode_errors="ignore") # demora muito para obter mesmo resultados que os outros modelos
     # try:
     #     # model = Word2Vec.load(model_name)
     #     model = KeyedVectors.load(model_name)
