@@ -16,7 +16,7 @@ from sklearn.svm import SVC
 from sklearn import neighbors
 from sklearn.naive_bayes import MultinomialNB, GaussianNB
 from sklearn.tree import DecisionTreeClassifier
-from gensim.models import KeyedVectors, wrappers
+from gensim.models import KeyedVectors
 
 pontuacao = ['.', ',', ' ', '"', '!', '(', ')', '-', '=', '+', '/', '*', ';', ':',
                 '[', ']', '{', '}', '$', '#', '@', '%', '&', '?']
@@ -110,8 +110,29 @@ def extract_features_we(X_sentences, model, model_size, vocabulary):
     return np.array(features)
 
 
+def extract_features_we_tfidf(X_sentences, model, model_size, vocabulary):
+    features = []
+    # nvocab = 0
+    # palavras_corpus = 0
+    for s in X_sentences:
+        # n = 0
+        sentence_feature = [0] * model_size
+        sentences = str(s).split()
+        for word in sentences:
+            if len(word) > 2 and word in vocabulary:
+                word_feature = model[word]
+                # word_feature = KeyedVectors.word_vec(model, word, use_norm=False)
+                sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
+                # n += 1
+            # elif len(word) > 2 and word not in vocabulary:
+            #     print(word + " nao estah no vocabulario")
+            #     nvocab += 1
+        features.append(sentence_feature)
+    return np.array(features)
+
+
 def classificador():
-    cross_val = 5
+    cross_val = 10
 
     corpi = ['corpus/output366.json', 'corpus/output466.json', 'corpus/output832.json']
     # corpus = 'corpus/output366.json'
@@ -137,55 +158,62 @@ def classificador():
     # model_name = 'glove_s1000.txt'
 
     model_size = 50
+    ngrama = 1
+    kchi = 500
 
     print(time.asctime(time.localtime(time.time())))
 
     print("Abrindo modelo embedding")
     model = KeyedVectors.load_word2vec_format(fname=model_name, unicode_errors="ignore")
-    # model = wrappers.FastText.load_word2vec_format(fname=model_name, unicode_errors="ignore") # demora muito para obter mesmo resultados que os outros modelos
-    # try:
-    #     # model = Word2Vec.load(model_name)
-    #     model = KeyedVectors.load(model_name)
-    #     print("Loading Embedding")
-    # except:
-    #     model = KeyedVectors.load_word2vec_format(fname=model_name, binary=False, unicode_errors="ignore") # 1
-    #     # model = KeyedVectors.load_word2vec_format(model_name)
-    #     print("Loading word2vec embeddings")
+    # FastText demora muito para obter mesmo resultados que os outros modelos
+    # model = wrappers.FastText.load_word2vec_format(fname=model_name, unicode_errors="ignore")
     vocabulary = model.vocab
 
     for corpus in corpi:
         print("")
         print("lendo corpus ", corpus)
         _, _, data, labels, _ = loadFromJson(corpus)
-        X_sentences, _, _, X_pos, Y_sentences, _ = abstracts_to_sentences(data, labels)
+        X_sentences, X_prev, X_next, X_pos, Y_sentences, _ = abstracts_to_sentences(data, labels)
 
         print("Extraindo caracteristicas")
         X_sentences = extract_features_we(X_sentences, model, model_size, vocabulary)
 
-        print("SVM RBF")
-        clf = SVC(kernel='rbf')
-        clf = clf.fit(X_sentences, Y_sentences)
-        # print("Predição...")
-        pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
-        print("Classification_report:")
-        print(classification_report(Y_sentences, pred))
-        print(confusion_matrix(Y_sentences, pred))
-        print("")
+        # print("Aplicando tfidf")
+        # vectorizer = TfidfVectorizer(ngram_range=(1, ngrama))
+        # X_sentences = vectorizer.fit_transform(X_sentences)
+        # X_prev = vectorizer.transform(X_prev)
+        # X_next = vectorizer.transform(X_next)
+        #
+        # print("Selecionando features superficiais com chi-quadrado")
+        # selector = SelectKBest(chi2, k=kchi)
+        # X_sentences = selector.fit_transform(X_sentences, Y_sentences)
+        # X_prev = selector.transform(X_prev)
+        # X_next = selector.transform(X_next)
+        #
+        # print("add prev next train")
+        # X_sentences = hstack([X_sentences_we, X_sentences, X_prev, X_next, np.expand_dims(np.array(X_pos), -1)])
 
-        print("SVM linear")
-        clf = SVC(kernel='linear')
-        clf = clf.fit(X_sentences, Y_sentences)
-        # print("Predição...")
-        pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=10)
-        print("Classification_report:")
-        print(classification_report(Y_sentences, pred))
-        print(confusion_matrix(Y_sentences, pred))
-        print("")
+        # print("SVM RBF")
+        # clf = SVC(kernel='rbf')
+        # clf = clf.fit(X_sentences, Y_sentences)
+        # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
+        # print("Classification_report:")
+        # print(classification_report(Y_sentences, pred))
+        # print(confusion_matrix(Y_sentences, pred))
+        # print("")
+        #
+        # print("SVM linear")
+        # clf = SVC(kernel='linear')
+        # clf = clf.fit(X_sentences, Y_sentences)
+        # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
+        # print("Classification_report:")
+        # print(classification_report(Y_sentences, pred))
+        # print(confusion_matrix(Y_sentences, pred))
+        # print("")
 
         print("KNN")
         clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
         clf = clf.fit(X_sentences, Y_sentences)
-        # print("Predição...")
         pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
         print("Classification_report:")
         print(classification_report(Y_sentences, pred))
@@ -196,7 +224,6 @@ def classificador():
         # clf = MultinomialNB()
         clf = GaussianNB()
         clf = clf.fit(X_sentences, Y_sentences)
-        # print("Predição...")
         pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
         print("Classification_report:")
         print(classification_report(Y_sentences, pred))
@@ -206,7 +233,6 @@ def classificador():
         print("DT")
         clf = DecisionTreeClassifier(random_state=0)
         clf = clf.fit(X_sentences, Y_sentences)
-        # print("Predição...")
         pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
         print("Classification_report:")
         print(classification_report(Y_sentences, pred))
