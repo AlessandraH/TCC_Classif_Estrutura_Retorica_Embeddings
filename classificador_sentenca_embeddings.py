@@ -118,13 +118,13 @@ def classificador():
     # corpus = 'corpus/output466.json'
     # corpus = 'corpus/output832.json'
 
-    model_name = 'cbow_s50.txt'
+    # model_name = 'cbow_s50.txt'
     # model_name = 'cbow_s100.txt'
     # model_name = 'cbow_s300.txt'
     # model_name = 'cbow_s600.txt'
     # model_name = 'cbow_s1000.txt'
 
-    # model_name = 'skip_s50.txt'
+    model_name = 'skip_s50.txt'
     # model_name = 'skip_s100.txt'
     # model_name = 'skip_s300.txt'
     # model_name = 'skip_s600.txt'
