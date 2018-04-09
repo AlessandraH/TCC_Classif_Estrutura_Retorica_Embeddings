@@ -139,13 +139,13 @@ def classificador():
     # corpus = 'corpus/output466.json'
     # corpus = 'corpus/output832.json'
 
-    model_name = 'cbow_s50.txt'
+    # model_name = 'cbow_s50.txt'
     # model_name = 'cbow_s100.txt'
     # model_name = 'cbow_s300.txt'
     # model_name = 'cbow_s600.txt'
     # model_name = 'cbow_s1000.txt'
 
-    # model_name = 'skip_s50.txt'
+    model_name = 'skip_s50.txt'
     # model_name = 'skip_s100.txt'
     # model_name = 'skip_s300.txt'
     # model_name = 'skip_s600.txt'
@@ -190,7 +190,7 @@ def classificador():
         # X_prev = selector.transform(X_prev)
         # X_next = selector.transform(X_next)
         #
-        # print("add prev next train")
+        # print("Adicionando anterior e posterior")
         # X_sentences = hstack([X_sentences_we, X_sentences, X_prev, X_next, np.expand_dims(np.array(X_pos), -1)])
 
         # print("SVM RBF")
