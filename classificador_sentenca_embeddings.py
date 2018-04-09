@@ -110,27 +110,6 @@ def extract_features_we(X_sentences, model, model_size, vocabulary):
     return np.array(features)
 
 
-def extract_features_we_tfidf(X_sentences, model, model_size, vocabulary):
-    features = []
-    # nvocab = 0
-    # palavras_corpus = 0
-    for s in X_sentences:
-        # n = 0
-        sentence_feature = [0] * model_size
-        sentences = str(s).split()
-        for word in sentences:
-            if len(word) > 2 and word in vocabulary:
-                word_feature = model[word]
-                # word_feature = KeyedVectors.word_vec(model, word, use_norm=False)
-                sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
-                # n += 1
-            # elif len(word) > 2 and word not in vocabulary:
-            #     print(word + " nao estah no vocabulario")
-            #     nvocab += 1
-        features.append(sentence_feature)
-    return np.array(features)
-
-
 def classificador():
     cross_val = 10
 
@@ -139,7 +118,7 @@ def classificador():
     # corpus = 'corpus/output466.json'
     # corpus = 'corpus/output832.json'
 
-    # model_name = 'cbow_s50.txt'
+    model_name = 'cbow_s50.txt'
     # model_name = 'cbow_s100.txt'
     # model_name = 'cbow_s300.txt'
     # model_name = 'cbow_s600.txt'
@@ -155,9 +134,9 @@ def classificador():
     # model_name = 'glove_s100.txt'
     # model_name = 'glove_s300.txt'
     # model_name = 'glove_s600.txt'
-    model_name = 'glove_s1000.txt'
+    # model_name = 'glove_s1000.txt'
 
-    model_size = 1000
+    model_size = 50
     ngrama = 1
     kchi = 500
 
@@ -176,40 +155,61 @@ def classificador():
         X_sentences, X_prev, X_next, X_pos, Y_sentences, _ = abstracts_to_sentences(data, labels)
 
         print("Extraindo caracteristicas")
-        X_sentences = extract_features_we(X_sentences, model, model_size, vocabulary)
+        X_sentences_we = extract_features_we(X_sentences, model, model_size, vocabulary)
 
-        # print("Aplicando tfidf")
-        # vectorizer = TfidfVectorizer(ngram_range=(1, ngrama))
-        # X_sentences = vectorizer.fit_transform(X_sentences)
-        # X_prev = vectorizer.transform(X_prev)
-        # X_next = vectorizer.transform(X_next)
-        #
-        # print("Selecionando features superficiais com chi-quadrado")
-        # selector = SelectKBest(chi2, k=kchi)
-        # X_sentences = selector.fit_transform(X_sentences, Y_sentences)
-        # X_prev = selector.transform(X_prev)
-        # X_next = selector.transform(X_next)
-        #
-        # print("Adicionando anterior e posterior")
-        # X_sentences = hstack([X_sentences_we, X_sentences, X_prev, X_next, np.expand_dims(np.array(X_pos), -1)])
+        #################################################################################################
+        # - - - - - - - - - - - - - - Combinando embeddings com tfidf") - - - - - - - - - - - - - - - - #
+        #################################################################################################
+        print("Aplicando tfidf")
+        vectorizer = TfidfVectorizer(ngram_range=(1, ngrama))
+        X_sentences = vectorizer.fit_transform(X_sentences)
+        X_prev = vectorizer.transform(X_prev)
+        X_next = vectorizer.transform(X_next)
 
-        # print("SVM RBF")
-        # clf = SVC(kernel='rbf')
-        # clf = clf.fit(X_sentences, Y_sentences)
-        # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
-        # print("Classification_report:")
-        # print(classification_report(Y_sentences, pred))
-        # print(confusion_matrix(Y_sentences, pred))
-        # print("")
+        print("Aplicando chi-quadrado")
+        selector = SelectKBest(chi2, k=kchi)
+        X_sentences = selector.fit_transform(X_sentences, Y_sentences)
+        X_prev = selector.transform(X_prev)
+        X_next = selector.transform(X_next)
+
+        # X_sentences = np.sum([X_sentences, X_sentences_we], axis=0)
+        # X_sentences = np.sum([X_sentences, X_prev], axis=0)
+        # X_sentences = np.sum([X_sentences, X_next], axis=0)
         #
-        # print("SVM linear")
-        # clf = SVC(kernel='linear')
-        # clf = clf.fit(X_sentences, Y_sentences)
-        # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
-        # print("Classification_report:")
-        # print(classification_report(Y_sentences, pred))
-        # print(confusion_matrix(Y_sentences, pred))
-        # print("")
+        # if corpus == 'corpus/output366.json':
+        #     corpus_size = 366
+        # elif corpus == 'corpus/output466.json':
+        #     corpus_size = 466
+        # else:
+        #     corpus_size = 832
+        #
+        # X_pos = np.array(X_pos)
+        # X_pos = np.repeat(X_pos, model_size).reshape(corpus_size, model_size)
+        # X_sentences = np.sum([X_sentences, X_pos], axis=0)
+
+        print("Adicionando anterior e posterior")
+        X_sentences = hstack([X_sentences_we, X_sentences, X_prev, X_next, np.expand_dims(np.array(X_pos), -1)])
+        X_sentences = X_sentences.todense()
+        #################################################################################################
+
+
+        print("SVM RBF")
+        clf = SVC(kernel='rbf')
+        clf = clf.fit(X_sentences, Y_sentences)
+        pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
+        print("Classification_report:")
+        print(classification_report(Y_sentences, pred))
+        print(confusion_matrix(Y_sentences, pred))
+        print("")
+
+        print("SVM linear")
+        clf = SVC(kernel='linear')
+        clf = clf.fit(X_sentences, Y_sentences)
+        pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
+        print("Classification_report:")
+        print(classification_report(Y_sentences, pred))
+        print(confusion_matrix(Y_sentences, pred))
+        print("")
 
         print("KNN")
         clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
@@ -221,6 +221,7 @@ def classificador():
         print("")
 
         print("NB")
+        # X_sentences_nb = X_sentences.todense()
         # clf = MultinomialNB()
         clf = GaussianNB()
         clf = clf.fit(X_sentences, Y_sentences)
