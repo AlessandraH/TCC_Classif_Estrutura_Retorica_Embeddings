@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 
-import sys
 import time
 import json
 import numpy as np
+import sklearn_crfsuite
 
-
-from sklearn import metrics
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cross_validation import cross_val_predict
@@ -155,53 +153,53 @@ def classificador():
         X_sentences, X_prev, X_next, X_pos, Y_sentences, _ = abstracts_to_sentences(data, labels)
 
         print("Extraindo caracteristicas")
-        X_sentences_we = extract_features_we(X_sentences, model, model_size, vocabulary)
+        X_sentences = extract_features_we(X_sentences, model, model_size, vocabulary)
 
         #################################################################################################
         # - - - - - - - - - - - - - - Combinando embeddings com tfidf") - - - - - - - - - - - - - - - - #
         #################################################################################################
-        print("Aplicando tfidf")
-        vectorizer = TfidfVectorizer(ngram_range=(1, ngrama))
-        X_sentences = vectorizer.fit_transform(X_sentences)
-        X_prev = vectorizer.transform(X_prev)
-        X_next = vectorizer.transform(X_next)
-
-        print("Aplicando chi-quadrado")
-        selector = SelectKBest(chi2, k=kchi)
-        X_sentences = selector.fit_transform(X_sentences, Y_sentences)
-        X_prev = selector.transform(X_prev)
-        X_next = selector.transform(X_next)
-
-        # X_sentences = np.sum([X_sentences, X_sentences_we], axis=0)
-        # X_sentences = np.sum([X_sentences, X_prev], axis=0)
-        # X_sentences = np.sum([X_sentences, X_next], axis=0)
+        # print("Aplicando tfidf")
+        # vectorizer = TfidfVectorizer(ngram_range=(1, ngrama))
+        # X_sentences = vectorizer.fit_transform(X_sentences)
+        # X_prev = vectorizer.transform(X_prev)
+        # X_next = vectorizer.transform(X_next)
         #
-        # if corpus == 'corpus/output366.json':
-        #     corpus_size = 366
-        # elif corpus == 'corpus/output466.json':
-        #     corpus_size = 466
-        # else:
-        #     corpus_size = 832
+        # print("Aplicando chi-quadrado")
+        # selector = SelectKBest(chi2, k=kchi)
+        # X_sentences = selector.fit_transform(X_sentences, Y_sentences)
+        # X_prev = selector.transform(X_prev)
+        # X_next = selector.transform(X_next)
         #
-        # X_pos = np.array(X_pos)
-        # X_pos = np.repeat(X_pos, model_size).reshape(corpus_size, model_size)
-        # X_sentences = np.sum([X_sentences, X_pos], axis=0)
-
-        print("Adicionando anterior e posterior")
-        X_sentences = hstack([X_sentences_we, X_sentences, X_prev, X_next, np.expand_dims(np.array(X_pos), -1)])
-        X_sentences = X_sentences.todense()
+        # # X_sentences = np.sum([X_sentences, X_sentences_we], axis=0)
+        # # X_sentences = np.sum([X_sentences, X_prev], axis=0)
+        # # X_sentences = np.sum([X_sentences, X_next], axis=0)
+        # #
+        # # if corpus == 'corpus/output366.json':
+        # #     corpus_size = 366
+        # # elif corpus == 'corpus/output466.json':
+        # #     corpus_size = 466
+        # # else:
+        # #     corpus_size = 832
+        # #
+        # # X_pos = np.array(X_pos)
+        # # X_pos = np.repeat(X_pos, model_size).reshape(corpus_size, model_size)
+        # # X_sentences = np.sum([X_sentences, X_pos], axis=0)
+        #
+        # print("Adicionando anterior e posterior")
+        # X_sentences = hstack([X_sentences_we, X_sentences, X_prev, X_next, np.expand_dims(np.array(X_pos), -1)])
+        # X_sentences = X_sentences.todense()
         #################################################################################################
 
 
-        print("SVM RBF")
-        clf = SVC(kernel='rbf')
-        clf = clf.fit(X_sentences, Y_sentences)
-        pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
-        print("Classification_report:")
-        print(classification_report(Y_sentences, pred))
-        print(confusion_matrix(Y_sentences, pred))
-        print("")
-
+        # print("SVM RBF")
+        # clf = SVC(kernel='rbf')
+        # clf = clf.fit(X_sentences, Y_sentences)
+        # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
+        # print("Classification_report:")
+        # print(classification_report(Y_sentences, pred))
+        # print(confusion_matrix(Y_sentences, pred))
+        # print("")
+        #
         print("SVM linear")
         clf = SVC(kernel='linear')
         clf = clf.fit(X_sentences, Y_sentences)
@@ -210,29 +208,36 @@ def classificador():
         print(classification_report(Y_sentences, pred))
         print(confusion_matrix(Y_sentences, pred))
         print("")
+        #
+        # print("KNN")
+        # clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
+        # clf = clf.fit(X_sentences, Y_sentences)
+        # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
+        # print("Classification_report:")
+        # print(classification_report(Y_sentences, pred))
+        # print(confusion_matrix(Y_sentences, pred))
+        # print("")
+        #
+        # print("NB")
+        # # clf = MultinomialNB()
+        # clf = GaussianNB()
+        # clf = clf.fit(X_sentences, Y_sentences)
+        # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
+        # print("Classification_report:")
+        # print(classification_report(Y_sentences, pred))
+        # print(confusion_matrix(Y_sentences, pred))
+        # print("")
+        #
+        # print("DT")
+        # clf = DecisionTreeClassifier(random_state=0)
+        # clf = clf.fit(X_sentences, Y_sentences)
+        # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
+        # print("Classification_report:")
+        # print(classification_report(Y_sentences, pred))
+        # print(confusion_matrix(Y_sentences, pred))
 
-        print("KNN")
-        clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
-        clf = clf.fit(X_sentences, Y_sentences)
-        pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
-        print("Classification_report:")
-        print(classification_report(Y_sentences, pred))
-        print(confusion_matrix(Y_sentences, pred))
-        print("")
-
-        print("NB")
-        # X_sentences_nb = X_sentences.todense()
-        # clf = MultinomialNB()
-        clf = GaussianNB()
-        clf = clf.fit(X_sentences, Y_sentences)
-        pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
-        print("Classification_report:")
-        print(classification_report(Y_sentences, pred))
-        print(confusion_matrix(Y_sentences, pred))
-        print("")
-
-        print("DT")
-        clf = DecisionTreeClassifier(random_state=0)
+        print("CRF")
+        clf = sklearn_crfsuite.CRF()
         clf = clf.fit(X_sentences, Y_sentences)
         pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
         print("Classification_report:")
