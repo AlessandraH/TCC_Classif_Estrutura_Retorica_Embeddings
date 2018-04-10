@@ -113,7 +113,7 @@ def extract_features_we(X_sentences, model, model_size, vocabulary):
 def classificador():
     cross_val = 10
 
-    corpi = ['corpus/output366.json', 'corpus/output466.json', 'corpus/output832.json']
+    corpora = ['corpus/output366.json', 'corpus/output466.json', 'corpus/output832.json']
     # corpus = 'corpus/output366.json'
     # corpus = 'corpus/output466.json'
     # corpus = 'corpus/output832.json'
@@ -124,13 +124,13 @@ def classificador():
     # model_name = 'cbow_s600.txt'
     # model_name = 'cbow_s1000.txt'
 
-    model_name = 'skip_s50.txt'
+    # model_name = 'skip_s50.txt'
     # model_name = 'skip_s100.txt'
     # model_name = 'skip_s300.txt'
     # model_name = 'skip_s600.txt'
     # model_name = 'skip_s1000.txt'
 
-    # model_name = 'glove_s50.txt'
+    model_name = 'glove_s50.txt'
     # model_name = 'glove_s100.txt'
     # model_name = 'glove_s300.txt'
     # model_name = 'glove_s600.txt'
@@ -148,7 +148,7 @@ def classificador():
     # model = wrappers.FastText.load_word2vec_format(fname=model_name, unicode_errors="ignore")
     vocabulary = model.vocab
 
-    for corpus in corpi:
+    for corpus in corpora:
         print("")
         print("lendo corpus ", corpus)
         _, _, data, labels, _ = loadFromJson(corpus)
