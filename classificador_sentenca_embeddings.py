@@ -2,6 +2,7 @@
 
 import time
 import json
+import scipy
 import numpy as np
 import sklearn_crfsuite
 
@@ -112,9 +113,6 @@ def classificador():
     cross_val = 10
 
     corpora = ['corpus/output366.json', 'corpus/output466.json', 'corpus/output832.json']
-    # corpus = 'corpus/output366.json'
-    # corpus = 'corpus/output466.json'
-    # corpus = 'corpus/output832.json'
 
     model_name = 'cbow_s50.txt'
     # model_name = 'cbow_s100.txt'
@@ -142,8 +140,6 @@ def classificador():
 
     print("Abrindo modelo embedding")
     model = KeyedVectors.load_word2vec_format(fname=model_name, unicode_errors="ignore")
-    # FastText demora muito para obter mesmo resultados que os outros modelos
-    # model = wrappers.FastText.load_word2vec_format(fname=model_name, unicode_errors="ignore")
     vocabulary = model.vocab
 
     for corpus in corpora:
@@ -190,16 +186,15 @@ def classificador():
         # X_sentences = X_sentences.todense()
         #################################################################################################
 
+        print("SVM RBF")
+        clf = SVC(kernel='rbf')
+        clf = clf.fit(X_sentences, Y_sentences)
+        pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
+        print("Classification_report:")
+        print(classification_report(Y_sentences, pred))
+        print(confusion_matrix(Y_sentences, pred))
+        print("")
 
-        # print("SVM RBF")
-        # clf = SVC(kernel='rbf')
-        # clf = clf.fit(X_sentences, Y_sentences)
-        # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
-        # print("Classification_report:")
-        # print(classification_report(Y_sentences, pred))
-        # print(confusion_matrix(Y_sentences, pred))
-        # print("")
-        #
         print("SVM linear")
         clf = SVC(kernel='linear')
         clf = clf.fit(X_sentences, Y_sentences)
@@ -208,41 +203,42 @@ def classificador():
         print(classification_report(Y_sentences, pred))
         print(confusion_matrix(Y_sentences, pred))
         print("")
-        #
-        # print("KNN")
-        # clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
-        # clf = clf.fit(X_sentences, Y_sentences)
-        # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
-        # print("Classification_report:")
-        # print(classification_report(Y_sentences, pred))
-        # print(confusion_matrix(Y_sentences, pred))
-        # print("")
-        #
-        # print("NB")
-        # # clf = MultinomialNB()
-        # clf = GaussianNB()
-        # clf = clf.fit(X_sentences, Y_sentences)
-        # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
-        # print("Classification_report:")
-        # print(classification_report(Y_sentences, pred))
-        # print(confusion_matrix(Y_sentences, pred))
-        # print("")
-        #
-        # print("DT")
-        # clf = DecisionTreeClassifier(random_state=0)
-        # clf = clf.fit(X_sentences, Y_sentences)
-        # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
-        # print("Classification_report:")
-        # print(classification_report(Y_sentences, pred))
-        # print(confusion_matrix(Y_sentences, pred))
 
-        print("CRF")
-        clf = sklearn_crfsuite.CRF()
+        print("KNN")
+        clf = neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
         clf = clf.fit(X_sentences, Y_sentences)
         pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
         print("Classification_report:")
         print(classification_report(Y_sentences, pred))
         print(confusion_matrix(Y_sentences, pred))
+        print("")
+
+        print("NB")
+        # clf = MultinomialNB()
+        clf = GaussianNB()
+        clf = clf.fit(X_sentences, Y_sentences)
+        pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
+        print("Classification_report:")
+        print(classification_report(Y_sentences, pred))
+        print(confusion_matrix(Y_sentences, pred))
+        print("")
+
+        print("DT")
+        clf = DecisionTreeClassifier(random_state=0)
+        clf = clf.fit(X_sentences, Y_sentences)
+        pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
+        print("Classification_report:")
+        print(classification_report(Y_sentences, pred))
+        print(confusion_matrix(Y_sentences, pred))
+
+        # print("CRF")
+        # clf = sklearn_crfsuite.CRF()
+        # X_sentences = scipy.sparse.csr_matrix(X_sentences)
+        # clf = clf.fit(X_sentences, Y_sentences)
+        # pred = cross_val_predict(clf, X_sentences, Y_sentences, cv=cross_val)
+        # print("Classification_report:")
+        # print(classification_report(Y_sentences, pred))
+        # print(confusion_matrix(Y_sentences, pred))
 
     print(time.asctime(time.localtime(time.time())))
 
