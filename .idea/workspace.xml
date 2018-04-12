@@ -21,26 +21,26 @@
       <file leaf-file-name="classificador_sentenca_embeddings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1372">
-              <caret line="236" column="4" selection-start-line="236" selection-start-column="4" selection-end-line="236" selection-end-column="52" />
-              <folding>
-                <element signature="e#25#36#0" expanded="true" />
-                <element signature="e#784#1546#0" />
-                <element signature="e#1577#1695#0" />
-                <element signature="e#1749#2498#0" />
-              </folding>
+            <state relative-caret-position="697">
+              <caret line="153" column="40" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classificador_we_pipeline.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="classificador_we_pipeline.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classificador_we_pipeline.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="80" column="36" lean-forward="true" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1375">
+              <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -60,7 +60,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/366_word2vec_skipgram300.txt" />
         <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/832_word2vec_skipgram600.txt" />
         <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/466_word2vec_skipgram600.txt" />
         <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/366_word2vec_skipgram600.txt" />
@@ -109,6 +108,7 @@
         <option value="$PROJECT_DIR$/results/we com tfidf/glove/832_glove_1000.txt" />
         <option value="$PROJECT_DIR$/results/we com tfidf/glove/466_glove_1000.txt" />
         <option value="$PROJECT_DIR$/results/we com tfidf/glove/366_glove_1000.txt" />
+        <option value="$PROJECT_DIR$/functions.py" />
         <option value="$PROJECT_DIR$/classificador_sentenca_embeddings.py" />
         <option value="$PROJECT_DIR$/classificador_we_pipeline.py" />
       </list>
@@ -275,8 +275,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2905983" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15753424" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.32849163" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5015806" side_tool="true" weight="0.8916201" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295583" />
@@ -302,27 +303,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4650">
-          <caret line="186" column="22" selection-start-line="186" selection-start-column="22" selection-end-line="186" selection-end-column="22" />
-          <folding>
-            <element signature="e#25#36#0" expanded="true" />
-            <element signature="e#784#1546#0" />
-            <element signature="e#1577#1695#0" />
-            <element signature="e#1749#2498#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5925">
           <caret line="237" selection-start-line="237" selection-end-line="237" />
-          <folding>
-            <element signature="e#25#36#0" expanded="true" />
-            <element signature="e#784#1546#0" />
-            <element signature="e#1577#1695#0" />
-            <element signature="e#1749#2498#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -330,12 +312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5925">
           <caret line="237" lean-forward="true" selection-start-line="237" selection-end-line="237" />
-          <folding>
-            <element signature="e#25#36#0" expanded="true" />
-            <element signature="e#784#1546#0" />
-            <element signature="e#1577#1695#0" />
-            <element signature="e#1749#2498#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -661,26 +637,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
+    <entry file="file://$PROJECT_DIR$/classificador_we_pipeline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1372">
-          <caret line="236" column="4" selection-start-line="236" selection-start-column="4" selection-end-line="236" selection-end-column="52" />
-          <folding>
-            <element signature="e#25#36#0" expanded="true" />
-            <element signature="e#784#1546#0" />
-            <element signature="e#1577#1695#0" />
-            <element signature="e#1749#2498#0" />
-          </folding>
+        <state relative-caret-position="1375">
+          <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classificador_we_pipeline.py">
+    <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="80" column="36" lean-forward="true" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="697">
+          <caret line="153" column="40" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>
