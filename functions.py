@@ -62,6 +62,14 @@ def loadFromJson(file):
     return to_sentences(data)
 
 
+def loadJson(file):
+    data = []
+    with open(file, 'r') as f:
+        data = json.load(f, encoding='cp1252')
+
+    return data
+
+
 def abstracts_to_sentences(abstracts, labels):
     ret = []
     ret_prev = []

@@ -18,29 +18,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="classificador_sentenca_embeddings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="classificador_sentenca_embeddings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="153" column="40" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="classificador_we_pipeline.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classificador_we_pipeline.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1375">
-              <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/functions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            <state relative-caret-position="325">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="e#25#46#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,9 +93,9 @@
         <option value="$PROJECT_DIR$/results/we com tfidf/glove/832_glove_1000.txt" />
         <option value="$PROJECT_DIR$/results/we com tfidf/glove/466_glove_1000.txt" />
         <option value="$PROJECT_DIR$/results/we com tfidf/glove/366_glove_1000.txt" />
+        <option value="$PROJECT_DIR$/classificador_we_pipeline.py" />
         <option value="$PROJECT_DIR$/functions.py" />
         <option value="$PROJECT_DIR$/classificador_sentenca_embeddings.py" />
-        <option value="$PROJECT_DIR$/classificador_we_pipeline.py" />
       </list>
     </option>
   </component>
@@ -127,6 +112,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,7 +129,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -163,7 +148,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.classificador_we_pipeline">
+  <component name="RunManager" selected="Python.classificador_sentenca_embeddings">
     <configuration name="classificador_sentenca_embeddings" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TCC_Classif_Estrutura_Retorica_Embeddings" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -194,7 +179,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classificador_we_pipeline.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\aleha\OneDrive\Documents\GitHub\TCC_Classif_Estrutura_Retorica_Embeddings\classificador_we_blog.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -244,8 +229,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.classificador_we_pipeline" />
         <item itemvalue="Python.classificador_sentenca_embeddings" />
+        <item itemvalue="Python.classificador_we_pipeline" />
         <item itemvalue="Python.classifier_test" />
         <item itemvalue="Python.word2vec" />
       </list>
@@ -275,18 +260,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15753424" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15753424" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.32849163" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5015806" side_tool="true" weight="0.8916201" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295583" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.6122905" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.8145251" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295583" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.37988827" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32849163" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -637,24 +621,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classificador_we_pipeline.py">
+    <entry file="file://$PROJECT_DIR$/classificador_we_blog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1375">
-          <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="153" column="40" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
+        <state relative-caret-position="925">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        <state relative-caret-position="100">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#25#46#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
