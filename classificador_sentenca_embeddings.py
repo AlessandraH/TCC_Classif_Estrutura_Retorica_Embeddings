@@ -26,9 +26,8 @@ def sentence_we(sentence, model, model_size, vocabulary):
     return f.np.array(sentence_feature)
 
 
-def abstract2features(abstracts, tfidf, tfidf_prev, tfidf_next, pos, i, we):
-    label = abstracts[i][0]
-    sentence = abstracts[i][1]
+def sent2features(sentences, tfidf, tfidf_prev, tfidf_next, pos, i, we):
+    s = sentences[i]
 
     features = {
         'wordembeddings': we,
@@ -38,16 +37,16 @@ def abstract2features(abstracts, tfidf, tfidf_prev, tfidf_next, pos, i, we):
         # 'posicao': pos,
     }
 
-    if i == 0:
+    if pos[i] == 0:
         features['BOA'] = True
-    if i == len(abstracts)-1:
+    if pos[i+1] == 0:
         features['EOA'] = True
 
     return features
 
 
-def sent2labels(abstracts, i):
-    return [label for label, sentence in abstracts[i]]
+# def sent2labels(abstracts, i):
+#     return [label for label, sentence in abstracts[i]]
 
 
 def classificador():
@@ -87,9 +86,10 @@ def classificador():
         abstracts = f.loadJson(corpus)
         _, _, data, labels, _ = f.loadFromJson(corpus)
         X_sentences, X_prev, X_next, X_pos, Y_sentences, _ = f.abstracts_to_sentences(data, labels)
+        X_pos.append(0)
 
         print("Extraindo caracteristicas")
-        X_sentences = extract_features_we(X_sentences, model, model_size, vocabulary)
+        X_sentences_we = extract_features_we(X_sentences, model, model_size, vocabulary)
 
         #################################################################################################
         # - - - - - - - - - - - - - - Combinando embeddings com tfidf") - - - - - - - - - - - - - - - - #
@@ -174,9 +174,8 @@ def classificador():
         print("CRF")
         clf = f.sklearn_crfsuite.CRF(algorithm='lbfgs', c1=0.1, c2=0.1,
                                      max_iterations=100, all_possible_transitions=True)
-        X_sentences_crf = [abstract2features(abstracts, _, _, _, _, i, X_sentences[i])
-                            for i in range(len(abstracts))]
-        Y_sentences = [sent2labels(abstracts, i) for i in range(len(abstracts))]
+        X_sentences_crf = [sent2features(X_sentences, _, _, _, X_pos, i, X_sentences_we[i])
+                            for i in range(len(X_sentences))]
         print(len(X_sentences_crf))
         print(X_sentences_crf)
         print(len(Y_sentences))
