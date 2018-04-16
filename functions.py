@@ -6,6 +6,9 @@ import json
 import numpy as np
 import sklearn_crfsuite
 
+
+from sklearn_crfsuite import scorers
+from sklearn_crfsuite import metrics
 from collections import defaultdict
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.feature_extraction.text import TfidfVectorizer
