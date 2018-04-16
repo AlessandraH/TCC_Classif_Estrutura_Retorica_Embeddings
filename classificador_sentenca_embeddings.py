@@ -31,7 +31,7 @@ def sent2features(abstract, i, tfidf, tfidf_prev, tfidf_next, pos, we):
     sentence = abstract[i][1]
 
     features = {
-        'word_embeddings': f.np.sum(we[i]),
+        # 'word_embeddings': f.np.sum(we[i]),
         'tfidf': f.np.sum(tfidf[i]),
         'tfidf_prev': f.np.sum(tfidf_prev[i]),
         'tfidf_next': f.np.sum(tfidf_next[i]),
@@ -197,6 +197,11 @@ def classificador():
         print("CRF")
         x_train_pos.append(0)
         x_test_pos.append(0)
+        print(len(train_abstracts))
+        print(x_train.shape)
+        print(x_train_prev.shape)
+        print(x_train_next.shape)
+        print(x_train_we)
         x_train = [abstract2features(a, x_train, x_train_prev, x_train_next, x_train_pos, x_train_we)
                    for a in train_abstracts]
         x_test = [abstract2features(a, x_test, x_test_prev, x_test_next, x_test_pos, x_test_we)
