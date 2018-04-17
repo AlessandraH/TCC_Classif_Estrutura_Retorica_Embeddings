@@ -22,8 +22,8 @@ from sklearn.tree import DecisionTreeClassifier
 from gensim.models import KeyedVectors
 
 
-pontuacao = ['.', ',', ' ', '"', '!', '(', ')', '-', '=', '+', '/', '*', ';', ':',
-                '[', ']', '{', '}', '$', '#', '@', '%', '&', '?']
+pontuacao = ['.', ',', ' ', '"', '!', '(', ')', '-', '=', '+', '/', '*', ';', ':', '[', ']', '{', '}', '$', '#', '@',
+             '%', '&', '?']
 
 
 def to_sentences(abstracts, senteces_max=None):
