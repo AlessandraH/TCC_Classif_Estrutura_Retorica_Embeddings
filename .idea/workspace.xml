@@ -17,15 +17,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="classificador_sentenca_embeddings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
+    <leaf>
+      <file leaf-file-name="crf.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-              <folding>
-                <element signature="e#24#66#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="333">
+              <caret line="115" column="30" lean-forward="true" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -45,7 +42,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/832_word2vec_skipgram600.txt" />
         <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/466_word2vec_skipgram600.txt" />
         <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/366_word2vec_skipgram600.txt" />
         <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/832_word2vec_skipgram1000.txt" />
@@ -96,6 +92,7 @@
         <option value="$PROJECT_DIR$/classificador_we_pipeline.py" />
         <option value="$PROJECT_DIR$/functions.py" />
         <option value="$PROJECT_DIR$/classificador_sentenca_embeddings.py" />
+        <option value="$PROJECT_DIR$/crf.py" />
       </list>
     </option>
   </component>
@@ -112,7 +109,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -129,6 +125,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -260,11 +257,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.31928346" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.32849163" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5015806" side_tool="true" weight="0.8916201" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.698324" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.5351955" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295583" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.37988827" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -285,13 +283,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5925">
-          <caret line="237" lean-forward="true" selection-start-line="237" selection-end-line="237" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/366_word2vec_skipgram1000.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1855">
@@ -637,11 +628,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-          <folding>
-            <element signature="e#24#66#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-192">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="115" column="30" lean-forward="true" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
         </state>
       </provider>
     </entry>
