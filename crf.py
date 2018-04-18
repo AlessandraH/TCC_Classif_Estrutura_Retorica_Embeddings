@@ -117,26 +117,20 @@ def classificador():
         x_test_prev_sentences = selector.transform(x_test_prev_sentences)
         x_test_next_sentences = selector.transform(x_test_next_sentences)
 
-        # x_train_sentences = f.hstack([x_train_we, x_train_sentences, x_train_prev_sentences, x_train_next_sentences, f.np.expand_dims(f.np.array(x_train_sentences_pos), -1)])
-        # x_test_sentences = f.hstack([x_test_we, x_test_sentences, x_test_prev_sentences, x_test_next_sentences, f.np.expand_dims(f.np.array(x_test_sentences_pos), -1)])
-
-        # from scipy.sparse import csr_matrix
-        # x_train_sentences = csr_matrix(x_train_sentences)
-        # x_test_sentences = csr_matrix(x_test_sentences)
-        # print("Gerando features")
-        # print(x_train_sentences.shape)
-        # print(len(y_train))
         X_pos.append(0)
+        x_train_sentences_pos.append(0)
+        x_test_sentences_pos.append(0)
         x_train_crf = [abstract2features(a, x_train_we, x_train_sentences, x_train_prev_sentences,
                                          x_train_next_sentences, x_train_sentences_pos) for a in train_data]
-        x_test_crf = [abstract2features(a, x_test_we, x_test_sentences, x_test_prev_sentences,
-                                         x_test_next_sentences, x_test_sentences_pos) for a in test_data]
+        x_test_crf = [abstract2features(a, x_test_we, x_test_sentences, x_test_prev_sentences, x_test_next_sentences,
+                                        x_test_sentences_pos) for a in test_data]
         y_train_crf = [abstract2labels(a) for a in train_data]
         y_test_crf = [abstract2labels(a) for a in test_data]
+
         # X_crf = [abstract2features(a, X_sentences_we, X_sentences, X_prev, X_next, X_pos) for a in abstracts]
         # Y_crf = [abstract2labels(a) for a in abstracts]
+        
         print("CRF")
-        # clf = f.sklearn_crfsuite.CRF()
         clf = f.sklearn_crfsuite.CRF(algorithm='lbfgs', c1=0.1, c2=0.1,
                                      max_iterations=100, all_possible_transitions=True)
         # clf = clf.fit(X_crf, Y_crf)
