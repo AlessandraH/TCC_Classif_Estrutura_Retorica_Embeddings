@@ -15,12 +15,33 @@ def extract_features_we(X_sentences, model, model_size, vocabulary):
     return f.np.array(features)
 
 
-def sent2features(features, i, label):
+def sent2features(abstract, i, we, tfidf, tfidf_prev, tfidf_next, pos):
+    label = abstract[i][0]
+    sentence = abstract[i][1]
+
     features = {
-        'features': features[i],
-        'label': label[i],
+        'we': f.np.sum(we),
+        'tfidf': f.np.sum(tfidf),
+        'tfidf_prev': f.np.sum(tfidf_prev),
+        'tfidf_next': f.np.sum(tfidf_next),
+        'pos': pos[i],
+        'label': label,
     }
+
+    if pos[i] == 0:
+        features['boa'] = True
+    elif pos[i+1] == 0:
+        features['eoa'] = True
+
     return features
+
+
+def abstract2features(abstract, we, tfidf, tfidf_prev, tfidf_next, pos):
+    return [sent2features(abstract, i, we, tfidf[i], tfidf_prev[i], tfidf_next[i], pos) for i in range(len(abstract))]
+
+
+def abstract2labels(abstract):
+    return [label for label, abstract in abstract]
 
 
 def classificador():
@@ -44,7 +65,6 @@ def classificador():
     # model_name = 'glove_s600.txt'
     # model_name = 'glove_s1000.txt'
 
-    porcent = 0.2
     model_size = 50
     ngrama = 1
     kchi = 100
@@ -56,55 +76,73 @@ def classificador():
     for corpus in corpora:
         print("")
         print("lendo corpus ", corpus)
+        abstracts = f.loadJson(corpus)
         _, _, data, labels, _ = f.loadFromJson(corpus)
         X_sentences, X_prev, X_next, X_pos, Y_sentences, _ = f.abstracts_to_sentences(data, labels)
-        ind = round(len(data) * porcent)
-        x_train, x_test, y_train, y_test = (data[ind:], data[:ind], labels[ind:], labels[:ind])
-        x_train_sentences, x_train_prev_sentences, x_train_next_sentences, x_train_sentences_pos, y_train_sentences, train_ind = f.abstracts_to_sentences(x_train, y_train)
-        x_test_sentences, x_test_prev_sentences, x_test_next_sentences, x_test_sentences_pos, y_test_sentences, test_ind = f.abstracts_to_sentences(x_test, y_test)
+        # ind = round(len(data) * porcent)
+        # x_train, x_test, y_train, y_test = (data[ind:], data[:ind], labels[ind:], labels[:ind])
+        # x_train_sentences, x_train_prev_sentences, x_train_next_sentences, x_train_sentences_pos, y_train_sentences, train_ind = f.abstracts_to_sentences(x_train, y_train)
+        # x_test_sentences, x_test_prev_sentences, x_test_next_sentences, x_test_sentences_pos, y_test_sentences, test_ind = f.abstracts_to_sentences(x_test, y_test)
+        #
+        # x_train_we = extract_features_we(x_train_sentences, model, model_size, vocabulary)
+        # x_test_we = extract_features_we(x_test_sentences, model, model_size, vocabulary)
 
-        x_train_we = extract_features_we(x_train_sentences, model, model_size, vocabulary)
-        x_test_we = extract_features_we(x_test_sentences, model, model_size, vocabulary)
+        X_sentences_we = extract_features_we(X_sentences, model, model_size, vocabulary)
 
         print("Extraindo tfidf e chi2")
         vectorizer = f.TfidfVectorizer(ngram_range=(1, ngrama))
         selector = f.SelectKBest(f.chi2, k=kchi)
 
-        x_train_sentences = vectorizer.fit_transform(x_train_sentences)
-        x_test_sentences = vectorizer.transform(x_test_sentences)
-        x_train_prev_sentences = vectorizer.transform(x_train_prev_sentences)
-        x_train_next_sentences = vectorizer.transform(x_train_next_sentences)
-        x_test_prev_sentences = vectorizer.transform(x_test_prev_sentences)
-        x_test_next_sentences = vectorizer.transform(x_test_next_sentences)
+        X_sentences = vectorizer.fit_transform(X_sentences)
+        X_prev = vectorizer.transform(X_prev)
+        X_next = vectorizer.transform(X_next)
+        X_sentences = selector.fit_transform(X_sentences, Y_sentences)
+        X_prev = selector.transform(X_prev)
+        X_next = selector.transform(X_next)
 
-        x_train_sentences = selector.fit_transform(x_train_sentences, y_train_sentences)
-        x_test_sentences = selector.transform(x_test_sentences)
-        x_train_prev_sentences = selector.transform(x_train_prev_sentences)
-        x_train_next_sentences = selector.transform(x_train_next_sentences)
-        x_test_prev_sentences = selector.transform(x_test_prev_sentences)
-        x_test_next_sentences = selector.transform(x_test_next_sentences)
-
-        x_train_sentences = f.hstack([x_train_we, x_train_sentences, x_train_prev_sentences, x_train_next_sentences, f.np.expand_dims(f.np.array(x_train_sentences_pos), -1)])
-        x_test_sentences = f.hstack([x_test_we, x_test_sentences, x_test_prev_sentences, x_test_next_sentences, f.np.expand_dims(f.np.array(x_test_sentences_pos), -1)])
-        from scipy.sparse import csr_matrix
-        x_train_sentences = csr_matrix(x_train_sentences)
-        x_test_sentences = csr_matrix(x_test_sentences)
-        print("Gerando features")
-        print(x_train_sentences.shape)
-        print(len(y_train))
-        # x_train_crf = [sent2features(x_train_sentences, i, y_train) for i in range(len())]
-        # x_test_crf = [sent2features(x_test_sentences, i, y_test) for i in x_test_sentences.shape[0]]
-
+        # x_train_sentences = vectorizer.fit_transform(x_train_sentences)
+        # x_test_sentences = vectorizer.transform(x_test_sentences)
+        # x_train_prev_sentences = vectorizer.transform(x_train_prev_sentences)
+        # x_train_next_sentences = vectorizer.transform(x_train_next_sentences)
+        # x_test_prev_sentences = vectorizer.transform(x_test_prev_sentences)
+        # x_test_next_sentences = vectorizer.transform(x_test_next_sentences)
+        #
+        # x_train_sentences = selector.fit_transform(x_train_sentences, y_train_sentences)
+        # x_test_sentences = selector.transform(x_test_sentences)
+        # x_train_prev_sentences = selector.transform(x_train_prev_sentences)
+        # x_train_next_sentences = selector.transform(x_train_next_sentences)
+        # x_test_prev_sentences = selector.transform(x_test_prev_sentences)
+        # x_test_next_sentences = selector.transform(x_test_next_sentences)
+        #
+        # x_train_sentences = f.hstack([x_train_we, x_train_sentences, x_train_prev_sentences, x_train_next_sentences, f.np.expand_dims(f.np.array(x_train_sentences_pos), -1)])
+        # x_test_sentences = f.hstack([x_test_we, x_test_sentences, x_test_prev_sentences, x_test_next_sentences, f.np.expand_dims(f.np.array(x_test_sentences_pos), -1)])
+        # from scipy.sparse import csr_matrix
+        # x_train_sentences = csr_matrix(x_train_sentences)
+        # x_test_sentences = csr_matrix(x_test_sentences)
+        # print("Gerando features")
+        # print(x_train_sentences.shape)
+        # print(len(y_train))
+        # # x_train_crf = [sent2features(x_train_sentences, i, y_train) for i in range(len())]
+        # # x_test_crf = [sent2features(x_test_sentences, i, y_test) for i in x_test_sentences.shape[0]]
+        X_pos.append(0)
+        X_crf = [abstract2features(a, X_sentences_we, X_sentences, X_prev, X_next, X_pos) for a in abstracts]
+        Y_crf = [abstract2labels(a) for a in abstracts]
+        print("TIPO DO X_CRF: ", type(X_crf[0]))
         print("CRF")
+        # clf = f.sklearn_crfsuite.CRF()
         clf = f.sklearn_crfsuite.CRF(algorithm='lbfgs', c1=0.1, c2=0.1,
                                      max_iterations=100, all_possible_transitions=True)
-        clf.fit(x_train_sentences, y_train)
-        pred = clf.predict(x_test_sentences)
+        clf = clf.fit(X_crf, Y_crf)
+        # pred = clf.predict(X_crf)
+        pred = f.cross_val_predict(clf, X_crf, Y_crf, cv=10)
         print("Classification_report:")
         labels = list(clf.classes_)
-        f.metrics.flat_f1_score(y_test, pred, average='weighted', labels=labels)
+        f.metrics.flat_f1_score(Y_crf, pred, average='weighted', labels=labels)
         sorted_labels = sorted(labels, key=lambda name: (name[1:], name[0]))
-        print(f.metrics.flat_classification_report(y_test, pred, labels=sorted_labels, digits=3))
+        print(f.metrics.flat_classification_report(Y_crf, pred, labels=sorted_labels, digits=3))
+        # print(f.classification_report(Y_sentences, pred))
+        # print(f.confusion_matrix(Y_sentences, pred))
+        print("")
 
 
 print(f.time.asctime(f.time.localtime(f.time.time())))
