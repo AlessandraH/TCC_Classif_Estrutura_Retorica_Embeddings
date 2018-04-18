@@ -17,43 +17,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="classificador_sentenca_embeddings.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="582">
-                  <caret line="77" column="70" lean-forward="true" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="70" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="crf.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/crf.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="422">
-                  <caret line="123" column="8" lean-forward="true" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="crf.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/crf.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="classificador_sentenca_embeddings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="56" column="88" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -303,12 +277,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.31928346" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.32849163" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5015806" side_tool="true" weight="0.8916201" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.7687151" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.824581" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295583" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.37988827" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -675,17 +648,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
+    <entry file="file://$PROJECT_DIR$/crf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="77" column="70" lean-forward="true" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="70" />
+        <state relative-caret-position="2250">
+          <caret line="90" column="54" selection-start-line="90" selection-start-column="54" selection-end-line="90" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crf.py">
+    <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="123" column="8" lean-forward="true" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
+        <state relative-caret-position="275">
+          <caret line="56" column="88" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="88" />
         </state>
       </provider>
     </entry>

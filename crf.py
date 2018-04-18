@@ -2,66 +2,25 @@
 import functions as f
 
 
-def abstracts_prev_next_pos(abstracts):
-    prev = []
-    next = []
-    pos = []
-    for abstract in abstracts:
-        pos_aux = []
-        prev_aux = abstract.copy()
-        next_aux = abstract.copy()
-        for i in range(len(abstract)):
-            pos_aux.append(i)
-        prev_aux = prev_aux[:-1]
-        prev_aux.insert(0, ["", ""])
-        next_aux = next_aux[1:]
-        next_aux.insert(-1, ["", ""])
-        prev.append(prev_aux)
-        next.append(next_aux)
-        pos.append(pos_aux)
-    return prev, next, pos
+def extract_features_we(X_sentences, model, model_size, vocabulary):
+    features = []
+    for s in X_sentences:
+        sentence_feature = [0] * model_size
+        sentences = str(s).split()
+        for word in sentences:
+            if len(word) > 2 and word in vocabulary:
+                word_feature = model[word]
+                sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
+        features.append(sentence_feature)
+    return f.np.array(features)
 
 
-def label_abstract(abstract, i):
-    return (a for label, a in abstract[i])
-
-
-def sent_we(sentence, model, model_size, vocabulary):
-    sentence_feature = [0] * model_size
-    for word in sentence:
-        if len(word) > 2 and word in vocabulary:
-            word_feature = model[word]
-            sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
-    return f.np.array(sentence_feature)
-
-
-def sent2features(abstract, i, tfidf, tfidf_prev, tfidf_next, pos, model, model_size, vocabulary):
-    label = abstract[i][0]
-    sentence = abstract[i][1]
+def sent2features(features, i, label):
     features = {
-        'word_embeddings': f.np.sum(sent_we(sentence, model, model_size, vocabulary)),
-        'tfidf': f.np.sum(tfidf),
-        'tfidf_prev': f.np.sum(tfidf_prev),
-        'tfidf_next': f.np.sum(tfidf_next),
-        'posicao': pos[i],
-        'label': label,
+        'features': features[i],
+        'label': label[i],
     }
-
-    if i == 0:
-        features['boa'] = True
-    else:
-        features['eoa'] = True
-
     return features
-
-
-def abstract2features(abst, tfidf, tfidf_prev, tfidf_next, pos, model, model_size, vocabulary):
-    return [sent2features(abst, i, tfidf, tfidf_prev, tfidf_next, pos, model, model_size, vocabulary)
-            for i in range(len(abst))]
-
-
-def abstract2labels(abst):
-    return [label for label, sentence in abst]
 
 
 def classificador():
@@ -97,63 +56,55 @@ def classificador():
     for corpus in corpora:
         print("")
         print("lendo corpus ", corpus)
-        abstracts = f.loadJson(corpus)
-        prev, next, pos = abstracts_prev_next_pos(abstracts)
-        ind = int(round(len(abstracts) * porcent, 0))
-        train_abstracts = abstracts[:ind]
-        test_abstracts = abstracts[ind:]
-        train_prev = prev[:ind]
-        test_prev = prev[ind:]
-        train_next = next[:ind]
-        test_next = next[ind:]
-        train_pos = pos[:ind]
-        test_pos = pos[ind:]
+        _, _, data, labels, _ = f.loadFromJson(corpus)
+        X_sentences, X_prev, X_next, X_pos, Y_sentences, _ = f.abstracts_to_sentences(data, labels)
+        ind = round(len(data) * porcent)
+        x_train, x_test, y_train, y_test = (data[ind:], data[:ind], labels[ind:], labels[:ind])
+        x_train_sentences, x_train_prev_sentences, x_train_next_sentences, x_train_sentences_pos, y_train_sentences, train_ind = f.abstracts_to_sentences(x_train, y_train)
+        x_test_sentences, x_test_prev_sentences, x_test_next_sentences, x_test_sentences_pos, y_test_sentences, test_ind = f.abstracts_to_sentences(x_test, y_test)
+
+        x_train_we = extract_features_we(x_train_sentences, model, model_size, vocabulary)
+        x_test_we = extract_features_we(x_test_sentences, model, model_size, vocabulary)
 
         print("Extraindo tfidf e chi2")
-        x_train = [label_abstract(train_abstracts, i) for i in range(len(train_abstracts))]
-        x_train_prev = [label_abstract(train_prev, i) for i in range(len(train_prev))]
-        x_train_next = [label_abstract(train_next, i) for i in range(len(train_next))]
-        x_test = [label_abstract(test_abstracts, i) for i in range(len(test_abstracts))]
-        x_test_prev = [label_abstract(test_prev, i) for i in range(len(test_prev))]
-        x_test_next = [label_abstract(test_next, i) for i in range(len(test_next))]
-        y_train_crf = [abstract2labels(a) for a in train_abstracts]
-        y_test_crf = [abstract2labels(a) for a in test_abstracts]
-
         vectorizer = f.TfidfVectorizer(ngram_range=(1, ngrama))
         selector = f.SelectKBest(f.chi2, k=kchi)
 
-        x_train = vectorizer.fit_transform(x_train)
-        x_train_prev = vectorizer.transform(x_train_prev)
-        x_train_next = vectorizer.transform(x_train_next)
-        x_test = vectorizer.transform(x_test)
-        x_test_prev = vectorizer.transform(x_test_prev)
-        x_test_next = vectorizer.transform(x_test_next)
+        x_train_sentences = vectorizer.fit_transform(x_train_sentences)
+        x_test_sentences = vectorizer.transform(x_test_sentences)
+        x_train_prev_sentences = vectorizer.transform(x_train_prev_sentences)
+        x_train_next_sentences = vectorizer.transform(x_train_next_sentences)
+        x_test_prev_sentences = vectorizer.transform(x_test_prev_sentences)
+        x_test_next_sentences = vectorizer.transform(x_test_next_sentences)
 
-        print(x_train.shape)
-        print(len(y_train_crf))
-        x_train = selector.fit_transform(x_train, y_train_crf)
-        x_train_prev = selector.transform(x_train_prev)
-        x_train_next = selector.transform(x_train_next)
-        x_test = selector.transform(x_test)
-        x_test_prev = selector.transform(x_test_prev)
-        x_test_next = selector.transform(x_test_next)
+        x_train_sentences = selector.fit_transform(x_train_sentences, y_train_sentences)
+        x_test_sentences = selector.transform(x_test_sentences)
+        x_train_prev_sentences = selector.transform(x_train_prev_sentences)
+        x_train_next_sentences = selector.transform(x_train_next_sentences)
+        x_test_prev_sentences = selector.transform(x_test_prev_sentences)
+        x_test_next_sentences = selector.transform(x_test_next_sentences)
 
+        x_train_sentences = f.hstack([x_train_we, x_train_sentences, x_train_prev_sentences, x_train_next_sentences, f.np.expand_dims(f.np.array(x_train_sentences_pos), -1)])
+        x_test_sentences = f.hstack([x_test_we, x_test_sentences, x_test_prev_sentences, x_test_next_sentences, f.np.expand_dims(f.np.array(x_test_sentences_pos), -1)])
+        from scipy.sparse import csr_matrix
+        x_train_sentences = csr_matrix(x_train_sentences)
+        x_test_sentences = csr_matrix(x_test_sentences)
         print("Gerando features")
-        x_train_crf = [abstract2features(a, x_train, x_train_prev, x_train_next, train_pos, model, model_size,
-                                         vocabulary) for a in train_abstracts]
-        x_test_crf = [abstract2features(a, x_test, x_test_prev, x_test_next, test_pos, model, model_size, vocabulary)
-                      for a in test_abstracts]
+        print(x_train_sentences.shape)
+        print(len(y_train))
+        # x_train_crf = [sent2features(x_train_sentences, i, y_train) for i in range(len())]
+        # x_test_crf = [sent2features(x_test_sentences, i, y_test) for i in x_test_sentences.shape[0]]
 
         print("CRF")
         clf = f.sklearn_crfsuite.CRF(algorithm='lbfgs', c1=0.1, c2=0.1,
                                      max_iterations=100, all_possible_transitions=True)
-        clf.fit(x_train_crf, y_train_crf)
-        pred = clf.predict(x_test_crf)
+        clf.fit(x_train_sentences, y_train)
+        pred = clf.predict(x_test_sentences)
         print("Classification_report:")
         labels = list(clf.classes_)
-        f.metrics.flat_f1_score(y_test_crf, pred, average='weighted', labels=labels)
+        f.metrics.flat_f1_score(y_test, pred, average='weighted', labels=labels)
         sorted_labels = sorted(labels, key=lambda name: (name[1:], name[0]))
-        print(f.metrics.flat_classification_report(y_test_crf, pred, labels=sorted_labels, digits=3))
+        print(f.metrics.flat_classification_report(y_test, pred, labels=sorted_labels, digits=3))
 
 
 print(f.time.asctime(f.time.localtime(f.time.time())))
