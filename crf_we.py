@@ -43,9 +43,9 @@ def abstract2labels(abstract):
 def classificador():
     corpora = ['corpus/output366.json', 'corpus/output466.json', 'corpus/output832.json']
 
-    model_name = 'cbow_s50.txt'
+    # model_name = 'cbow_s50.txt'
     # model_name = 'cbow_s100.txt'
-    # model_name = 'cbow_s300.txt'
+    model_name = 'cbow_s300.txt'
     # model_name = 'cbow_s600.txt'
     # model_name = 'cbow_s1000.txt'
 
@@ -62,7 +62,7 @@ def classificador():
     # model_name = 'glove_s1000.txt'
 
     porcent = 0.2
-    model_size = 50
+    model_size = 300
 
     print("Abrindo modelo embedding")
     model = f.KeyedVectors.load_word2vec_format(fname=model_name, unicode_errors="ignore")
