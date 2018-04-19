@@ -140,7 +140,6 @@ def classificador():
         print(f.confusion_matrix(Y_sentences, pred))
 
 
-
 # reload(sys)
 # sys.setdefaultencoding('utf8')
 print(f.time.asctime(f.time.localtime(f.time.time())))

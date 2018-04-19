@@ -15,16 +15,12 @@ def extract_features_we(X_sentences, model, model_size, vocabulary):
     return f.np.array(features)
 
 
-def sent2features(abstract, i, we, tfidf, tfidf_prev, tfidf_next, pos):
+def sent2features(abstract, i, we, pos):
     label = abstract[i][0]
     sentence = abstract[i][1]
 
     features = {
         'we': f.np.sum(we),
-        'tfidf': f.np.sum(tfidf),
-        'tfidf_prev': f.np.sum(tfidf_prev),
-        'tfidf_next': f.np.sum(tfidf_next),
-        'pos': pos[i],
         'label': label,
     }
 
@@ -36,8 +32,8 @@ def sent2features(abstract, i, we, tfidf, tfidf_prev, tfidf_next, pos):
     return features
 
 
-def abstract2features(abstract, we, tfidf, tfidf_prev, tfidf_next, pos):
-    return [sent2features(abstract, i, we, tfidf[i], tfidf_prev[i], tfidf_next[i], pos) for i in range(len(abstract))]
+def abstract2features(abstract, we, pos):
+    return [sent2features(abstract, i, we, pos) for i in range(len(abstract))]
 
 
 def abstract2labels(abstract):
@@ -67,8 +63,6 @@ def classificador():
 
     porcent = 0.2
     model_size = 50
-    ngrama = 1
-    kchi = 100
 
     print("Abrindo modelo embedding")
     model = f.KeyedVectors.load_word2vec_format(fname=model_name, unicode_errors="ignore")
@@ -92,42 +86,15 @@ def classificador():
 
         X_sentences_we = extract_features_we(X_sentences, model, model_size, vocabulary)
 
-        print("Extraindo tfidf e chi2")
-        vectorizer = f.TfidfVectorizer(ngram_range=(1, ngrama))
-        selector = f.SelectKBest(f.chi2, k=kchi)
-
-        X_sentences = vectorizer.fit_transform(X_sentences)
-        X_prev = vectorizer.transform(X_prev)
-        X_next = vectorizer.transform(X_next)
-        X_sentences = selector.fit_transform(X_sentences, Y_sentences)
-        X_prev = selector.transform(X_prev)
-        X_next = selector.transform(X_next)
-
-        # x_train_sentences = vectorizer.fit_transform(x_train_sentences)
-        # x_test_sentences = vectorizer.transform(x_test_sentences)
-        # x_train_prev_sentences = vectorizer.transform(x_train_prev_sentences)
-        # x_train_next_sentences = vectorizer.transform(x_train_next_sentences)
-        # x_test_prev_sentences = vectorizer.transform(x_test_prev_sentences)
-        # x_test_next_sentences = vectorizer.transform(x_test_next_sentences)
-        #
-        # x_train_sentences = selector.fit_transform(x_train_sentences, y_train_sentences)
-        # x_test_sentences = selector.transform(x_test_sentences)
-        # x_train_prev_sentences = selector.transform(x_train_prev_sentences)
-        # x_train_next_sentences = selector.transform(x_train_next_sentences)
-        # x_test_prev_sentences = selector.transform(x_test_prev_sentences)
-        # x_test_next_sentences = selector.transform(x_test_next_sentences)
-
         # x_train_sentences_pos.append(0)
         # x_test_sentences_pos.append(0)
-        # x_train_crf = [abstract2features(a, x_train_we, x_train_sentences, x_train_prev_sentences,
-        #                                  x_train_next_sentences, x_train_sentences_pos) for a in train_data]
-        # x_test_crf = [abstract2features(a, x_test_we, x_test_sentences, x_test_prev_sentences, x_test_next_sentences,
-        #                                 x_test_sentences_pos) for a in test_data]
+        # x_train_crf = [abstract2features(a, x_train_we, x_train_sentences_pos) for a in train_data]
+        # x_test_crf = [abstract2features(a, x_test_we, x_test_sentences_pos) for a in test_data]
         # y_train_crf = [abstract2labels(a) for a in train_data]
         # y_test_crf = [abstract2labels(a) for a in test_data]
 
         X_pos.append(0)
-        X_crf = [abstract2features(a, X_sentences_we, X_sentences, X_prev, X_next, X_pos) for a in abstracts]
+        X_crf = [abstract2features(a, X_sentences_we, X_pos) for a in abstracts]
         Y_crf = [abstract2labels(a) for a in abstracts]
 
         print("CRF")
