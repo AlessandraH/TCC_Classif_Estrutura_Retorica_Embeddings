@@ -51,9 +51,9 @@ def classificador():
     # model_name = 'cbow_s100.txt'
     # model_name = 'cbow_s300.txt'
     # model_name = 'cbow_s600.txt'
-    model_name = 'cbow_s1000.txt'
+    # model_name = 'cbow_s1000.txt'
 
-    # model_name = 'skip_s50.txt'
+    model_name = 'skip_s50.txt'
     # model_name = 'skip_s100.txt'
     # model_name = 'skip_s300.txt'
     # model_name = 'skip_s600.txt'
@@ -66,7 +66,7 @@ def classificador():
     # model_name = 'glove_s1000.txt'
 
     porcent = 0.2
-    model_size = 1000
+    model_size = 50
     ngrama = 1
     kchi = 100
 
