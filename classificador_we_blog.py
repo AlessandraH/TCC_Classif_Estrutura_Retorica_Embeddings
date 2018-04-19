@@ -7,11 +7,11 @@ def main():
 
     corpora = ['corpus/output366.json', 'corpus/output466.json', 'corpus/output832.json']
 
-    model_name = 'cbow_s50Copia.txt'
-    # model_name = 'cbow_s100Copia.txt'
-    # model_name = 'cbow_s300Copia.txt'
-    # model_name = 'cbow_s600Copia.txt'
-    # model_name = 'cbow_s1000Copia.txt'
+    model_name = 'cbow_s50.txt'
+    # model_name = 'cbow_s100.txt'
+    # model_name = 'cbow_s300.txt'
+    # model_name = 'cbow_s600.txt'
+    # model_name = 'cbow_s1000.txt'
 
     with open(model_name, "rb") as lines:
         w2v = {line.split()[0]: f.np.array(map(float, line.split()[1:]))
