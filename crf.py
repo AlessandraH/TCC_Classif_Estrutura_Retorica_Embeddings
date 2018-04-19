@@ -15,9 +15,9 @@ def extract_features_we(X_sentences, model, model_size, vocabulary):
     return f.np.array(features)
 
 
-def sent2features(abstract, i, we, tfidf, tfidf_prev, tfidf_next, pos):
-    label = abstract[i][0]
-    sentence = abstract[i][1]
+def sent2features(abstract, i, we, tfidf, tfidf_prev, tfidf_next, pos, label):
+    # label = abstract[i][0]
+    # sentence = abstract[i][1]
 
     features = {
         'we': f.np.sum(we),
@@ -36,8 +36,8 @@ def sent2features(abstract, i, we, tfidf, tfidf_prev, tfidf_next, pos):
     return features
 
 
-def abstract2features(abstract, we, tfidf, tfidf_prev, tfidf_next, pos):
-    return [sent2features(abstract, i, we, tfidf[i], tfidf_prev[i], tfidf_next[i], pos) for i in range(len(abstract))]
+def abstract2features(abstract, we, tfidf, tfidf_prev, tfidf_next, pos, c, labels):
+    return [sent2features(abstract, c+i, we, tfidf[c+i], tfidf_prev[c+i], tfidf_next[c+i], pos, labels[c+i]) for i in range(len(abstract))]
 
 
 def abstract2labels(abstract):
@@ -127,7 +127,12 @@ def classificador():
         # y_test_crf = [abstract2labels(a) for a in test_data]
 
         X_pos.append(0)
-        X_crf = [abstract2features(a, X_sentences_we, X_sentences, X_prev, X_next, X_pos) for a in abstracts]
+        X_crf = []
+        c = 0
+        for a in abstracts:
+            X_crf.append(abstract2features(a, X_sentences_we, X_sentences, X_prev, X_next, X_pos, c, Y_sentences))
+            c += len(a)
+        # X_crf = [abstract2features(a, X_sentences_we, X_sentences, X_prev, X_next, X_pos) for a in abstracts]
         Y_crf = [abstract2labels(a) for a in abstracts]
 
         print("CRF")
