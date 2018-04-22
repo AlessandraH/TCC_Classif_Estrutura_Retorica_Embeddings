@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import functions as f
+import warnings
 
 
 def extract_features_we(X_sentences, model, model_size, vocabulary):
@@ -39,13 +40,13 @@ def abstract2labels(abstract):
 def classificador():
     corpora = ['corpus/output366.json', 'corpus/output466.json', 'corpus/output832.json']
 
-    # model_name = 'cbow_s50.txt'
+    model_name = 'cbow_s50.txt'
     # model_name = 'cbow_s100.txt'
     # model_name = 'cbow_s300.txt'
     # model_name = 'cbow_s600.txt'
     # model_name = 'cbow_s1000.txt'
 
-    model_name = 'skip_s50.txt'
+    # model_name = 'skip_s50.txt'
     # model_name = 'skip_s100.txt'
     # model_name = 'skip_s300.txt'
     # model_name = 'skip_s600.txt'
@@ -93,6 +94,7 @@ def classificador():
         print("")
 
 
+warnings.filterwarnings("ignore")
 print(f.time.asctime(f.time.localtime(f.time.time())))
 classificador()
 print(f.time.asctime(f.time.localtime(f.time.time())))
