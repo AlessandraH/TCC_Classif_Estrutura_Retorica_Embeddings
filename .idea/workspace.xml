@@ -18,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="crf.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crf.py">
+      <file leaf-file-name="crf_we.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crf_we.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="63" column="19" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+            <state relative-caret-position="117">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="e#24#45#0" expanded="true" />
               </folding>
@@ -30,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crf_we.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crf_we.py">
+      <file leaf-file-name="crf.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+            <state relative-caret-position="67">
+              <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
               <folding>
                 <element signature="e#24#45#0" expanded="true" />
               </folding>
@@ -57,41 +57,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/cbow/366_word2vec_cbow600.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/cbow/832_word2vec_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/cbow/466_word2vec_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/cbow/366_word2vec_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/word2vec/cbow/832_word2vec_cbow50.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/word2vec/cbow/466_word2vec_cbow50.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/word2vec/cbow/366_word2vec_cbow50.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/word2vec/cbow/832_word2vec_cbow100.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/word2vec/cbow/466_word2vec_cbow100.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/word2vec/cbow/366_word2vec_cbow100.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/word2vec/cbow/832_word2vec_cbow300.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/word2vec/cbow/466_word2vec_cbow300.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/word2vec/cbow/366_word2vec_cbow300.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/word2vec/cbow/832_word2vec_cbow600.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/word2vec/cbow/466_word2vec_cbow600.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/word2vec/cbow/366_word2vec_cbow600.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/word2vec/cbow/832_word2vec_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/word2vec/cbow/466_word2vec_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/word2vec/cbow/366_word2vec_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/832_word2vec_skipgram50.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/466_word2vec_skipgram50.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/366_word2vec_skipgram50.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/832_word2vec_skipgram100.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/466_word2vec_skipgram100.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/366_word2vec_skipgram100.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/832_word2vec_skipgram300.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/466_word2vec_skipgram300.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/366_word2vec_skipgram300.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/832_word2vec_skipgram600.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/466_word2vec_skipgram600.txt" />
         <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/366_word2vec_skipgram600.txt" />
         <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/832_word2vec_skipgram1000.txt" />
         <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/466_word2vec_skipgram1000.txt" />
         <option value="$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/366_word2vec_skipgram1000.txt" />
-        <option value="$PROJECT_DIR$/crf.py" />
         <option value="$PROJECT_DIR$/results/word embeddings/word2vec/skipgram/832_word2vec_skipgram50.txt" />
         <option value="$PROJECT_DIR$/results/word embeddings/word2vec/skipgram/466_word2vec_skipgram50.txt" />
         <option value="$PROJECT_DIR$/results/word embeddings/word2vec/skipgram/366_word2vec_skipgram50.txt" />
@@ -107,7 +76,38 @@
         <option value="$PROJECT_DIR$/results/word embeddings/word2vec/skipgram/832_word2vec_skipgram1000.txt" />
         <option value="$PROJECT_DIR$/results/word embeddings/word2vec/skipgram/466_word2vec_skipgram1000.txt" />
         <option value="$PROJECT_DIR$/results/word embeddings/word2vec/skipgram/366_word2vec_skipgram1000.txt" />
+        <option value="$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/832_wang2vec_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/466_wang2vec_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/366_wang2vec_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/366_wang2vec_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/832_wang2vec_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/466_wang2vec_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/832_wang2vec_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/466_wang2vec_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/366_wang2vec_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/832_wang2vec_cbow600.txt" />
+        <option value="$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/466_wang2vec_cbow600.txt" />
+        <option value="$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/366_wang2vec_cbow600.txt" />
         <option value="$PROJECT_DIR$/crf_we.py" />
+        <option value="$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/832_wang2vec_cbow1000.txt" />
+        <option value="$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/466_wang2vec_cbow1000.txt" />
+        <option value="$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/366_wang2vec_cbow1000.txt" />
+        <option value="$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/832_wang2vec_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/466_wang2vec_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/366_wang2vec_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/832_wang2vec_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/466_wang2vec_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/366_wang2vec_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/832_wang2vec_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/466_wang2vec_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/366_wang2vec_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/832_wang2vec_cbow600.txt" />
+        <option value="$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/466_wang2vec_cbow600.txt" />
+        <option value="$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/366_wang2vec_cbow600.txt" />
+        <option value="$PROJECT_DIR$/crf.py" />
+        <option value="$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/832_wang2vec_cbow1000.txt" />
+        <option value="$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/466_wang2vec_cbow1000.txt" />
+        <option value="$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/366_wang2vec_cbow1000.txt" />
       </list>
     </option>
   </component>
@@ -140,22 +140,22 @@
               <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="b2602c69:ProjectViewProjectNode" />
               <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="462c0819:PsiDirectoryNode" />
               <item name="results" type="462c0819:PsiDirectoryNode" />
-              <item name="word embeddings" type="462c0819:PsiDirectoryNode" />
+              <item name="we com tfidf" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="b2602c69:ProjectViewProjectNode" />
               <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="462c0819:PsiDirectoryNode" />
               <item name="results" type="462c0819:PsiDirectoryNode" />
-              <item name="word embeddings" type="462c0819:PsiDirectoryNode" />
-              <item name="word2vec" type="462c0819:PsiDirectoryNode" />
+              <item name="we com tfidf" type="462c0819:PsiDirectoryNode" />
+              <item name="wang2vec" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="b2602c69:ProjectViewProjectNode" />
               <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="462c0819:PsiDirectoryNode" />
               <item name="results" type="462c0819:PsiDirectoryNode" />
-              <item name="word embeddings" type="462c0819:PsiDirectoryNode" />
-              <item name="word2vec" type="462c0819:PsiDirectoryNode" />
-              <item name="skipgram" type="462c0819:PsiDirectoryNode" />
+              <item name="we com tfidf" type="462c0819:PsiDirectoryNode" />
+              <item name="wang2vec" type="462c0819:PsiDirectoryNode" />
+              <item name="cbow" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -186,7 +186,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.crf_we">
+  <component name="RunManager" selected="Python.crf">
     <configuration name="classificador_sentenca_embeddings" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TCC_Classif_Estrutura_Retorica_Embeddings" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -286,8 +286,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.crf_we" />
         <item itemvalue="Python.crf" />
+        <item itemvalue="Python.crf_we" />
         <item itemvalue="Python.classificador_we_blog" />
         <item itemvalue="Python.classificador_sentenca_embeddings" />
         <item itemvalue="Python.classificador_we_pipeline" />
@@ -364,216 +364,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/cbow/366_word2vec_cbow600.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/cbow/366_word2vec_cbow1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/cbow/466_word2vec_cbow1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="110" selection-start-line="110" selection-end-line="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/cbow/832_word2vec_cbow1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/word2vec/cbow/366_word2vec_cbow50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/word2vec/cbow/466_word2vec_cbow50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="110" selection-start-line="110" selection-end-line="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/word2vec/cbow/832_word2vec_cbow50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/word2vec/cbow/366_word2vec_cbow100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/word2vec/cbow/466_word2vec_cbow100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/word2vec/cbow/832_word2vec_cbow100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/word2vec/cbow/366_word2vec_cbow300.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/word2vec/cbow/466_word2vec_cbow300.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/word2vec/cbow/832_word2vec_cbow300.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/word2vec/cbow/466_word2vec_cbow600.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/word2vec/cbow/832_word2vec_cbow600.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/word2vec/cbow/366_word2vec_cbow600.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="110" selection-start-line="110" selection-end-line="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/word2vec/cbow/366_word2vec_cbow1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/word2vec/cbow/466_word2vec_cbow1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/word2vec/cbow/832_word2vec_cbow1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/832_word2vec_skipgram50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/466_word2vec_skipgram50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/366_word2vec_skipgram50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/366_word2vec_skipgram100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/466_word2vec_skipgram100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/832_word2vec_skipgram100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/366_word2vec_skipgram300.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/466_word2vec_skipgram300.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/832_word2vec_skipgram300.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/366_word2vec_skipgram600.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/466_word2vec_skipgram600.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/832_word2vec_skipgram600.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -592,13 +382,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/832_word2vec_skipgram1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="88" column="26" lean-forward="true" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -707,20 +490,237 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crf.py">
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/word2vec/skipgram/832_word2vec_skipgram1000.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="63" column="19" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+        <state relative-caret-position="25">
+          <caret line="88" column="26" lean-forward="true" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/366_wang2vec_cbow50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/832_wang2vec_cbow50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/466_wang2vec_cbow50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/366_wang2vec_cbow100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/466_wang2vec_cbow100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/832_wang2vec_cbow100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/366_wang2vec_cbow300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/466_wang2vec_cbow300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/832_wang2vec_cbow300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/366_wang2vec_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/466_wang2vec_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/832_wang2vec_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/366_wang2vec_cbow1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/466_wang2vec_cbow1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/word embeddings/wang2vec/cbow/832_wang2vec_cbow1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crf_we.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="e#24#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crf_we.py">
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/366_wang2vec_cbow50.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/466_wang2vec_cbow50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/832_wang2vec_cbow50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/366_wang2vec_cbow100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/466_wang2vec_cbow100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/832_wang2vec_cbow100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/366_wang2vec_cbow300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/466_wang2vec_cbow300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/832_wang2vec_cbow300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/366_wang2vec_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/466_wang2vec_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/832_wang2vec_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/366_wang2vec_cbow1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/466_wang2vec_cbow1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/wang2vec/cbow/832_wang2vec_cbow1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
           <folding>
             <element signature="e#24#45#0" expanded="true" />
           </folding>
