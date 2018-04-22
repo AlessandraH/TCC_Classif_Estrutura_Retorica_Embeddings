@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import functions as f
+import warnings
 
 
 def extract_features_we(X_sentences, model, model_size, vocabulary):
@@ -140,6 +141,7 @@ def classificador():
         print(f.confusion_matrix(Y_sentences, pred))
 
 
+warnings.filterwarnings("ignore")
 # reload(sys)
 # sys.setdefaultencoding('utf8')
 print(f.time.asctime(f.time.localtime(f.time.time())))

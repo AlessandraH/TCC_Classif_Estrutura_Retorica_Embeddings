@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import warnings
 import time
 import json
 
@@ -146,3 +147,6 @@ class TfidfEmbeddingVectorizer(object):
                         [np.zeros(self.dim)], axis=0)
                 for words in X
             ])
+
+
+warnings.filterwarnings("ignore")

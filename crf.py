@@ -52,16 +52,16 @@ def classificador():
     # model_name = 'skip_s50.txt'
     # model_name = 'skip_s100.txt'
     # model_name = 'skip_s300.txt'
-    model_name = 'skip_s600.txt'
+    # model_name = 'skip_s600.txt'
     # model_name = 'skip_s1000.txt'
 
     # model_name = 'glove_s50.txt'
     # model_name = 'glove_s100.txt'
     # model_name = 'glove_s300.txt'
     # model_name = 'glove_s600.txt'
-    # model_name = 'glove_s1000.txt'
+    model_name = 'glove_s1000.txt'
 
-    model_size = 600
+    model_size = 1000
     ngrama = 1
     kchi = 100
 
