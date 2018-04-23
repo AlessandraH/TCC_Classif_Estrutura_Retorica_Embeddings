@@ -2,6 +2,7 @@
 import functions as f
 import warnings
 
+
 def extract_features_we(X_sentences, model, model_size, vocabulary):
     features = []
     for s in X_sentences:
