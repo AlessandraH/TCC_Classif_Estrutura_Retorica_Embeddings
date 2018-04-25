@@ -18,23 +18,44 @@ def extract_features_we(X_sentences, model, model_size, vocabulary):
 
 def sent2features(i, we, tfidf, tfidf_prev, tfidf_next, pos):
     features = {
-        'we': f.np.sum(we),
-        'tfidf': f.np.sum(tfidf),
-        'tfidf_prev': f.np.sum(tfidf_prev),
-        'tfidf_next': f.np.sum(tfidf_next),
+        'we': f.np.sum(we[i]),
+        'tfidf': f.np.sum(tfidf[i]),
+        'tfidf_prev': f.np.sum(tfidf_prev[i]),
+        'tfidf_next': f.np.sum(tfidf_next[i]),
         'pos': pos[i],
     }
 
+    # if pos[i] > 0:
+    #     features.update({
+    #         '-1:we': f.np.sum(we[i-1]),
+    #         '-1:tfidf': f.np.sum(tfidf[i-1]),
+    #         '-1:tfidf_prev': f.np.sum(tfidf_prev[i-1]),
+    #         '-1:tfidf_next': f.np.sum(tfidf_next[i-1]),
+    #         '-1:pos': pos[i-1],
+    #     })
+    # else:
+    #     features['boa'] = True
+    # if pos[i+1] > 0:
+    #     features.update({
+    #         '+1:we': f.np.sum(we[i+1]),
+    #         '+1:tfidf': f.np.sum(tfidf[i+1]),
+    #         '+1:tfidf_prev': f.np.sum(tfidf_prev[i+1]),
+    #         '+1:tfidf_next': f.np.sum(tfidf_next[i+1]),
+    #         '+1:pos': pos[i+1],
+    #     })
+    # else:
+    #     features['eoa'] = True
+
     if pos[i] == 0:
         features['boa'] = True
-    elif pos[i+1] == 0:
+    elif pos[i + 1] == 0:
         features['eoa'] = True
 
     return features
 
 
 def abstract2features(abstract, we, tfidf, tfidf_prev, tfidf_next, pos, c):
-    return [sent2features(c+i, we, tfidf[c+i], tfidf_prev[c+i], tfidf_next[c+i], pos) for i in range(len(abstract))]
+    return [sent2features(c+i, we, tfidf, tfidf_prev, tfidf_next, pos) for i in range(len(abstract))]
 
 
 def abstract2labels(abstract):
@@ -44,7 +65,7 @@ def abstract2labels(abstract):
 def classificador():
     corpora = ['corpus/output366.json', 'corpus/output466.json', 'corpus/output832.json']
 
-    # model_name = 'cbow_s50.txt'
+    model_name = 'cbow_s50.txt'
     # model_name = 'cbow_s100.txt'
     # model_name = 'cbow_s300.txt'
     # model_name = 'cbow_s600.txt'
@@ -60,9 +81,9 @@ def classificador():
     # model_name = 'glove_s100.txt'
     # model_name = 'glove_s300.txt'
     # model_name = 'glove_s600.txt'
-    model_name = 'glove_s1000.txt'
+    # model_name = 'glove_s1000.txt'
 
-    model_size = 1000
+    model_size = 50
     ngrama = 1
     kchi = 100
 
