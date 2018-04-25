@@ -26,7 +26,6 @@ def classificador():
     # model_name = 'glove_s600.txt'
     # model_name = 'glove_s1000.txt'
 
-    porcent = 0.2
     model_size = 50
     ngrama = 1
     kchi = 100
@@ -43,8 +42,6 @@ def classificador():
 
         print("Extraindo caracteristicas")
         X_sentences_we = f.extract_features_we(X_sentences, model, model_size, vocabulary)
-        # x_train_we = extract_features_we(x_train, model, model_size, vocabulary)
-        # x_test_we = extract_features_we(x_test, model, model_size, vocabulary)
 
         #################################################################################################
         # - - - - - - - - - - - - - - Combinando embeddings com tfidf") - - - - - - - - - - - - - - - - #
@@ -54,32 +51,16 @@ def classificador():
         X_sentences = vectorizer.fit_transform(X_sentences)
         X_prev = vectorizer.transform(X_prev)
         X_next = vectorizer.transform(X_next)
-        # x_train = vectorizer.fit_transform(x_train)
-        # x_test = vectorizer.transform(x_test)
-        # x_train_prev = vectorizer.transform(x_train_prev)
-        # x_test_prev = vectorizer.transform(x_test_prev)
-        # x_train_next = vectorizer.transform(x_train_next)
-        # x_test_next = vectorizer.transform(x_test_next)
 
         print("Aplicando chi-quadrado")
         selector = f.SelectKBest(f.chi2, k=kchi)
         X_sentences = selector.fit_transform(X_sentences, Y_sentences)
         X_prev = selector.transform(X_prev)
         X_next = selector.transform(X_next)
-        # x_train = selector.fit_transform(x_train, y_train)
-        # x_test = selector.transform(x_test)
-        # x_train_prev = selector.transform(x_train_prev)
-        # x_test_prev = selector.transform(x_test_prev)
-        # x_train_next = selector.transform(x_train_next)
-        # x_test_next = selector.transform(x_test_next)
 
         print("Adicionando anterior e posterior")
         X_sentences = f.hstack([X_sentences_we, X_sentences, X_prev, X_next, f.np.expand_dims(f.np.array(X_pos), -1)])
         X_sentences = X_sentences.todense()
-        # x_train = f.hstack([x_train_we, x_train, x_train_prev, x_train_next, f.np.expand_dims(f.np.array(x_train_pos), -1)])
-        # x_test = f.hstack([x_test_we, x_test, x_test_prev, x_test_next, f.np.expand_dims(f.np.array(x_test_pos), -1)])
-        # x_train = x_train.todense()
-        # x_test = x_test.todense()
         #################################################################################################
 
         print("SVM RBF")

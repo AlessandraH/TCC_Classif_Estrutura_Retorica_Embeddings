@@ -12,27 +12,6 @@ def sent2features(i, we, tfidf, tfidf_prev, tfidf_next, pos):
         'pos': pos[i],
     }
 
-    # if pos[i] > 0:
-    #     features.update({
-    #         '-1:we': f.np.sum(we[i-1]),
-    #         '-1:tfidf': f.np.sum(tfidf[i-1]),
-    #         '-1:tfidf_prev': f.np.sum(tfidf_prev[i-1]),
-    #         '-1:tfidf_next': f.np.sum(tfidf_next[i-1]),
-    #         '-1:pos': pos[i-1],
-    #     })
-    # else:
-    #     features['boa'] = True
-    # if pos[i+1] > 0:
-    #     features.update({
-    #         '+1:we': f.np.sum(we[i+1]),
-    #         '+1:tfidf': f.np.sum(tfidf[i+1]),
-    #         '+1:tfidf_prev': f.np.sum(tfidf_prev[i+1]),
-    #         '+1:tfidf_next': f.np.sum(tfidf_next[i+1]),
-    #         '+1:pos': pos[i+1],
-    #     })
-    # else:
-    #     features['eoa'] = True
-
     if pos[i] == 0:
         features['boa'] = True
     elif pos[i + 1] == 0:
