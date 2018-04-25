@@ -3,19 +3,6 @@ import functions as f
 import warnings
 
 
-def extract_features_we(X_sentences, model, model_size, vocabulary):
-    features = []
-    for s in X_sentences:
-        sentence_feature = [0] * model_size
-        sentences = str(s).split()
-        for word in sentences:
-            if len(word) > 2 and word in vocabulary:
-                word_feature = model[word]
-                sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
-        features.append(sentence_feature)
-    return f.np.array(features)
-
-
 def classificador():
     cross_val = 10
 
@@ -55,7 +42,7 @@ def classificador():
         X_sentences, X_prev, X_next, X_pos, Y_sentences, _ = f.abstracts_to_sentences(data, labels)
 
         print("Extraindo caracteristicas")
-        X_sentences_we = extract_features_we(X_sentences, model, model_size, vocabulary)
+        X_sentences_we = f.extract_features_we(X_sentences, model, model_size, vocabulary)
         # x_train_we = extract_features_we(x_train, model, model_size, vocabulary)
         # x_test_we = extract_features_we(x_test, model, model_size, vocabulary)
 

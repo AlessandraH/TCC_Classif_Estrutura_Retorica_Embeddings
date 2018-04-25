@@ -21,8 +21,8 @@
       <file leaf-file-name="functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="820">
-              <caret line="151" column="33" selection-start-line="151" selection-start-column="33" selection-end-line="151" selection-end-column="33" />
+            <state relative-caret-position="420">
+              <caret line="114" column="11" lean-forward="true" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -30,22 +30,34 @@
       <file leaf-file-name="classificador_we_blog.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classificador_we_blog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="300">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crf.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="crf.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+            <state relative-caret-position="275">
+              <caret line="87" column="27" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crf_azfeatures.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="classificador_sentenca_embeddings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1100">
+              <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+              <folding>
+                <element signature="e#24#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crf_azfeatures.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crf_azfeatures.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
@@ -97,8 +109,6 @@
         <option value="$PROJECT_DIR$/results/word embeddings/glove/832_glove_50.txt" />
         <option value="$PROJECT_DIR$/results/word embeddings/glove/466_glove_50.txt" />
         <option value="$PROJECT_DIR$/results/word embeddings/glove/366_glove_50.txt" />
-        <option value="$PROJECT_DIR$/classificador_sentenca_embeddings.py" />
-        <option value="$PROJECT_DIR$/functions.py" />
         <option value="$PROJECT_DIR$/results/word embeddings/glove/832_glove_100.txt" />
         <option value="$PROJECT_DIR$/results/word embeddings/glove/466_glove_100.txt" />
         <option value="$PROJECT_DIR$/results/word embeddings/glove/366_glove_100.txt" />
@@ -131,7 +141,9 @@
         <option value="$PROJECT_DIR$/crf_azfeatures.py" />
         <option value="$PROJECT_DIR$/classificador_we_blog.py" />
         <option value="$PROJECT_DIR$/crf_we.py" />
+        <option value="$PROJECT_DIR$/functions.py" />
         <option value="$PROJECT_DIR$/crf.py" />
+        <option value="$PROJECT_DIR$/classificador_sentenca_embeddings.py" />
       </list>
     </option>
   </component>
@@ -329,7 +341,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20706007" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20706007" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.32849163" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5015806" side_tool="true" weight="0.8916201" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.7217877" />
@@ -448,13 +460,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="143" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -668,20 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classificador_we_blog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="151" column="33" selection-start-line="151" selection-start-column="33" selection-end-line="151" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/azport features/axport_features_366_466_832.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -696,6 +687,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="114" column="11" lean-forward="true" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classificador_we_blog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="87" column="27" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+          <folding>
+            <element signature="e#24#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/crf_azfeatures.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -703,13 +725,6 @@
           <folding>
             <element signature="e#24#45#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
         </state>
       </provider>
     </entry>

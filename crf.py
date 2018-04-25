@@ -3,19 +3,6 @@ import functions as f
 import warnings
 
 
-def extract_features_we(X_sentences, model, model_size, vocabulary):
-    features = []
-    for s in X_sentences:
-        sentence_feature = [0] * model_size
-        sentences = str(s).split()
-        for word in sentences:
-            if len(word) > 2 and word in vocabulary:
-                word_feature = model[word]
-                sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
-        features.append(sentence_feature)
-    return f.np.array(features)
-
-
 def sent2features(i, we, tfidf, tfidf_prev, tfidf_next, pos):
     features = {
         'we': f.np.sum(we[i]),
@@ -98,7 +85,7 @@ def classificador():
         _, _, data, labels, _ = f.loadFromJson(corpus)
         X_sentences, X_prev, X_next, X_pos, Y_sentences, _ = f.abstracts_to_sentences(data, labels)
 
-        X_sentences_we = extract_features_we(X_sentences, model, model_size, vocabulary)
+        X_sentences_we = f.extract_features_we(X_sentences, model, model_size, vocabulary)
 
         print("Extraindo tfidf e chi2")
         vectorizer = f.TfidfVectorizer(ngram_range=(1, ngrama))

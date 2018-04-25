@@ -102,6 +102,19 @@ def abstracts_to_sentences(abstracts, labels):
     return ret, ret_prev, ret_next, ret_pos, ret_labels, abstracts_idx
 
 
+def extract_features_we(X_sentences, model, model_size, vocabulary):
+    features = []
+    for s in X_sentences:
+        sentence_feature = [0] * model_size
+        sentences = str(s).split()
+        for word in sentences:
+            if len(word) > 2 and word in vocabulary:
+                word_feature = model[word]
+                sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
+        features.append(sentence_feature)
+    return np.array(features)
+
+
 # fonte: http://nadbordrozd.github.io/blog/2016/05/20/text-classification-with-word2vec/
 class MeanEmbeddingVectorizer(object):
     def __init__(self, word2vec):
