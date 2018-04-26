@@ -1,0 +1,43 @@
+CRF
+Classification_report:
+             precision    recall  f1-score   support
+          B      0.460     0.377     0.414        77
+          C      0.182     0.100     0.129        20
+          G      0.293     0.333     0.312        36
+          M      0.135     0.156     0.144        45
+          O      0.000     0.000     0.000         6
+          P      0.486     0.523     0.504        65
+          R      0.535     0.581     0.557       117
+
+avg / total      0.410     0.415     0.410       366
+
+CRF
+Classification_report:
+             precision    recall  f1-score   support
+          B      0.608     0.536     0.570       179
+          C      0.316     0.300     0.308        20
+          G      0.270     0.278     0.274        36
+          M      0.192     0.169     0.180        59
+          O      0.000     0.000     0.000         1
+          P      0.369     0.456     0.408        68
+          R      0.353     0.398     0.374       103
+
+avg / total      0.424     0.416     0.418       466
+
+CRF
+Classification_report:
+             precision    recall  f1-score   support
+          B      0.571     0.629     0.599       256
+          C      0.286     0.250     0.267        40
+          G      0.268     0.264     0.266        72
+          M      0.202     0.173     0.187       104
+          O      0.000     0.000     0.000         7
+          P      0.500     0.459     0.478       133
+          R      0.489     0.518     0.503       220
+
+avg / total      0.447     0.460     0.453       832
+
+
+Wed Apr 25 19:27:51 2018
+
+Process finished with exit code 0
