@@ -17,29 +17,63 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="crf_azfeatures.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crf_azfeatures.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-553">
-              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-              <folding>
-                <element signature="e#24#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crf2ponto0.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crf2ponto0.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.26678988">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="crf_azfeatures.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/crf_azfeatures.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="125">
+                  <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+                  <folding>
+                    <element signature="e#24#45#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="crf2ponto0.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/crf2ponto0.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="1006" selection-end-column="15" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <splitter split-orientation="horizontal" split-proportion="0.45630252">
+          <split-first>
+            <leaf>
+              <file leaf-file-name="crf2ponto0.py" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/crf2ponto0.py">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="66">
+                      <caret line="1112" column="23" selection-start-line="1112" selection-start-column="23" selection-end-line="2111" selection-end-column="23" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file leaf-file-name="crf2ponto0.py" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/crf2ponto0.py">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="2041">
+                      <caret line="3372" lean-forward="true" selection-start-line="3372" selection-end-line="3372" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -54,35 +88,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/results/word embeddings/glove/366_glove_300.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/glove/832_glove_600.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/glove/466_glove_600.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/glove/366_glove_600.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/glove/832_glove_1000.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/glove/466_glove_1000.txt" />
-        <option value="$PROJECT_DIR$/results/word embeddings/glove/366_glove_1000.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/glove/832_glove_50.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/glove/466_glove_50.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/glove/366_glove_50.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/glove/832_glove_100.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/glove/466_glove_100.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/glove/366_glove_100.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/glove/832_glove_300.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/glove/466_glove_300.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/glove/366_glove_300.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/glove/832_glove_600.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/glove/466_glove_600.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/glove/366_glove_600.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/glove/832_glove_1000.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/glove/466_glove_1000.txt" />
-        <option value="$PROJECT_DIR$/results/we com tfidf/glove/366_glove_1000.txt" />
-        <option value="$PROJECT_DIR$/azport_features/azfeatures832.arff" />
-        <option value="$PROJECT_DIR$/results/azport features/axport_features_366_466_832.txt" />
-        <option value="$PROJECT_DIR$/crf_azfeatures.py" />
-        <option value="$PROJECT_DIR$/classificador_we_blog.py" />
-        <option value="$PROJECT_DIR$/crf_we.py" />
-        <option value="$PROJECT_DIR$/functions.py" />
-        <option value="$PROJECT_DIR$/classificador_sentenca_embeddings.py" />
         <option value="$PROJECT_DIR$/crf.py" />
         <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/word2vec_cbow50.txt" />
         <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/word2vec_cbow100.txt" />
@@ -104,6 +109,35 @@
         <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/word2vec_skipgram300.txt" />
         <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/word2vec_skipgram600.txt" />
         <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/word2vec_skipgram1000.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_skipgram50.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/glove_50.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_skipgram100.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/glove_100.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_skipgram300.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/glove_300.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_cbow600.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_skipgram600.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/glove_600.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_cbow1000.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/glove_1000.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_skipgram50.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/glove_50.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_skipgram100.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/glove_100.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_skipgram300.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/glove_300.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_cbow600.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_skipgram600.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/glove_600.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_cbow1000.txt" />
+        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/glove_1000.txt" />
+        <option value="$PROJECT_DIR$/results/tfidf/crf.txt" />
         <option value="$PROJECT_DIR$/crf2ponto0.py" />
       </list>
     </option>
@@ -137,22 +171,7 @@
               <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="b2602c69:ProjectViewProjectNode" />
               <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="462c0819:PsiDirectoryNode" />
               <item name="results" type="462c0819:PsiDirectoryNode" />
-              <item name="we sentenca soma" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="462c0819:PsiDirectoryNode" />
-              <item name="results" type="462c0819:PsiDirectoryNode" />
-              <item name="we sentenca soma" type="462c0819:PsiDirectoryNode" />
-              <item name="crf2ponto0" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="462c0819:PsiDirectoryNode" />
-              <item name="results" type="462c0819:PsiDirectoryNode" />
-              <item name="we sentenca soma" type="462c0819:PsiDirectoryNode" />
-              <item name="crf2ponto0" type="462c0819:PsiDirectoryNode" />
-              <item name="we+tfidf" type="462c0819:PsiDirectoryNode" />
+              <item name="tfidf" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -317,16 +336,16 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14488935" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14488935" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.32849163" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5015806" side_tool="true" weight="0.8916201" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.7240223" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295583" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.7206704" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.7240223" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.698324" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -341,146 +360,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/glove/466_glove_600.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/glove/832_glove_600.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/glove/366_glove_1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/glove/466_glove_1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/word embeddings/glove/832_glove_1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/366_glove_50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/466_glove_50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/832_glove_50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/366_glove_100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/466_glove_100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/832_glove_100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/366_glove_300.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/466_glove_300.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/832_glove_300.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/366_glove_600.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/466_glove_600.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/832_glove_600.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/832_glove_1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/466_glove_1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/366_glove_1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we com tfidf/glove/366_glove_1000.txt" />
     <entry file="file://$PROJECT_DIR$/azport_features/azfeatures366.arff">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -502,27 +382,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crf_we.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classificador_we_blog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/crf_we.py" />
+    <entry file="file://$PROJECT_DIR$/classificador_we_blog.py" />
     <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1900">
           <caret line="76" selection-start-line="76" selection-end-line="76" />
-          <folding>
-            <element signature="e#24#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -542,7 +407,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crf_azfeatures.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-553">
+        <state relative-caret-position="125">
           <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding>
             <element signature="e#24#45#0" expanded="true" />
@@ -557,37 +422,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/word2vec_cbow100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/word2vec_cbow50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/word2vec_cbow300.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/word2vec_cbow600.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/word2vec_cbow1000.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/word2vec_cbow100.txt" />
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/word2vec_cbow50.txt" />
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/word2vec_cbow300.txt" />
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/word2vec_cbow600.txt" />
     <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/word2vec_cbow50.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -607,12 +445,6 @@
         <state relative-caret-position="-150" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/word2vec_cbow600.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/word2vec_cbow1000.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/word2vec_skipgram50.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -627,34 +459,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/word2vec_skipgram300.txt">
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_skipgram50.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/word2vec_skipgram600.txt">
+    <entry file="file://$USER_HOME$/venv/Lib/site-packages/gensim/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="859" selection-start-line="859" selection-end-line="859" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_cbow50.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/word2vec_skipgram1000.txt">
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/glove_50.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/word2vec_skipgram50.txt">
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_cbow100.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/word2vec_skipgram100.txt">
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_skipgram100.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/word2vec_skipgram300.txt">
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/glove_100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="706">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_cbow300.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/word2vec_skipgram600.txt">
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_skipgram300.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/word2vec_skipgram1000.txt">
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/glove_300.txt">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_skipgram600.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/glove_600.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_cbow1000.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/glove_1000.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_cbow50.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_skipgram50.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/glove_50.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_cbow100.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_skipgram100.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/glove_100.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_cbow300.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_skipgram300.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/glove_300.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_skipgram600.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/glove_600.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_cbow1000.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/glove_1000.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/tfidf/crf.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crf2ponto0.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+        <state relative-caret-position="2041">
+          <caret line="3372" lean-forward="true" selection-start-line="3372" selection-end-line="3372" />
         </state>
       </provider>
     </entry>
