@@ -73,8 +73,8 @@ def classificador():
 
     dataset = arff.load(open(azfeat366, 'r'))
     X_data = f.np.array(dataset['data'])
-    features = X_data[:, 0:8]
-    # Y_labels = X_data[:, 8]
+    features = X_data[:, :-1]
+    # Y_labels = X_data[:, -1]
 
     X_pos.append(0)
     X_crf = []
@@ -171,7 +171,117 @@ def classificador():
     print("")
 
 
+# svm e naive bayes
+def classificador2():
+    corpus366 = 'corpus/output366.json'
+    azfeat366 = 'azport_features/azfeatures366numbers.arff'
+    corpus466 = 'corpus/output466.json'
+    azfeat466 = 'azport_features/azfeatures466numbers.arff'
+    corpus832 = 'corpus/output832.json'
+    azfeat832 = 'azport_features/azfeatures832numbers.arff'
+
+    print(corpus366)
+    dataset = arff.load(open(azfeat366, 'r'))
+    X_data = f.np.array(dataset['data'])
+    features = X_data[:, :-1].astype(f.np.float)
+    Y_labels = X_data[:, -1]
+
+    print("SVM RBF corpus366")
+    clf = f.SVC(kernel='rbf')
+    clf = clf.fit(features, Y_labels)
+    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
+    print("Classification_report:")
+    print(f.classification_report(Y_labels, pred))
+    print(f.confusion_matrix(Y_labels, pred))
+    print("")
+
+    print("SVM linear corpus366")
+    clf = f.SVC(kernel='linear')
+    clf = clf.fit(features, Y_labels)
+    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
+    print("Classification_report:")
+    print(f.classification_report(Y_labels, pred))
+    print(f.confusion_matrix(Y_labels, pred))
+    print("")
+
+    print("NB corpus366")
+    clf = f.GaussianNB()
+    clf = clf.fit(features, Y_labels)
+    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
+    print("Classification_report:")
+    print(f.classification_report(Y_labels, pred))
+    print(f.confusion_matrix(Y_labels, pred))
+    print("")
+
+    print(corpus466)
+    dataset = arff.load(open(azfeat466, 'r'))
+    X_data = f.np.array(dataset['data'])
+    features = X_data[:, :-1].astype(f.np.float)
+    Y_labels = X_data[:, -1]
+
+    print("SVM RBF corpus466")
+    clf = f.SVC(kernel='rbf')
+    clf = clf.fit(features, Y_labels)
+    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
+    print("Classification_report:")
+    print(f.classification_report(Y_labels, pred))
+    print(f.confusion_matrix(Y_labels, pred))
+    print("")
+
+    print("SVM linear corpus466")
+    clf = f.SVC(kernel='linear')
+    clf = clf.fit(features, Y_labels)
+    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
+    print("Classification_report:")
+    print(f.classification_report(Y_labels, pred))
+    print(f.confusion_matrix(Y_labels, pred))
+    print("")
+
+    print("NB corpus466")
+    clf = f.GaussianNB()
+    clf = clf.fit(features, Y_labels)
+    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
+    print("Classification_report:")
+    print(f.classification_report(Y_labels, pred))
+    print(f.confusion_matrix(Y_labels, pred))
+    print("")
+
+    print(corpus832)
+    dataset = arff.load(open(azfeat832, 'r'))
+    X_data = f.np.array(dataset['data'])
+    features = X_data[:, :-1].astype(f.np.float)
+    Y_labels = X_data[:, -1]
+
+    print("SVM RBF corpus832")
+    clf = f.SVC(kernel='rbf')
+    clf = clf.fit(features, Y_labels)
+    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
+    print("Classification_report:")
+    print(f.classification_report(Y_labels, pred))
+    print(f.confusion_matrix(Y_labels, pred))
+    print("")
+
+    print("SVM linear corpus832")
+    clf = f.SVC(kernel='linear')
+    clf = clf.fit(features, Y_labels)
+    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
+    print("Classification_report:")
+    print(f.classification_report(Y_labels, pred))
+    print(f.confusion_matrix(Y_labels, pred))
+    print("")
+
+    print("NB corpus832")
+    clf = f.GaussianNB()
+    clf = clf.fit(features, Y_labels)
+    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
+    print("Classification_report:")
+    print(f.classification_report(Y_labels, pred))
+    print(f.confusion_matrix(Y_labels, pred))
+    print("")
+
+
 warnings.filterwarnings("ignore")
 print(f.time.asctime(f.time.localtime(f.time.time())))
-classificador()
+# classificador()
+classificador2()
 print(f.time.asctime(f.time.localtime(f.time.time())))
