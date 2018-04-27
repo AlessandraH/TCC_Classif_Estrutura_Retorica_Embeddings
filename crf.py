@@ -94,7 +94,7 @@ def classificador():
         labels = list(clf.classes_)
         f.metrics.flat_f1_score(Y_crf, pred, average='weighted', labels=labels)
         sorted_labels = sorted(labels, key=lambda name: (name[1:], name[0]))
-        print(f.metrics.flat_classification_report(Y_crf, pred, labels=sorted_labels, digits=3))
+        print(f.metrics.flat_classification_report(Y_crf, pred, labels=sorted_labels, digits=2))
         print("")
 
 

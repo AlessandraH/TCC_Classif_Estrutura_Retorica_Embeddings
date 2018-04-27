@@ -1,60 +1,69 @@
 # -*- coding: utf-8 -*-
 import functions as f
 import warnings
+import arff
 
 
-def sent2features(i, we, tfidf, pos):
+def sent2features(i, azport, we, tfidf, pos):
     features = {
-        # 'we[0]': we[i, 0],
-        # 'we[1]': we[i, 1],
-        # 'we[2]': we[i, 2],
-        # 'we[3]': we[i, 3],
-        # 'we[4]': we[i, 4],
-        # 'we[5]': we[i, 5],
-        # 'we[6]': we[i, 6],
-        # 'we[7]': we[i, 7],
-        # 'we[8]': we[i, 8],
-        # 'we[9]': we[i, 9],
-        # 'we[10]': we[i, 10],
-        # 'we[11]': we[i, 11],
-        # 'we[12]': we[i, 12],
-        # 'we[13]': we[i, 13],
-        # 'we[14]': we[i, 14],
-        # 'we[15]': we[i, 15],
-        # 'we[16]': we[i, 16],
-        # 'we[17]': we[i, 17],
-        # 'we[18]': we[i, 18],
-        # 'we[19]': we[i, 19],
-        # 'we[20]': we[i, 20],
-        # 'we[21]': we[i, 21],
-        # 'we[22]': we[i, 22],
-        # 'we[23]': we[i, 23],
-        # 'we[24]': we[i, 24],
-        # 'we[25]': we[i, 25],
-        # 'we[26]': we[i, 26],
-        # 'we[27]': we[i, 27],
-        # 'we[28]': we[i, 28],
-        # 'we[29]': we[i, 29],
-        # 'we[30]': we[i, 30],
-        # 'we[31]': we[i, 31],
-        # 'we[32]': we[i, 32],
-        # 'we[33]': we[i, 33],
-        # 'we[34]': we[i, 34],
-        # 'we[35]': we[i, 35],
-        # 'we[36]': we[i, 36],
-        # 'we[37]': we[i, 37],
-        # 'we[38]': we[i, 38],
-        # 'we[39]': we[i, 39],
-        # 'we[40]': we[i, 40],
-        # 'we[41]': we[i, 41],
-        # 'we[42]': we[i, 42],
-        # 'we[43]': we[i, 43],
-        # 'we[44]': we[i, 44],
-        # 'we[45]': we[i, 45],
-        # 'we[46]': we[i, 46],
-        # 'we[47]': we[i, 47],
-        # 'we[48]': we[i, 48],
-        # 'we[49]': we[i, 49],
+        'length': azport[i][0],
+        'location': azport[i][1],
+        'citacion': azport[i][2],
+        'formulaic': azport[i][3],
+        'tense': azport[i][4],
+        'voice': azport[i][5],
+        'modal': azport[i][6],
+        'history': azport[i][7],
+        'we[0]': we[i, 0],
+        'we[1]': we[i, 1],
+        'we[2]': we[i, 2],
+        'we[3]': we[i, 3],
+        'we[4]': we[i, 4],
+        'we[5]': we[i, 5],
+        'we[6]': we[i, 6],
+        'we[7]': we[i, 7],
+        'we[8]': we[i, 8],
+        'we[9]': we[i, 9],
+        'we[10]': we[i, 10],
+        'we[11]': we[i, 11],
+        'we[12]': we[i, 12],
+        'we[13]': we[i, 13],
+        'we[14]': we[i, 14],
+        'we[15]': we[i, 15],
+        'we[16]': we[i, 16],
+        'we[17]': we[i, 17],
+        'we[18]': we[i, 18],
+        'we[19]': we[i, 19],
+        'we[20]': we[i, 20],
+        'we[21]': we[i, 21],
+        'we[22]': we[i, 22],
+        'we[23]': we[i, 23],
+        'we[24]': we[i, 24],
+        'we[25]': we[i, 25],
+        'we[26]': we[i, 26],
+        'we[27]': we[i, 27],
+        'we[28]': we[i, 28],
+        'we[29]': we[i, 29],
+        'we[30]': we[i, 30],
+        'we[31]': we[i, 31],
+        'we[32]': we[i, 32],
+        'we[33]': we[i, 33],
+        'we[34]': we[i, 34],
+        'we[35]': we[i, 35],
+        'we[36]': we[i, 36],
+        'we[37]': we[i, 37],
+        'we[38]': we[i, 38],
+        'we[39]': we[i, 39],
+        'we[40]': we[i, 40],
+        'we[41]': we[i, 41],
+        'we[42]': we[i, 42],
+        'we[43]': we[i, 43],
+        'we[44]': we[i, 44],
+        'we[45]': we[i, 45],
+        'we[46]': we[i, 46],
+        'we[47]': we[i, 47],
+        'we[48]': we[i, 48],
+        'we[49]': we[i, 49],
         # 'we[50]': we[i, 50],
         # 'we[51]': we[i, 51],
         # 'we[52]': we[i, 52],
@@ -1110,56 +1119,64 @@ def sent2features(i, we, tfidf, pos):
 
     if pos[i] > 0:
         features.update({
-            # '-1:we[0]': we[i - 1, 0],
-            # '-1:we[1]': we[i - 1, 1],
-            # '-1:we[2]': we[i - 1, 2],
-            # '-1:we[3]': we[i - 1, 3],
-            # '-1:we[4]': we[i - 1, 4],
-            # '-1:we[5]': we[i - 1, 5],
-            # '-1:we[6]': we[i - 1, 6],
-            # '-1:we[7]': we[i - 1, 7],
-            # '-1:we[8]': we[i - 1, 8],
-            # '-1:we[9]': we[i - 1, 9],
-            # '-1:we[10]': we[i - 1, 10],
-            # '-1:we[11]': we[i - 1, 11],
-            # '-1:we[12]': we[i - 1, 12],
-            # '-1:we[13]': we[i - 1, 13],
-            # '-1:we[14]': we[i - 1, 14],
-            # '-1:we[15]': we[i - 1, 15],
-            # '-1:we[16]': we[i - 1, 16],
-            # '-1:we[17]': we[i - 1, 17],
-            # '-1:we[18]': we[i - 1, 18],
-            # '-1:we[19]': we[i - 1, 19],
-            # '-1:we[20]': we[i - 1, 20],
-            # '-1:we[21]': we[i - 1, 21],
-            # '-1:we[22]': we[i - 1, 22],
-            # '-1:we[23]': we[i - 1, 23],
-            # '-1:we[24]': we[i - 1, 24],
-            # '-1:we[25]': we[i - 1, 25],
-            # '-1:we[26]': we[i - 1, 26],
-            # '-1:we[27]': we[i - 1, 27],
-            # '-1:we[28]': we[i - 1, 28],
-            # '-1:we[29]': we[i - 1, 29],
-            # '-1:we[30]': we[i - 1, 30],
-            # '-1:we[31]': we[i - 1, 31],
-            # '-1:we[32]': we[i - 1, 32],
-            # '-1:we[33]': we[i - 1, 33],
-            # '-1:we[34]': we[i - 1, 34],
-            # '-1:we[35]': we[i - 1, 35],
-            # '-1:we[36]': we[i - 1, 36],
-            # '-1:we[37]': we[i - 1, 37],
-            # '-1:we[38]': we[i - 1, 38],
-            # '-1:we[39]': we[i - 1, 39],
-            # '-1:we[40]': we[i - 1, 40],
-            # '-1:we[41]': we[i - 1, 41],
-            # '-1:we[42]': we[i - 1, 42],
-            # '-1:we[43]': we[i - 1, 43],
-            # '-1:we[44]': we[i - 1, 44],
-            # '-1:we[45]': we[i - 1, 45],
-            # '-1:we[46]': we[i - 1, 46],
-            # '-1:we[47]': we[i - 1, 47],
-            # '-1:we[48]': we[i - 1, 48],
-            # '-1:we[49]': we[i - 1, 49],
+            '-1:length': azport[i-1][0],
+            '-1:location': azport[i-1][1],
+            '-1:citacion': azport[i-1][2],
+            '-1:formulaic': azport[i-1][3],
+            '-1:tense': azport[i-1][4],
+            '-1:voice': azport[i-1][5],
+            '-1:modal': azport[i-1][6],
+            '-1:history': azport[i-1][7],
+            '-1:we[0]': we[i - 1, 0],
+            '-1:we[1]': we[i - 1, 1],
+            '-1:we[2]': we[i - 1, 2],
+            '-1:we[3]': we[i - 1, 3],
+            '-1:we[4]': we[i - 1, 4],
+            '-1:we[5]': we[i - 1, 5],
+            '-1:we[6]': we[i - 1, 6],
+            '-1:we[7]': we[i - 1, 7],
+            '-1:we[8]': we[i - 1, 8],
+            '-1:we[9]': we[i - 1, 9],
+            '-1:we[10]': we[i - 1, 10],
+            '-1:we[11]': we[i - 1, 11],
+            '-1:we[12]': we[i - 1, 12],
+            '-1:we[13]': we[i - 1, 13],
+            '-1:we[14]': we[i - 1, 14],
+            '-1:we[15]': we[i - 1, 15],
+            '-1:we[16]': we[i - 1, 16],
+            '-1:we[17]': we[i - 1, 17],
+            '-1:we[18]': we[i - 1, 18],
+            '-1:we[19]': we[i - 1, 19],
+            '-1:we[20]': we[i - 1, 20],
+            '-1:we[21]': we[i - 1, 21],
+            '-1:we[22]': we[i - 1, 22],
+            '-1:we[23]': we[i - 1, 23],
+            '-1:we[24]': we[i - 1, 24],
+            '-1:we[25]': we[i - 1, 25],
+            '-1:we[26]': we[i - 1, 26],
+            '-1:we[27]': we[i - 1, 27],
+            '-1:we[28]': we[i - 1, 28],
+            '-1:we[29]': we[i - 1, 29],
+            '-1:we[30]': we[i - 1, 30],
+            '-1:we[31]': we[i - 1, 31],
+            '-1:we[32]': we[i - 1, 32],
+            '-1:we[33]': we[i - 1, 33],
+            '-1:we[34]': we[i - 1, 34],
+            '-1:we[35]': we[i - 1, 35],
+            '-1:we[36]': we[i - 1, 36],
+            '-1:we[37]': we[i - 1, 37],
+            '-1:we[38]': we[i - 1, 38],
+            '-1:we[39]': we[i - 1, 39],
+            '-1:we[40]': we[i - 1, 40],
+            '-1:we[41]': we[i - 1, 41],
+            '-1:we[42]': we[i - 1, 42],
+            '-1:we[43]': we[i - 1, 43],
+            '-1:we[44]': we[i - 1, 44],
+            '-1:we[45]': we[i - 1, 45],
+            '-1:we[46]': we[i - 1, 46],
+            '-1:we[47]': we[i - 1, 47],
+            '-1:we[48]': we[i - 1, 48],
+            '-1:we[49]': we[i - 1, 49],
             # '-1:we[50]': we[i-1, 50],
             # '-1:we[51]': we[i-1, 51],
             # '-1:we[52]': we[i-1, 52],
@@ -2216,56 +2233,64 @@ def sent2features(i, we, tfidf, pos):
         features['boa'] = True
     if pos[i + 1] > 0:
         features.update({
-            # '+1:we[0]': we[i + 1, 0],
-            # '+1:we[1]': we[i + 1, 1],
-            # '+1:we[2]': we[i + 1, 2],
-            # '+1:we[3]': we[i + 1, 3],
-            # '+1:we[4]': we[i + 1, 4],
-            # '+1:we[5]': we[i + 1, 5],
-            # '+1:we[6]': we[i + 1, 6],
-            # '+1:we[7]': we[i + 1, 7],
-            # '+1:we[8]': we[i + 1, 8],
-            # '+1:we[9]': we[i + 1, 9],
-            # '+1:we[10]': we[i + 1, 10],
-            # '+1:we[11]': we[i + 1, 11],
-            # '+1:we[12]': we[i + 1, 12],
-            # '+1:we[13]': we[i + 1, 13],
-            # '+1:we[14]': we[i + 1, 14],
-            # '+1:we[15]': we[i + 1, 15],
-            # '+1:we[16]': we[i + 1, 16],
-            # '+1:we[17]': we[i + 1, 17],
-            # '+1:we[18]': we[i + 1, 18],
-            # '+1:we[19]': we[i + 1, 19],
-            # '+1:we[20]': we[i + 1, 20],
-            # '+1:we[21]': we[i + 1, 21],
-            # '+1:we[22]': we[i + 1, 22],
-            # '+1:we[23]': we[i + 1, 23],
-            # '+1:we[24]': we[i + 1, 24],
-            # '+1:we[25]': we[i + 1, 25],
-            # '+1:we[26]': we[i + 1, 26],
-            # '+1:we[27]': we[i + 1, 27],
-            # '+1:we[28]': we[i + 1, 28],
-            # '+1:we[29]': we[i + 1, 29],
-            # '+1:we[30]': we[i + 1, 30],
-            # '+1:we[31]': we[i + 1, 31],
-            # '+1:we[32]': we[i + 1, 32],
-            # '+1:we[33]': we[i + 1, 33],
-            # '+1:we[34]': we[i + 1, 34],
-            # '+1:we[35]': we[i + 1, 35],
-            # '+1:we[36]': we[i + 1, 36],
-            # '+1:we[37]': we[i + 1, 37],
-            # '+1:we[38]': we[i + 1, 38],
-            # '+1:we[39]': we[i + 1, 39],
-            # '+1:we[40]': we[i + 1, 40],
-            # '+1:we[41]': we[i + 1, 41],
-            # '+1:we[42]': we[i + 1, 42],
-            # '+1:we[43]': we[i + 1, 43],
-            # '+1:we[44]': we[i + 1, 44],
-            # '+1:we[45]': we[i + 1, 45],
-            # '+1:we[46]': we[i + 1, 46],
-            # '+1:we[47]': we[i + 1, 47],
-            # '+1:we[48]': we[i + 1, 48],
-            # '+1:we[49]': we[i + 1, 49],
+            '+1:length': azport[i + 1][0],
+            '+1:location': azport[i + 1][1],
+            '+1:citacion': azport[i + 1][2],
+            '+1:formulaic': azport[i + 1][3],
+            '+1:tense': azport[i + 1][4],
+            '+1:voice': azport[i + 1][5],
+            '+1:modal': azport[i + 1][6],
+            '+1:history': azport[i + 1][7],
+            '+1:we[0]': we[i + 1, 0],
+            '+1:we[1]': we[i + 1, 1],
+            '+1:we[2]': we[i + 1, 2],
+            '+1:we[3]': we[i + 1, 3],
+            '+1:we[4]': we[i + 1, 4],
+            '+1:we[5]': we[i + 1, 5],
+            '+1:we[6]': we[i + 1, 6],
+            '+1:we[7]': we[i + 1, 7],
+            '+1:we[8]': we[i + 1, 8],
+            '+1:we[9]': we[i + 1, 9],
+            '+1:we[10]': we[i + 1, 10],
+            '+1:we[11]': we[i + 1, 11],
+            '+1:we[12]': we[i + 1, 12],
+            '+1:we[13]': we[i + 1, 13],
+            '+1:we[14]': we[i + 1, 14],
+            '+1:we[15]': we[i + 1, 15],
+            '+1:we[16]': we[i + 1, 16],
+            '+1:we[17]': we[i + 1, 17],
+            '+1:we[18]': we[i + 1, 18],
+            '+1:we[19]': we[i + 1, 19],
+            '+1:we[20]': we[i + 1, 20],
+            '+1:we[21]': we[i + 1, 21],
+            '+1:we[22]': we[i + 1, 22],
+            '+1:we[23]': we[i + 1, 23],
+            '+1:we[24]': we[i + 1, 24],
+            '+1:we[25]': we[i + 1, 25],
+            '+1:we[26]': we[i + 1, 26],
+            '+1:we[27]': we[i + 1, 27],
+            '+1:we[28]': we[i + 1, 28],
+            '+1:we[29]': we[i + 1, 29],
+            '+1:we[30]': we[i + 1, 30],
+            '+1:we[31]': we[i + 1, 31],
+            '+1:we[32]': we[i + 1, 32],
+            '+1:we[33]': we[i + 1, 33],
+            '+1:we[34]': we[i + 1, 34],
+            '+1:we[35]': we[i + 1, 35],
+            '+1:we[36]': we[i + 1, 36],
+            '+1:we[37]': we[i + 1, 37],
+            '+1:we[38]': we[i + 1, 38],
+            '+1:we[39]': we[i + 1, 39],
+            '+1:we[40]': we[i + 1, 40],
+            '+1:we[41]': we[i + 1, 41],
+            '+1:we[42]': we[i + 1, 42],
+            '+1:we[43]': we[i + 1, 43],
+            '+1:we[44]': we[i + 1, 44],
+            '+1:we[45]': we[i + 1, 45],
+            '+1:we[46]': we[i + 1, 46],
+            '+1:we[47]': we[i + 1, 47],
+            '+1:we[48]': we[i + 1, 48],
+            '+1:we[49]': we[i + 1, 49],
             # '+1:we[50]': we[i+1, 50],
             # '+1:we[51]': we[i+1, 51],
             # '+1:we[52]': we[i+1, 52],
@@ -3324,86 +3349,358 @@ def sent2features(i, we, tfidf, pos):
     return features
 
 
-def abstract2features(abstract, we, tfidf, pos, c):
-    return [sent2features(c + i, we, tfidf, pos) for i in range(len(abstract))]
+def abstract2features(abstract, azport, we, tfidf, pos, c):
+    return [sent2features(c + i, azport, we, tfidf, pos) for i in range(len(abstract))]
 
 
 def abstract2labels(abstract):
     return [label for label, abstract in abstract]
 
 
-def classificador():
-    corpora = ['corpus/output366.json', 'corpus/output466.json', 'corpus/output832.json']
-
-    model_name = 'cbow_s50.txt'
-    # model_name = 'cbow_s100.txt'
-    # model_name = 'cbow_s300.txt'
-    # model_name = 'cbow_s600.txt'
-    # model_name = 'cbow_s1000.txt'
-
-    # model_name = 'skip_s50.txt'
-    # model_name = 'skip_s100.txt'
-    # model_name = 'skip_s300.txt'
-    # model_name = 'skip_s600.txt'
-    # model_name = 'skip_s1000.txt'
-
-    # model_name = 'glove_s50.txt'
-    # model_name = 'glove_s100.txt'
-    # model_name = 'glove_s300.txt'
-    # model_name = 'glove_s600.txt'
-    # model_name = 'glove_s1000.txt'
-
-    model_size = 50
-    ngrama = 1
-    kchi = 100
-
-    print("Abrindo modelo embedding")
-    model = f.KeyedVectors.load_word2vec_format(fname=model_name, unicode_errors="ignore")
-    vocabulary = model.vocab
-
-    for corpus in corpora:
-        print("")
-        print("lendo corpus ", corpus)
-        abstracts = f.loadJson(corpus)
-        _, _, data, labels, _ = f.loadFromJson(corpus)
-        X_sentences, X_prev, X_next, X_pos, Y_sentences, _ = f.abstracts_to_sentences(data, labels)
-
-        X_sentences_we = f.extract_features_we(X_sentences, model, model_size, vocabulary)
-        # X_sentences_we = []
-
-        print("Extraindo tfidf e chi2")
-        vectorizer = f.TfidfVectorizer(ngram_range=(1, ngrama))
-        selector = f.SelectKBest(f.chi2, k=kchi)
-
-        X_sentences = vectorizer.fit_transform(X_sentences)
-        # X_prev = vectorizer.transform(X_prev)
-        # X_next = vectorizer.transform(X_next)
-        X_sentences = selector.fit_transform(X_sentences, Y_sentences)
-        # X_prev = selector.transform(X_prev)
-        # X_next = selector.transform(X_next)
-
-        X_pos.append(0)
-        X_crf = []
-        c = 0
-        for a in abstracts:
-            X_crf.append(abstract2features(a, X_sentences_we, X_sentences, X_pos, c))
-            c += len(a)
-        Y_crf = [abstract2labels(a) for a in abstracts]
-
-        print("CRF")
-        clf = f.sklearn_crfsuite.CRF(algorithm='lbfgs', c1=0.1, c2=0.1,
-                                     max_iterations=100, all_possible_transitions=True)
-        clf = clf.fit(X_crf, Y_crf)
-        pred = f.cross_val_predict(clf, X_crf, Y_crf, cv=10)
-        print("Classification_report:")
-        labels = list(clf.classes_)
-        f.metrics.flat_f1_score(Y_crf, pred, average='weighted', labels=labels)
-        sorted_labels = sorted(labels, key=lambda name: (name[1:], name[0]))
-        print(f.metrics.flat_classification_report(Y_crf, pred, labels=sorted_labels, digits=2))
-        print("")
-
-
 warnings.filterwarnings("ignore")
+
+corpus366 = 'corpus/output366.json'
+azfeat366 = 'azport_features/azfeatures366.arff'
+corpus466 = 'corpus/output466.json'
+azfeat466 = 'azport_features/azfeatures466.arff'
+corpus832 = 'corpus/output832.json'
+azfeat832 = 'azport_features/azfeatures832.arff'
+
+model_name = 'cbow_s50.txt'
+# model_name = 'cbow_s100.txt'
+# model_name = 'cbow_s300.txt'
+# model_name = 'cbow_s600.txt'
+# model_name = 'cbow_s1000.txt'
+
+# model_name = 'skip_s50.txt'
+# model_name = 'skip_s100.txt'
+# model_name = 'skip_s300.txt'
+# model_name = 'skip_s600.txt'
+# model_name = 'skip_s1000.txt'
+
+# model_name = 'glove_s50.txt'
+# model_name = 'glove_s100.txt'
+# model_name = 'glove_s300.txt'
+# model_name = 'glove_s600.txt'
+# model_name = 'glove_s1000.txt'
+
+model_size = 50
+ngrama = 1
+kchi = 100
+cross_val = 10
+
 print(f.time.asctime(f.time.localtime(f.time.time())))
-classificador()
+
+print("Abrindo modelo embedding")
+model = f.KeyedVectors.load_word2vec_format(fname=model_name, unicode_errors="ignore")
+vocabulary = model.vocab
+
+################################### 366 ####################################################
+print("lendo corpus ", corpus366)
+abstracts = f.loadJson(corpus366)
+_, _, data, labels, _ = f.loadFromJson(corpus366)
+X_sentences, X_prev, X_next, X_pos, Y_sentences, _ = f.abstracts_to_sentences(data, labels)
+
+X_sentences_we = f.extract_features_we(X_sentences, model, model_size, vocabulary)
+# X_sentences_we = []
+
+print("Extraindo tfidf e chi2")
+vectorizer = f.TfidfVectorizer(ngram_range=(1, ngrama))
+selector = f.SelectKBest(f.chi2, k=kchi)
+
+X_sentences = vectorizer.fit_transform(X_sentences)
+X_prev = vectorizer.transform(X_prev)
+X_next = vectorizer.transform(X_next)
+X_sentences = selector.fit_transform(X_sentences, Y_sentences)
+X_prev = selector.transform(X_prev)
+X_next = selector.transform(X_next)
+
+dataset = arff.load(open('azport_features/azfeatures366n.arff', 'r'))
+X_data = f.np.array(dataset['data'])
+azport = X_data[:, :-1].astype(f.np.float)
+Y_labels = X_data[:, -1]
+
+X_sentences_c = f.hstack([azport, X_sentences_we, X_sentences, X_prev, X_next, f.np.expand_dims(f.np.array(X_pos), -1)])
+X_sentences_c = X_sentences_c.todense()
+
+print("SVM RBF")
+clf = f.SVC(kernel='rbf')
+clf = clf.fit(X_sentences_c, Y_sentences)
+pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
+print("Classification_report:")
+print(f.classification_report(Y_sentences, pred))
+print(f.confusion_matrix(Y_sentences, pred))
+print("")
+
+print("SVM linear")
+clf = f.SVC(kernel='linear')
+clf = clf.fit(X_sentences_c, Y_sentences)
+pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
+print("Classification_report:")
+print(f.classification_report(Y_sentences, pred))
+print(f.confusion_matrix(Y_sentences, pred))
+print("")
+
+print("KNN")
+clf = f.neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
+clf = clf.fit(X_sentences_c, Y_sentences)
+pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
+print("Classification_report:")
+print(f.classification_report(Y_sentences, pred))
+print(f.confusion_matrix(Y_sentences, pred))
+print("")
+
+print("NB")
+clf = f.GaussianNB()
+clf = clf.fit(X_sentences_c, Y_sentences)
+pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
+print("Classification_report:")
+print(f.classification_report(Y_sentences, pred))
+print(f.confusion_matrix(Y_sentences, pred))
+print("")
+
+print("DT")
+clf = f.DecisionTreeClassifier(random_state=0)
+clf = clf.fit(X_sentences_c, Y_sentences)
+pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
+print("Classification_report:")
+print(f.classification_report(Y_sentences, pred))
+print(f.confusion_matrix(Y_sentences, pred))
+
+
+dataset = arff.load(open(azfeat366, 'r'))
+X_data = f.np.array(dataset['data'])
+azport = X_data[:, 0:8]
+
+X_pos.append(0)
+X_crf = []
+c = 0
+for a in abstracts:
+    X_crf.append(abstract2features(a, azport, X_sentences_we, X_sentences, X_pos, c))
+    c += len(a)
+Y_crf = [abstract2labels(a) for a in abstracts]
+
+print("")
+print("CRF")
+clf = f.sklearn_crfsuite.CRF(algorithm='lbfgs', c1=0.1, c2=0.1,
+                             max_iterations=100, all_possible_transitions=True)
+clf = clf.fit(X_crf, Y_crf)
+pred = f.cross_val_predict(clf, X_crf, Y_crf, cv=cross_val)
+print("Classification_report:")
+labels = list(clf.classes_)
+f.metrics.flat_f1_score(Y_crf, pred, average='weighted', labels=labels)
+sorted_labels = sorted(labels, key=lambda name: (name[1:], name[0]))
+print(f.metrics.flat_classification_report(Y_crf, pred, labels=sorted_labels, digits=2))
+print("")
+
+################################### 466 ####################################################
+print("lendo corpus ", corpus466)
+abstracts = f.loadJson(corpus466)
+_, _, data, labels, _ = f.loadFromJson(corpus466)
+X_sentences, X_prev, X_next, X_pos, Y_sentences, _ = f.abstracts_to_sentences(data, labels)
+
+del abstracts[17][7]
+del X_sentences[206]
+del X_prev[206]
+del X_next[206]
+del X_pos[206]
+del Y_sentences[206]
+
+X_sentences_we = f.extract_features_we(X_sentences, model, model_size, vocabulary)
+# X_sentences_we = []
+
+print("Extraindo tfidf e chi2")
+vectorizer = f.TfidfVectorizer(ngram_range=(1, ngrama))
+selector = f.SelectKBest(f.chi2, k=kchi)
+
+X_sentences = vectorizer.fit_transform(X_sentences)
+X_prev = vectorizer.transform(X_prev)
+X_next = vectorizer.transform(X_next)
+X_sentences = selector.fit_transform(X_sentences, Y_sentences)
+X_prev = selector.transform(X_prev)
+X_next = selector.transform(X_next)
+
+dataset = arff.load(open('azport_features/azfeatures466n.arff', 'r'))
+X_data = f.np.array(dataset['data'])
+azport = X_data[:, :-1].astype(f.np.float)
+Y_labels = X_data[:, -1]
+
+X_sentences_c = f.hstack([azport, X_sentences_we, X_sentences, X_prev, X_next, f.np.expand_dims(f.np.array(X_pos), -1)])
+X_sentences_c = X_sentences_c.todense()
+
+print("SVM RBF")
+clf = f.SVC(kernel='rbf')
+clf = clf.fit(X_sentences_c, Y_sentences)
+pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
+print("Classification_report:")
+print(f.classification_report(Y_sentences, pred))
+print(f.confusion_matrix(Y_sentences, pred))
+print("")
+
+print("SVM linear")
+clf = f.SVC(kernel='linear')
+clf = clf.fit(X_sentences_c, Y_sentences)
+pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
+print("Classification_report:")
+print(f.classification_report(Y_sentences, pred))
+print(f.confusion_matrix(Y_sentences, pred))
+print("")
+
+print("KNN")
+clf = f.neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
+clf = clf.fit(X_sentences_c, Y_sentences)
+pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
+print("Classification_report:")
+print(f.classification_report(Y_sentences, pred))
+print(f.confusion_matrix(Y_sentences, pred))
+print("")
+
+print("NB")
+clf = f.GaussianNB()
+clf = clf.fit(X_sentences_c, Y_sentences)
+pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
+print("Classification_report:")
+print(f.classification_report(Y_sentences, pred))
+print(f.confusion_matrix(Y_sentences, pred))
+print("")
+
+print("DT")
+clf = f.DecisionTreeClassifier(random_state=0)
+clf = clf.fit(X_sentences_c, Y_sentences)
+pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
+print("Classification_report:")
+print(f.classification_report(Y_sentences, pred))
+print(f.confusion_matrix(Y_sentences, pred))
+
+
+dataset = arff.load(open(azfeat466, 'r'))
+X_data = f.np.array(dataset['data'])
+azport = X_data[:, 0:8]
+
+X_pos.append(0)
+X_crf = []
+c = 0
+for a in abstracts:
+    X_crf.append(abstract2features(a, azport, X_sentences_we, X_sentences, X_pos, c))
+    c += len(a)
+Y_crf = [abstract2labels(a) for a in abstracts]
+
+print("")
+print("CRF")
+clf = f.sklearn_crfsuite.CRF(algorithm='lbfgs', c1=0.1, c2=0.1,
+                             max_iterations=100, all_possible_transitions=True)
+clf = clf.fit(X_crf, Y_crf)
+pred = f.cross_val_predict(clf, X_crf, Y_crf, cv=cross_val)
+print("Classification_report:")
+labels = list(clf.classes_)
+f.metrics.flat_f1_score(Y_crf, pred, average='weighted', labels=labels)
+sorted_labels = sorted(labels, key=lambda name: (name[1:], name[0]))
+print(f.metrics.flat_classification_report(Y_crf, pred, labels=sorted_labels, digits=2))
+print("")
+
+################################### 832 ####################################################
+print("lendo corpus ", corpus832)
+abstracts = f.loadJson(corpus832)
+_, _, data, labels, _ = f.loadFromJson(corpus832)
+X_sentences, X_prev, X_next, X_pos, Y_sentences, _ = f.abstracts_to_sentences(data, labels)
+
+del abstracts[69][7]
+del X_sentences[572]
+del X_prev[572]
+del X_next[572]
+del X_pos[572]
+del Y_sentences[572]
+
+X_sentences_we = f.extract_features_we(X_sentences, model, model_size, vocabulary)
+# X_sentences_we = []
+
+print("Extraindo tfidf e chi2")
+vectorizer = f.TfidfVectorizer(ngram_range=(1, ngrama))
+selector = f.SelectKBest(f.chi2, k=kchi)
+
+X_sentences = vectorizer.fit_transform(X_sentences)
+X_prev = vectorizer.transform(X_prev)
+X_next = vectorizer.transform(X_next)
+X_sentences = selector.fit_transform(X_sentences, Y_sentences)
+X_prev = selector.transform(X_prev)
+X_next = selector.transform(X_next)
+
+dataset = arff.load(open('azport_features/azfeatures832n.arff', 'r'))
+X_data = f.np.array(dataset['data'])
+azport = X_data[:, :-1].astype(f.np.float)
+Y_labels = X_data[:, -1]
+
+X_sentences_c = f.hstack([azport, X_sentences_we, X_sentences, X_prev, X_next, f.np.expand_dims(f.np.array(X_pos), -1)])
+X_sentences_c = X_sentences_c.todense()
+
+print("SVM RBF")
+clf = f.SVC(kernel='rbf')
+clf = clf.fit(X_sentences_c, Y_sentences)
+pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
+print("Classification_report:")
+print(f.classification_report(Y_sentences, pred))
+print(f.confusion_matrix(Y_sentences, pred))
+print("")
+
+print("SVM linear")
+clf = f.SVC(kernel='linear')
+clf = clf.fit(X_sentences_c, Y_sentences)
+pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
+print("Classification_report:")
+print(f.classification_report(Y_sentences, pred))
+print(f.confusion_matrix(Y_sentences, pred))
+print("")
+
+print("KNN")
+clf = f.neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
+clf = clf.fit(X_sentences_c, Y_sentences)
+pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
+print("Classification_report:")
+print(f.classification_report(Y_sentences, pred))
+print(f.confusion_matrix(Y_sentences, pred))
+print("")
+
+print("NB")
+clf = f.GaussianNB()
+clf = clf.fit(X_sentences_c, Y_sentences)
+pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
+print("Classification_report:")
+print(f.classification_report(Y_sentences, pred))
+print(f.confusion_matrix(Y_sentences, pred))
+print("")
+
+print("DT")
+clf = f.DecisionTreeClassifier(random_state=0)
+clf = clf.fit(X_sentences_c, Y_sentences)
+pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
+print("Classification_report:")
+print(f.classification_report(Y_sentences, pred))
+print(f.confusion_matrix(Y_sentences, pred))
+
+
+dataset = arff.load(open(azfeat832, 'r'))
+X_data = f.np.array(dataset['data'])
+azport = X_data[:, :-1]
+
+X_pos.append(0)
+X_crf = []
+c = 0
+for a in abstracts:
+    X_crf.append(abstract2features(a, azport, X_sentences_we, X_sentences, X_pos, c))
+    c += len(a)
+Y_crf = [abstract2labels(a) for a in abstracts]
+
+print("")
+print("CRF")
+clf = f.sklearn_crfsuite.CRF(algorithm='lbfgs', c1=0.1, c2=0.1,
+                             max_iterations=100, all_possible_transitions=True)
+clf = clf.fit(X_crf, Y_crf)
+pred = f.cross_val_predict(clf, X_crf, Y_crf, cv=cross_val)
+print("Classification_report:")
+labels = list(clf.classes_)
+f.metrics.flat_f1_score(Y_crf, pred, average='weighted', labels=labels)
+sorted_labels = sorted(labels, key=lambda name: (name[1:], name[0]))
+print(f.metrics.flat_classification_report(Y_crf, pred, labels=sorted_labels, digits=2))
+print("")
+
 print(f.time.asctime(f.time.localtime(f.time.time())))

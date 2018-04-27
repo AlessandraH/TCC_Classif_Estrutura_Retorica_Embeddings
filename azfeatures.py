@@ -2,6 +2,7 @@
 import functions as f
 import arff
 import warnings
+from sklearn.feature_extraction import DictVectorizer
 
 
 def sent2features(i, x_features, pos):
@@ -19,30 +20,30 @@ def sent2features(i, x_features, pos):
 
     if pos[i] > 0:
         features.update({
-            '-1:length': x_features[i-1][0],
-            '-1:location': x_features[i-1][1],
-            '-1:citacion': x_features[i-1][2],
-            '-1:formulaic': x_features[i-1][3],
-            '-1:tense': x_features[i-1][4],
-            '-1:voice': x_features[i-1][5],
-            '-1:modal': x_features[i-1][6],
-            '-1:history': x_features[i-1][7],
-            '-1:pos': pos[i-1],
+            '-1:length': x_features[i - 1][0],
+            '-1:location': x_features[i - 1][1],
+            '-1:citacion': x_features[i - 1][2],
+            '-1:formulaic': x_features[i - 1][3],
+            '-1:tense': x_features[i - 1][4],
+            '-1:voice': x_features[i - 1][5],
+            '-1:modal': x_features[i - 1][6],
+            '-1:history': x_features[i - 1][7],
+            '-1:pos': pos[i - 1],
         })
     else:
         features['boa'] = True
 
-    if pos[i+1] > 0:
+    if pos[i + 1] > 0:
         features.update({
-            '+1:length': x_features[i+1][0],
-            '+1:location': x_features[i+1][1],
-            '+1:citacion': x_features[i+1][2],
-            '+1:formulaic': x_features[i+1][3],
-            '+1:tense': x_features[i+1][4],
-            '+1:voice': x_features[i+1][5],
-            '+1:modal': x_features[i+1][6],
-            '+1:history': x_features[i+1][7],
-            '+1:pos': pos[i+1],
+            '+1:length': x_features[i + 1][0],
+            '+1:location': x_features[i + 1][1],
+            '+1:citacion': x_features[i + 1][2],
+            '+1:formulaic': x_features[i + 1][3],
+            '+1:tense': x_features[i + 1][4],
+            '+1:voice': x_features[i + 1][5],
+            '+1:modal': x_features[i + 1][6],
+            '+1:history': x_features[i + 1][7],
+            '+1:pos': pos[i + 1],
         })
     else:
         features['eoa'] = True
@@ -51,7 +52,7 @@ def sent2features(i, x_features, pos):
 
 
 def abstract2features(abstract, x_features, pos, c):
-    return [sent2features(c+i, x_features, pos) for i in range(len(abstract))]
+    return [sent2features(c + i, x_features, pos) for i in range(len(abstract))]
 
 
 def abstract2labels(abstract):
@@ -173,111 +174,42 @@ def classificador():
 
 # svm e naive bayes
 def classificador2():
-    corpus366 = 'corpus/output366.json'
-    azfeat366 = 'azport_features/azfeatures366numbers.arff'
-    corpus466 = 'corpus/output466.json'
-    azfeat466 = 'azport_features/azfeatures466numbers.arff'
-    corpus832 = 'corpus/output832.json'
-    azfeat832 = 'azport_features/azfeatures832numbers.arff'
+    azfeats = ['azport_features/azfeatures366n.arff', 'azport_features/azfeatures466n.arff',
+               'azport_features/azfeatures832n.arff']
 
-    print(corpus366)
-    dataset = arff.load(open(azfeat366, 'r'))
-    X_data = f.np.array(dataset['data'])
-    features = X_data[:, :-1].astype(f.np.float)
-    Y_labels = X_data[:, -1]
+    for azfeat in azfeats:
+        dataset = arff.load(open(azfeat, 'r'))
+        X_data = f.np.array(dataset['data'])
+        features = X_data[:, :-1].astype(f.np.float)
+        # features = X_data[:, :-1]
+        Y_labels = X_data[:, -1]
 
-    print("SVM RBF corpus366")
-    clf = f.SVC(kernel='rbf')
-    clf = clf.fit(features, Y_labels)
-    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
-    print("Classification_report:")
-    print(f.classification_report(Y_labels, pred))
-    print(f.confusion_matrix(Y_labels, pred))
-    print("")
+        print("SVM RBF")
+        clf = f.SVC(kernel='rbf')
+        clf = clf.fit(features, Y_labels)
+        pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
+        print("Classification_report:")
+        print(f.classification_report(Y_labels, pred))
+        print(f.confusion_matrix(Y_labels, pred))
+        print("")
 
-    print("SVM linear corpus366")
-    clf = f.SVC(kernel='linear')
-    clf = clf.fit(features, Y_labels)
-    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
-    print("Classification_report:")
-    print(f.classification_report(Y_labels, pred))
-    print(f.confusion_matrix(Y_labels, pred))
-    print("")
+        print("SVM linear")
+        clf = f.SVC(kernel='linear')
+        clf = clf.fit(features, Y_labels)
+        pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
+        print("Classification_report:")
+        print(f.classification_report(Y_labels, pred))
+        print(f.confusion_matrix(Y_labels, pred))
+        print("")
 
-    print("NB corpus366")
-    clf = f.GaussianNB()
-    clf = clf.fit(features, Y_labels)
-    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
-    print("Classification_report:")
-    print(f.classification_report(Y_labels, pred))
-    print(f.confusion_matrix(Y_labels, pred))
-    print("")
-
-    print(corpus466)
-    dataset = arff.load(open(azfeat466, 'r'))
-    X_data = f.np.array(dataset['data'])
-    features = X_data[:, :-1].astype(f.np.float)
-    Y_labels = X_data[:, -1]
-
-    print("SVM RBF corpus466")
-    clf = f.SVC(kernel='rbf')
-    clf = clf.fit(features, Y_labels)
-    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
-    print("Classification_report:")
-    print(f.classification_report(Y_labels, pred))
-    print(f.confusion_matrix(Y_labels, pred))
-    print("")
-
-    print("SVM linear corpus466")
-    clf = f.SVC(kernel='linear')
-    clf = clf.fit(features, Y_labels)
-    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
-    print("Classification_report:")
-    print(f.classification_report(Y_labels, pred))
-    print(f.confusion_matrix(Y_labels, pred))
-    print("")
-
-    print("NB corpus466")
-    clf = f.GaussianNB()
-    clf = clf.fit(features, Y_labels)
-    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
-    print("Classification_report:")
-    print(f.classification_report(Y_labels, pred))
-    print(f.confusion_matrix(Y_labels, pred))
-    print("")
-
-    print(corpus832)
-    dataset = arff.load(open(azfeat832, 'r'))
-    X_data = f.np.array(dataset['data'])
-    features = X_data[:, :-1].astype(f.np.float)
-    Y_labels = X_data[:, -1]
-
-    print("SVM RBF corpus832")
-    clf = f.SVC(kernel='rbf')
-    clf = clf.fit(features, Y_labels)
-    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
-    print("Classification_report:")
-    print(f.classification_report(Y_labels, pred))
-    print(f.confusion_matrix(Y_labels, pred))
-    print("")
-
-    print("SVM linear corpus832")
-    clf = f.SVC(kernel='linear')
-    clf = clf.fit(features, Y_labels)
-    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
-    print("Classification_report:")
-    print(f.classification_report(Y_labels, pred))
-    print(f.confusion_matrix(Y_labels, pred))
-    print("")
-
-    print("NB corpus832")
-    clf = f.GaussianNB()
-    clf = clf.fit(features, Y_labels)
-    pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
-    print("Classification_report:")
-    print(f.classification_report(Y_labels, pred))
-    print(f.confusion_matrix(Y_labels, pred))
-    print("")
+        print("NB")
+        clf = f.GaussianNB()
+        clf = clf.fit(features, Y_labels)
+        pred = f.cross_val_predict(clf, features, Y_labels, cv=10)
+        print("Classification_report:")
+        print(f.classification_report(Y_labels, pred))
+        print(f.confusion_matrix(Y_labels, pred))
+        print("")
 
 
 warnings.filterwarnings("ignore")
