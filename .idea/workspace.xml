@@ -21,8 +21,8 @@
       <file leaf-file-name="all_features.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/all_features.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3414" selection-start-line="3414" selection-end-line="3414" />
+            <state relative-caret-position="425">
+              <caret line="3370" column="25" lean-forward="true" selection-start-line="3370" selection-start-column="25" selection-end-line="3370" selection-end-column="25" />
               <folding>
                 <element signature="e#24#45#0" expanded="true" />
               </folding>
@@ -55,7 +55,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/glove_600.txt" />
         <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/wang2vec_cbow1000.txt" />
         <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we/glove_1000.txt" />
         <option value="$PROJECT_DIR$/results/we sentenca soma/crf2ponto0/we+tfidf/wang2vec_cbow50.txt" />
@@ -104,8 +103,9 @@
         <option value="$PROJECT_DIR$/results/azport com we/word2vec_cbow1000.txt" />
         <option value="$PROJECT_DIR$/results/azport com we/word2vec_skipgram1000.txt" />
         <option value="$PROJECT_DIR$/results/azport com we/wang2vec_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/all_features.py" />
         <option value="$PROJECT_DIR$/results/azport com we/glove_1000.txt" />
+        <option value="$PROJECT_DIR$/results/azport+tfidf/azport+tfidf.txt" />
+        <option value="$PROJECT_DIR$/all_features.py" />
       </list>
     </option>
   </component>
@@ -295,8 +295,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14488935" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14488935" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.32849163" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5015806" side_tool="true" weight="0.8916201" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295583" />
@@ -320,14 +321,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/azfeatures.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4775">
-          <caret line="191" selection-start-line="191" selection-end-line="191" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classificador_we_blog.py" />
     <entry file="file://$PROJECT_DIR$/results/azport features/crf.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -585,10 +578,18 @@
         <state relative-caret-position="-9655" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/results/azport+tfidf/azport+tfidf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/azport+tfidf/azport+tfidf.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9655" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/all_features.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3414" selection-start-line="3414" selection-end-line="3414" />
+        <state relative-caret-position="425">
+          <caret line="3370" column="25" lean-forward="true" selection-start-line="3370" selection-start-column="25" selection-end-line="3370" selection-end-column="25" />
           <folding>
             <element signature="e#24#45#0" expanded="true" />
           </folding>
