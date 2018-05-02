@@ -104,35 +104,35 @@ def div(n):
     return n[0]/n[1]
 
 
-def extract_features_we(X_sentences, model, model_size, vocabulary):
-    features = []
-    divisor = []
-    for s in X_sentences:
-        n = 0
-        sentence_feature = [0] * model_size
-        sentences = str(s).split()
-        for word in sentences:
-            if len(word) > 2 and word in vocabulary:
-                n += 1
-                word_feature = model[word]
-                sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
-        divisor = [n] * model_size
-        sentence_feature = list(map(div, zip(sentence_feature, divisor)))
-        features.append(sentence_feature)
-    return np.array(features)
-
-
 # def extract_features_we(X_sentences, model, model_size, vocabulary):
 #     features = []
+#     divisor = []
 #     for s in X_sentences:
+#         n = 0
 #         sentence_feature = [0] * model_size
 #         sentences = str(s).split()
 #         for word in sentences:
 #             if len(word) > 2 and word in vocabulary:
+#                 n += 1
 #                 word_feature = model[word]
 #                 sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
+#         divisor = [n] * model_size
+#         sentence_feature = list(map(div, zip(sentence_feature, divisor)))
 #         features.append(sentence_feature)
 #     return np.array(features)
+
+
+def extract_features_we(X_sentences, model, model_size, vocabulary):
+    features = []
+    for s in X_sentences:
+        sentence_feature = [0] * model_size
+        sentences = str(s).split()
+        for word in sentences:
+            if len(word) > 2 and word in vocabulary:
+                word_feature = model[word]
+                sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
+        features.append(sentence_feature)
+    return np.array(features)
 
 
 warnings.filterwarnings("ignore")
