@@ -17,7 +17,7 @@ from sklearn.feature_selection import SelectKBest, chi2
 from scipy.sparse import hstack
 from sklearn.svm import SVC
 from sklearn import neighbors
-from sklearn.naive_bayes import MultinomialNB, GaussianNB
+from sklearn.naive_bayes import MultinomialNB, GaussianNB, BernoulliNB
 from sklearn.tree import DecisionTreeClassifier
 from gensim.models import KeyedVectors
 
