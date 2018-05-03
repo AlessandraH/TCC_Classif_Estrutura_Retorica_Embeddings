@@ -21,8 +21,8 @@
       <file leaf-file-name="all_features.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/all_features.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1850">
-              <caret line="74" column="28" lean-forward="true" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+            <state relative-caret-position="722">
+              <caret line="3415" column="17" selection-start-line="3415" selection-start-column="17" selection-end-line="3415" selection-end-column="17" />
               <folding>
                 <element signature="e#24#45#0" expanded="true" />
               </folding>
@@ -43,10 +43,10 @@
     <findStrings>
       <find>&quot;CRF&quot;</find>
       <find>abstract2labels2</find>
-      <find>we[49</find>
       <find>model</find>
       <find>azport[</find>
       <find>we[999]</find>
+      <find>we[49</find>
       <find>we[49]</find>
       <find>we[99]</find>
       <find>we[299]</find>
@@ -63,26 +63,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/results/we media/we/glove_1000.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/word2vec_cbow50.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/word2vec_skipgram50.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/wang2vec_cbow50.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/wang2vec_skipgram50.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/glove_50.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/word2vec_cbow100.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/word2vec_skipgram100.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/wang2vec_cbow100.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/wang2vec_skipgram100.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/glove_100.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/word2vec_cbow300.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/word2vec_skipgram300.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/wang2vec_cbow300.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/wang2vec_skipgram300.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/glove_300.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/word2vec_cbow600.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/word2vec_skipgram600.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/wang2vec_cbow600.txt" />
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/wang2vec_skipgram600.txt" />
         <option value="$PROJECT_DIR$/results/we media/we+tfidf/glove_600.txt" />
         <option value="$PROJECT_DIR$/results/we media/we+tfidf/word2vec_cbow1000.txt" />
         <option value="$PROJECT_DIR$/results/we media/we+tfidf/word2vec_skipgram1000.txt" />
@@ -113,6 +93,26 @@
         <option value="$PROJECT_DIR$/results/we soma/we+azport/word2vec_skipgram1000.txt" />
         <option value="$PROJECT_DIR$/results/we soma/we+azport/wang2vec_cbow1000.txt" />
         <option value="$PROJECT_DIR$/results/we soma/we+azport/glove_1000.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_skipgram50.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_skipgram50.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/glove_50.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_skipgram100.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_skipgram100.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/glove_100.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_skipgram300.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_skipgram300.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/glove_300.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_cbow600.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_skipgram600.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_cbow600.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_skipgram600.txt" />
+        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/glove_600.txt" />
         <option value="$PROJECT_DIR$/all_features.py" />
       </list>
     </option>
@@ -154,7 +154,7 @@
               <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="462c0819:PsiDirectoryNode" />
               <item name="results" type="462c0819:PsiDirectoryNode" />
               <item name="we soma" type="462c0819:PsiDirectoryNode" />
-              <item name="we+azport" type="462c0819:PsiDirectoryNode" />
+              <item name="we+azport+tfidf" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -317,7 +317,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1691254" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.32849163" />
@@ -343,86 +342,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/results/we+azport+tfidf/word2vec_skipgram300.txt" />
-    <entry file="file://$PROJECT_DIR$/results/we+azport+tfidf/wang2vec_cbow300.txt" />
-    <entry file="file://$PROJECT_DIR$/results/we+azport+tfidf/word2vec_cbow600.txt" />
-    <entry file="file://$PROJECT_DIR$/results/we+azport+tfidf/glove_600.txt" />
-    <entry file="file://$PROJECT_DIR$/results/we+azport+tfidf/word2vec_cbow1000.txt" />
-    <entry file="file://$PROJECT_DIR$/results/we+azport+tfidf/wang2vec_cbow1000.txt" />
-    <entry file="file://$PROJECT_DIR$/classificador_sentenca_embeddings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="61" column="118" lean-forward="true" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we/wang2vec_skipgram50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9655" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we/glove_50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9655" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crf2ponto0.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/azport/azport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9664" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we/word2vec_cbow100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9655" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we/word2vec_skipgram100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9655" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we/wang2vec_cbow100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9655" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we/wang2vec_skipgram100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9655" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we/glove_100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9655" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we/wang2vec_cbow300.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9600" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we/wang2vec_skipgram300.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-625">
-          <caret line="359" column="30" lean-forward="true" selection-start-line="359" selection-start-column="30" selection-end-line="359" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we/word2vec_skipgram1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9655" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we/glove_1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9525" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/we media/we+tfidf/word2vec_cbow50.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9655" />
@@ -450,13 +369,6 @@
     <entry file="file://$PROJECT_DIR$/results/we media/we+tfidf/glove_1000.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9655" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="117" column="7" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="7" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/results/we soma/we+azport/glove_50.txt">
@@ -531,10 +443,80 @@
     <entry file="file://$PROJECT_DIR$/results/we soma/we+azport/glove_1000.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="117" column="7" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="7" />
+          <folding>
+            <element signature="e#25#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_skipgram50.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_cbow50.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_cbow50.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_skipgram50.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/glove_50.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_cbow100.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_skipgram100.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_cbow100.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_skipgram100.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/glove_100.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_cbow300.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_skipgram300.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_cbow300.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_skipgram300.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/glove_300.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_skipgram600.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_skipgram600.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/glove_600.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/all_features.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1850">
-          <caret line="74" column="28" lean-forward="true" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+        <state relative-caret-position="722">
+          <caret line="3415" column="17" selection-start-line="3415" selection-start-column="17" selection-end-line="3415" selection-end-column="17" />
           <folding>
             <element signature="e#24#45#0" expanded="true" />
           </folding>
