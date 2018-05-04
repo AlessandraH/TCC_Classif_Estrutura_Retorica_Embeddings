@@ -17,20 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="brenoullinb.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/brenoullinb.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-              <folding>
-                <element signature="e#25#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -63,13 +50,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_cbow50.txt" />
-        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_skipgram50.txt" />
-        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/glove_50.txt" />
-        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_cbow100.txt" />
-        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_skipgram100.txt" />
-        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_cbow100.txt" />
-        <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_skipgram100.txt" />
         <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/glove_100.txt" />
         <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_cbow300.txt" />
         <option value="$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_skipgram300.txt" />
@@ -97,27 +77,34 @@
         <option value="$PROJECT_DIR$/results/we media/we+tfidf/BernoulliNB.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/word2vec_cbow50.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/azport_tfidf.txt" />
+        <option value="$PROJECT_DIR$/results/BernoulliNB/word2vec_skipgram50.txt" />
+        <option value="$PROJECT_DIR$/results/BernoulliNB/wang2vec_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results/BernoulliNB/wang2vec_skipgram50.txt" />
+        <option value="$PROJECT_DIR$/results/BernoulliNB/glove_50.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/word2vec_cbow100.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/word2vec_cbow300.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/word2vec_cbow600.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/word2vec_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/results/BernoulliNB/word2vec_skipgram50.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/word2vec_skipgram100.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/word2vec_skipgram300.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/word2vec_skipgram600.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/word2vec_skipgram1000.txt" />
-        <option value="$PROJECT_DIR$/results/BernoulliNB/wang2vec_cbow50.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/wang2vec_cbow100.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/wang2vec_cbow300.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/wang2vec_cbow600.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/wang2vec_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/results/BernoulliNB/wang2vec_skipgram50.txt" />
-        <option value="$PROJECT_DIR$/results/BernoulliNB/glove_50.txt" />
+        <option value="$PROJECT_DIR$/results/BernoulliNB/wang2vec_skipgram100.txt" />
+        <option value="$PROJECT_DIR$/results/BernoulliNB/wang2vec_skipgram300.txt" />
+        <option value="$PROJECT_DIR$/results/BernoulliNB/wang2vec_skipgram600.txt" />
+        <option value="$PROJECT_DIR$/results/BernoulliNB/glove_100.txt" />
+        <option value="$PROJECT_DIR$/results/BernoulliNB/glove_300.txt" />
+        <option value="$PROJECT_DIR$/results/BernoulliNB/glove_600.txt" />
+        <option value="$PROJECT_DIR$/results/BernoulliNB/glove_1000.txt" />
         <option value="$PROJECT_DIR$/brenoullinb.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="974" />
@@ -131,7 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -144,16 +130,11 @@
               <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="462c0819:PsiDirectoryNode" />
               <item name="results" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="462c0819:PsiDirectoryNode" />
-              <item name="results" type="462c0819:PsiDirectoryNode" />
-              <item name="BernoulliNB" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -335,13 +316,17 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/brenoullinb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classifier.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85375">
           <caret line="3415" column="17" selection-start-line="3415" selection-start-column="17" selection-end-line="3415" selection-end-column="17" />
-          <folding>
-            <element signature="e#24#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -378,20 +363,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
           <caret line="117" column="7" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="7" />
-          <folding>
-            <element signature="e#25#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_cbow1000.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/word2vec_skipgram1000.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/wang2vec_cbow1000.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/glove_1000.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -400,42 +373,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/tfidf/BernoulliNB.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we/BernoulliNB">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/azport+we/BernoulliNB.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we/BernoulliNB.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/azport+tfidf/BernoulliNB.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/results/tfidf/BernoulliNB.txt" />
     <entry file="file://$PROJECT_DIR$/classifier.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="651">
           <caret line="3415" column="15" selection-end-line="3840" />
-          <folding>
-            <element signature="e#24#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/azport/BernoulliNB.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/results/azport/BernoulliNB.txt" />
     <entry file="file://$PROJECT_DIR$/azfeatures.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
@@ -443,41 +389,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/BernoulliNB.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we+azport+tfidf/BernoulliNB.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we+tfidf/BernoulliNB.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we soma/we+tfidf/BernoulliNB/word2vec_cbow.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we soma/we/BernoulliNB/word2vec_cbow.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/BernoulliNB.txt" />
+    <entry file="file://$PROJECT_DIR$/results/we media/we+azport+tfidf/BernoulliNB.txt" />
+    <entry file="file://$PROJECT_DIR$/results/we media/we+tfidf/BernoulliNB.txt" />
+    <entry file="file://$PROJECT_DIR$/results/we soma/we+tfidf/BernoulliNB/word2vec_cbow.txt" />
+    <entry file="file://$PROJECT_DIR$/results/we soma/we/BernoulliNB/word2vec_cbow.txt" />
     <entry file="file://$PROJECT_DIR$/results/BernoulliNB/azport_tfidf.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -493,9 +409,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/results/BernoulliNB/word2vec_cbow100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-825" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/results/BernoulliNB/word2vec_cbow300.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -504,9 +418,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/results/BernoulliNB/word2vec_cbow1000.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/word2vec_skipgram50.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/results/BernoulliNB/word2vec_skipgram100.txt">
@@ -521,9 +432,6 @@
     <entry file="file://$PROJECT_DIR$/results/BernoulliNB/word2vec_skipgram1000.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/wang2vec_cbow50.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/BernoulliNB/wang2vec_cbow100.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -536,19 +444,31 @@
     <entry file="file://$PROJECT_DIR$/results/BernoulliNB/wang2vec_cbow1000.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/wang2vec_skipgram50.txt">
+    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/wang2vec_skipgram100.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/glove_50.txt">
+    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/wang2vec_skipgram300.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/wang2vec_skipgram600.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/glove_100.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/glove_300.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/glove_600.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/glove_1000.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/brenoullinb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-          <folding>
-            <element signature="e#25#46#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="875">
+          <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
         </state>
       </provider>
     </entry>
