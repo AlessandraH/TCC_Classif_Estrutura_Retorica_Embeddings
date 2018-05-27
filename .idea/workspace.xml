@@ -17,7 +17,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="classifier.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/classifier.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="302" column="1" lean-forward="true" selection-start-line="302" selection-start-column="1" selection-end-line="302" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -50,7 +60,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/results/we media/we+tfidf/BernoulliNB.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/word2vec_cbow50.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/word2vec_skipgram50.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/wang2vec_cbow50.txt" />
@@ -101,14 +110,15 @@
         <option value="$PROJECT_DIR$/results/BernoulliNB/we/glove_600.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/we/glove_1000.txt" />
         <option value="$PROJECT_DIR$/brenoullinb.py" />
+        <option value="$PROJECT_DIR$/classifier.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="974" />
-    <option name="height" value="527" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="975" />
+    <option name="height" value="528" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -290,18 +300,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1691254" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16853933" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.32849163" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5015806" side_tool="true" weight="0.8916201" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.7608939" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295583" />
       <window_info anchor="bottom" x="0" y="0" width="1920" height="1040" id="Python Console" order="10" weight="0.52402234" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.7608939" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.698324" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -316,13 +326,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/brenoullinb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/brenoullinb.py" />
     <entry file="file://$PROJECT_DIR$/brenoullinb.py" />
     <entry file="file://$PROJECT_DIR$/classifier.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -375,13 +379,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/results/tfidf/BernoulliNB.txt" />
-    <entry file="file://$PROJECT_DIR$/classifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="3415" column="15" selection-end-line="3840" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/azport/BernoulliNB.txt" />
     <entry file="file://$PROJECT_DIR$/azfeatures.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -414,52 +411,11 @@
         <state relative-caret-position="-2705" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_cbow50.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_cbow100.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_cbow300.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_cbow600.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_cbow1000.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_skipgram50.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_skipgram100.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_skipgram300.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_skipgram600.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/we/glove_50.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/we/glove_100.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/we/glove_300.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/we/glove_600.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/BernoulliNB/we/glove_1000.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/brenoullinb.py">
+    <entry file="file://$PROJECT_DIR$/brenoullinb.py" />
+    <entry file="file://$PROJECT_DIR$/classifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="730">
-          <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+        <state relative-caret-position="25">
+          <caret line="302" column="1" lean-forward="true" selection-start-line="302" selection-start-column="1" selection-end-line="302" selection-end-column="1" />
         </state>
       </provider>
     </entry>
