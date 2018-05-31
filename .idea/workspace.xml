@@ -17,12 +17,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="classifier.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="302" column="1" lean-forward="true" selection-start-line="302" selection-start-column="1" selection-end-line="302" selection-end-column="1" />
+            <state relative-caret-position="28800">
+              <caret line="1154" column="31" selection-start-line="1154" selection-start-column="31" selection-end-line="1154" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -48,10 +48,12 @@
       <find>we[299]</find>
       <find>we[599]</find>
       <find>we[49]</find>
+      <find>'we</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;CRF 2.0&quot;</replace>
       <replace>abstract2labels</replace>
+      <replace>'-1:we</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -115,10 +117,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
     <option name="width" value="975" />
-    <option name="height" value="528" />
+    <option name="height" value="530" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -128,7 +130,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,6 +146,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -301,17 +303,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16853933" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.32849163" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5015806" side_tool="true" weight="0.8916201" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.7608939" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295583" />
       <window_info anchor="bottom" x="0" y="0" width="1920" height="1040" id="Python Console" order="10" weight="0.52402234" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.7608939" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.698324" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -326,6 +329,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3375">
+          <caret line="135" column="55" selection-start-line="135" selection-start-column="55" selection-end-line="135" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7550">
+          <caret line="302" column="1" lean-forward="true" selection-start-line="302" selection-start-column="1" selection-end-line="302" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/brenoullinb.py" />
     <entry file="file://$PROJECT_DIR$/brenoullinb.py" />
     <entry file="file://$PROJECT_DIR$/classifier.py">
@@ -380,13 +397,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/results/tfidf/BernoulliNB.txt" />
     <entry file="file://$PROJECT_DIR$/results/azport/BernoulliNB.txt" />
-    <entry file="file://$PROJECT_DIR$/azfeatures.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="205" column="26" selection-start-line="205" selection-start-column="26" selection-end-line="205" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/azfeatures.py" />
     <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/BernoulliNB.txt" />
     <entry file="file://$PROJECT_DIR$/results/we media/we+azport+tfidf/BernoulliNB.txt" />
     <entry file="file://$PROJECT_DIR$/results/we media/we+tfidf/BernoulliNB.txt" />
@@ -414,8 +425,8 @@
     <entry file="file://$PROJECT_DIR$/brenoullinb.py" />
     <entry file="file://$PROJECT_DIR$/classifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="302" column="1" lean-forward="true" selection-start-line="302" selection-start-column="1" selection-end-line="302" selection-end-column="1" />
+        <state relative-caret-position="28800">
+          <caret line="1154" column="31" selection-start-line="1154" selection-start-column="31" selection-end-line="1154" selection-end-column="31" />
         </state>
       </provider>
     </entry>
