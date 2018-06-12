@@ -1098,7 +1098,7 @@ azfeat366 = 'azport_features/azfeatures366.arff'
 azfeat466 = 'azport_features/azfeatures466.arff'
 azfeat832 = 'azport_features/azfeatures832.arff'
 
-# model_name = 'cbow_s50.txt'
+model_name = 'cbow_s50.txt'
 # model_name = 'cbow_s100.txt'
 # model_name = 'cbow_s300.txt'
 # model_name = 'cbow_s600.txt'
@@ -1108,7 +1108,7 @@ azfeat832 = 'azport_features/azfeatures832.arff'
 # model_name = 'skip_s100.txt'
 # model_name = 'skip_s300.txt'
 # model_name = 'skip_s600.txt'
-model_name = 'skip_s1000.txt'
+# model_name = 'skip_s1000.txt'
 
 # model_name = 'glove_s50.txt'
 # model_name = 'glove_s100.txt'
@@ -1116,7 +1116,7 @@ model_name = 'skip_s1000.txt'
 # model_name = 'glove_s600.txt'
 # model_name = 'glove_s1000.txt'
 
-model_size = 1000
+model_size = 50
 ngrama = 1
 kchi = 100
 cross_val = 10
@@ -1174,14 +1174,14 @@ for corpus in corpora:
     azport = X_data[:, :-1].astype(f.np.float)
     Y_labels = X_data[:, -1]
 
-    X_sentences_c = f.hstack(
-        [azport, X_sentences_we, X_sentences, X_prev, X_next, f.np.expand_dims(f.np.array(X_pos), -1)])
+    # X_sentences_c = f.hstack(
+    #     [azport, X_sentences_we, X_sentences, X_prev, X_next, f.np.expand_dims(f.np.array(X_pos), -1)])
     # X_sentences_c = f.hstack([X_sentences_we, X_sentences, X_prev, X_next, f.np.expand_dims(f.np.array(X_pos), -1)])
     # X_sentences_c = f.hstack([X_sentences, X_prev, X_next, f.np.expand_dims(f.np.array(X_pos), -1)])
     # X_sentences_c = f.hstack([azport, X_sentences, X_prev, X_next, f.np.expand_dims(f.np.array(X_pos), -1)])
-    X_sentences_c = X_sentences_c.todense()
+    # X_sentences_c = X_sentences_c.todense()
     # X_sentences_c = f.np.concatenate((X_sentences_we, azport), axis=1)
-    # X_sentences_c = X_sentences_we
+    X_sentences_c = X_sentences_we
     # X_sentences_c = azport
 
     print("SVM RBF")
