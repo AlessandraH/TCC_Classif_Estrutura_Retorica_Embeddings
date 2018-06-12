@@ -21,8 +21,8 @@
       <file leaf-file-name="classifier.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="1183" column="28" lean-forward="true" selection-start-line="1183" selection-start-column="28" selection-end-line="1183" selection-end-column="28" />
+            <state relative-caret-position="29">
+              <caret line="1118" column="17" selection-start-line="1118" selection-start-column="17" selection-end-line="1118" selection-end-column="17" />
               <folding>
                 <element signature="e#24#45#0" expanded="true" />
                 <element signature="e#127#105933#0" />
@@ -70,16 +70,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/results/BernoulliNB/we/word2vec_skipgram1000.txt" />
-        <option value="$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_cbow50.txt" />
-        <option value="$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_cbow100.txt" />
-        <option value="$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_cbow300.txt" />
-        <option value="$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_cbow600.txt" />
-        <option value="$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_skipgram50.txt" />
-        <option value="$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_skipgram100.txt" />
-        <option value="$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_skipgram300.txt" />
-        <option value="$PROJECT_DIR$/results/BernoulliNB/we/wang2vec_skipgram600.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/we/glove_50.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/we/glove_100.txt" />
         <option value="$PROJECT_DIR$/results/BernoulliNB/we/glove_300.txt" />
@@ -120,7 +110,17 @@
         <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport/w2v_skipgram300.txt" />
         <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport/w2v_skipgram600.txt" />
         <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport/w2v_skipgram1000.txt" />
+        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow600.txt" />
+        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow1000.txt" />
+        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_skipgram50.txt" />
+        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_skipgram100.txt" />
+        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_skipgram300.txt" />
+        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_skipgram600.txt" />
         <option value="$PROJECT_DIR$/classifier.py" />
+        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_skipgram1000.txt" />
       </list>
     </option>
   </component>
@@ -163,14 +163,6 @@
               <item name="results" type="462c0819:PsiDirectoryNode" />
               <item name="svm_gridSearch" type="462c0819:PsiDirectoryNode" />
               <item name="we soma" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="462c0819:PsiDirectoryNode" />
-              <item name="results" type="462c0819:PsiDirectoryNode" />
-              <item name="svm_gridSearch" type="462c0819:PsiDirectoryNode" />
-              <item name="we soma" type="462c0819:PsiDirectoryNode" />
-              <item name="we+azport" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -332,9 +324,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16853933" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16853933" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.32849163" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5015806" side_tool="true" weight="0.8916201" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295583" />
@@ -358,32 +349,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/results/we media/we+tfidf/word2vec_cbow1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2280">
-          <caret line="295" column="30" lean-forward="true" selection-start-line="295" selection-start-column="30" selection-end-line="295" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we media/we+tfidf/glove_1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9655" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/glove_1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/tfidf/BernoulliNB.txt" />
-    <entry file="file://$PROJECT_DIR$/results/azport/BernoulliNB.txt" />
-    <entry file="file://$PROJECT_DIR$/azfeatures.py" />
-    <entry file="file://$PROJECT_DIR$/results/we soma/we+azport+tfidf/BernoulliNB.txt" />
-    <entry file="file://$PROJECT_DIR$/results/we media/we+azport+tfidf/BernoulliNB.txt" />
-    <entry file="file://$PROJECT_DIR$/results/we media/we+tfidf/BernoulliNB.txt" />
-    <entry file="file://$PROJECT_DIR$/results/we soma/we+tfidf/BernoulliNB/word2vec_cbow.txt" />
     <entry file="file://$PROJECT_DIR$/results/we soma/we/BernoulliNB/word2vec_cbow.txt" />
     <entry file="file://$PROJECT_DIR$/results/BernoulliNB/word2vec_cbow50.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -593,10 +558,64 @@
         <state relative-caret-position="-2836" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2775" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2836" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2550" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2550" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2550" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_skipgram50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2461" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_skipgram100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2700" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_skipgram300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2836" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_skipgram600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2325">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_skipgram1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="128" column="30" lean-forward="true" selection-start-line="128" selection-start-column="30" selection-end-line="128" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="1183" column="28" lean-forward="true" selection-start-line="1183" selection-start-column="28" selection-end-line="1183" selection-end-column="28" />
+        <state relative-caret-position="29">
+          <caret line="1118" column="17" selection-start-line="1118" selection-start-column="17" selection-end-line="1118" selection-end-column="17" />
           <folding>
             <element signature="e#24#45#0" expanded="true" />
             <element signature="e#127#105933#0" />
