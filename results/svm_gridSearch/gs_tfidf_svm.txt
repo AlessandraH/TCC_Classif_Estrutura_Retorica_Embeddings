@@ -1,0 +1,117 @@
+test_size = 0.1
+
+Reading  corpus/output366.json
+# Tuning hyper-parameters for f1
+
+Best parameters set found on development set:
+
+{'C': 100, 'kernel': 'linear'}
+
+Grid scores on development set:
+
+0.075 (+/-0.014) for {'C': 1, 'gamma': 0.001, 'kernel': 'rbf'}
+0.075 (+/-0.014) for {'C': 1, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.075 (+/-0.014) for {'C': 10, 'gamma': 0.001, 'kernel': 'rbf'}
+0.075 (+/-0.014) for {'C': 10, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.075 (+/-0.014) for {'C': 100, 'gamma': 0.001, 'kernel': 'rbf'}
+0.075 (+/-0.014) for {'C': 100, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.194 (+/-0.081) for {'C': 1000, 'gamma': 0.001, 'kernel': 'rbf'}
+0.075 (+/-0.014) for {'C': 1000, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.121 (+/-0.072) for {'C': 1, 'kernel': 'linear'}
+0.299 (+/-0.142) for {'C': 10, 'kernel': 'linear'}
+0.384 (+/-0.165) for {'C': 100, 'kernel': 'linear'}
+0.373 (+/-0.166) for {'C': 1000, 'kernel': 'linear'}
+
+Detailed classification report:
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+             precision    recall  f1-score   support
+
+          B       0.33      0.40      0.36         5
+          C       1.00      0.50      0.67         2
+          G       1.00      0.40      0.57         5
+          M       1.00      0.50      0.67         4
+          P       1.00      0.73      0.84        11
+          R       0.56      1.00      0.71        10
+
+avg / total       0.79      0.68      0.68        37
+
+
+Reading  corpus/output466.json
+# Tuning hyper-parameters for f1
+
+Best parameters set found on development set:
+
+{'C': 1000, 'kernel': 'linear'}
+
+Grid scores on development set:
+
+0.089 (+/-0.011) for {'C': 1, 'gamma': 0.001, 'kernel': 'rbf'}
+0.089 (+/-0.011) for {'C': 1, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.089 (+/-0.011) for {'C': 10, 'gamma': 0.001, 'kernel': 'rbf'}
+0.089 (+/-0.011) for {'C': 10, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.089 (+/-0.011) for {'C': 100, 'gamma': 0.001, 'kernel': 'rbf'}
+0.089 (+/-0.011) for {'C': 100, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.181 (+/-0.061) for {'C': 1000, 'gamma': 0.001, 'kernel': 'rbf'}
+0.089 (+/-0.011) for {'C': 1000, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.136 (+/-0.060) for {'C': 1, 'kernel': 'linear'}
+0.374 (+/-0.208) for {'C': 10, 'kernel': 'linear'}
+0.422 (+/-0.167) for {'C': 100, 'kernel': 'linear'}
+0.427 (+/-0.180) for {'C': 1000, 'kernel': 'linear'}
+
+Detailed classification report:
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+             precision    recall  f1-score   support
+
+          B       0.63      0.86      0.73        22
+          C       0.00      0.00      0.00         1
+          G       0.50      0.25      0.33         4
+          M       0.25      0.25      0.25         4
+          P       0.43      0.75      0.55         4
+          R       0.75      0.25      0.38        12
+
+avg / total       0.59      0.57      0.53        47
+
+
+Reading  corpus/output832.json
+# Tuning hyper-parameters for f1
+
+Best parameters set found on development set:
+
+{'C': 100, 'kernel': 'linear'}
+
+Grid scores on development set:
+
+0.070 (+/-0.012) for {'C': 1, 'gamma': 0.001, 'kernel': 'rbf'}
+0.070 (+/-0.012) for {'C': 1, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.070 (+/-0.012) for {'C': 10, 'gamma': 0.001, 'kernel': 'rbf'}
+0.070 (+/-0.012) for {'C': 10, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.070 (+/-0.012) for {'C': 100, 'gamma': 0.001, 'kernel': 'rbf'}
+0.070 (+/-0.012) for {'C': 100, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.220 (+/-0.030) for {'C': 1000, 'gamma': 0.001, 'kernel': 'rbf'}
+0.070 (+/-0.012) for {'C': 1000, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.155 (+/-0.041) for {'C': 1, 'kernel': 'linear'}
+0.340 (+/-0.087) for {'C': 10, 'kernel': 'linear'}
+0.384 (+/-0.105) for {'C': 100, 'kernel': 'linear'}
+0.376 (+/-0.104) for {'C': 1000, 'kernel': 'linear'}
+
+Detailed classification report:
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+             precision    recall  f1-score   support
+
+          B       0.57      0.93      0.71        29
+          C       1.00      0.25      0.40         4
+          G       0.80      0.50      0.62         8
+          M       0.40      0.29      0.33         7
+          P       0.75      0.75      0.75        20
+          R       0.67      0.25      0.36        16
+
+avg / total       0.66      0.63      0.60        84
