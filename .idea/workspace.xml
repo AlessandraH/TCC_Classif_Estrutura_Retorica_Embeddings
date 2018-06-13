@@ -21,8 +21,8 @@
       <file leaf-file-name="classifier.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="1151" column="42" selection-start-line="1151" selection-start-column="42" selection-end-line="1151" selection-end-column="42" />
+            <state relative-caret-position="29">
+              <caret line="1118" column="15" selection-start-line="1118" selection-start-column="15" selection-end-line="1118" selection-end-column="15" />
               <folding>
                 <element signature="e#24#45#0" expanded="true" />
                 <element signature="e#127#105933#0" />
@@ -33,6 +33,11 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wang_skipgram50.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_skipgram50.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -70,11 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow50.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow100.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow300.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow600.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow1000.txt" />
         <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_skipgram50.txt" />
         <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_skipgram100.txt" />
         <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_skipgram300.txt" />
@@ -120,6 +120,11 @@
         <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_skipgram300.txt" />
         <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_skipgram600.txt" />
         <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_skipgram1000.txt" />
+        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow600.txt" />
+        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow1000.txt" />
         <option value="$PROJECT_DIR$/classifier.py" />
       </list>
     </option>
@@ -138,7 +143,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,6 +180,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,16 +337,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16853933" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16853933" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.32849163" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5015806" side_tool="true" weight="0.8916201" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295583" />
       <window_info anchor="bottom" x="0" y="0" width="1920" height="1040" id="Python Console" order="10" weight="0.52402234" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.8026125" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.698324" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.6981132" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -358,36 +362,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2775" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow100.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2836" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow300.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2550" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow600.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2550" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_cbow1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2550" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_skipgram50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2461" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we+azport+tfidf/w2v_skipgram100.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2700" />
@@ -634,10 +608,38 @@
         <state relative-caret-position="-2625" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2550" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2836" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2836" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2625" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2550" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_skipgram50.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/classifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="1151" column="42" selection-start-line="1151" selection-start-column="42" selection-end-line="1151" selection-end-column="42" />
+        <state relative-caret-position="29">
+          <caret line="1118" column="15" selection-start-line="1118" selection-start-column="15" selection-end-line="1118" selection-end-column="15" />
           <folding>
             <element signature="e#24#45#0" expanded="true" />
             <element signature="e#127#105933#0" />
