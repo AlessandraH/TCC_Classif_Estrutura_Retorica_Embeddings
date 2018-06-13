@@ -1098,13 +1098,13 @@ azfeat366 = 'azport_features/azfeatures366.arff'
 azfeat466 = 'azport_features/azfeatures466.arff'
 azfeat832 = 'azport_features/azfeatures832.arff'
 
-# model_name = 'cbow_s50.txt'
+model_name = 'cbow_s50.txt'
 # model_name = 'cbow_s100.txt'
 # model_name = 'cbow_s300.txt'
 # model_name = 'cbow_s600.txt'
 # model_name = 'cbow_s1000.txt'
 
-model_name = 'skip_s50.txt'
+# model_name = 'skip_s50.txt'
 # model_name = 'skip_s100.txt'
 # model_name = 'skip_s300.txt'
 # model_name = 'skip_s600.txt'
@@ -1121,9 +1121,9 @@ ngrama = 1
 kchi = 100
 cross_val = 10
 
-print(f.time.asctime(f.time.localtime(f.time.time())))
+# print(f.time.asctime(f.time.localtime(f.time.time())))
 
-print("Reading model embedding")
+# print("Reading model embedding")
 model = f.KeyedVectors.load_word2vec_format(fname=model_name, unicode_errors="ignore")
 vocabulary = model.vocab
 
@@ -1149,7 +1149,7 @@ for corpus in corpora:
         del X_pos[572]
         del Y_sentences[572]
 
-    X_sentences_we = f.extract_features_we(X_sentences, model, model_size, vocabulary)
+    X_sentences_we = f.extract_features_we_media(X_sentences, model, model_size, vocabulary)
     # X_sentences_we = []
 
     # print("Extracting tfidf and chi2")
@@ -1291,4 +1291,4 @@ for corpus in corpora:
     # print(f.metrics.flat_classification_report(Y_crf, pred, labels=sorted_labels, digits=2))
     # print("")
 
-print(f.time.asctime(f.time.localtime(f.time.time())))
+# print(f.time.asctime(f.time.localtime(f.time.time())))
