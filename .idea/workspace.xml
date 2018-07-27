@@ -21,17 +21,20 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.33" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="458" />
+          <entry key="md" value="243" />
           <entry key="py" value="266" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="Markdown" value="243" />
           <entry key="Python" value="724" />
         </counts>
       </usages-collector>
@@ -48,12 +51,24 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2779">
+            <state relative-caret-position="339">
               <caret line="1171" column="114" selection-start-line="1171" selection-start-column="114" selection-end-line="1171" selection-end-column="114" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="140">
+                <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -93,7 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we/w2v_cbow300.txt" />
         <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we/w2v_cbow600.txt" />
         <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we/w2v_cbow1000.txt" />
         <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we/w2v_skipgram50.txt" />
@@ -144,6 +158,7 @@
         <option value="$PROJECT_DIR$/gridsearchcv_svm.py" />
         <option value="$PROJECT_DIR$/functions.py" />
         <option value="$PROJECT_DIR$/classifier.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -161,6 +176,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,7 +193,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -349,8 +364,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16853933" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13152677" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -363,7 +379,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295583" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.5021097" weight="0.32849163" />
       <window_info anchor="bottom" id="Inspection Results" order="9" weight="0.32960895" />
-      <window_info anchor="bottom" x="0" y="0" width="1920" height="1040" id="Python Console" order="10" visible="true" weight="0.38294798" />
+      <window_info anchor="bottom" x="0" y="0" width="1920" height="1040" id="Python Console" order="10" weight="0.38294798" />
       <window_info anchor="bottom" x="0" y="23" width="1536" height="811" id="Terminal" order="11" weight="0.72109824" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -374,7 +390,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we/w2v_cbow1000.txt" />
     <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we/w2v_skipgram50.txt" />
     <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we/w2v_skipgram100.txt" />
     <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we/w2v_skipgram300.txt" />
@@ -439,9 +454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
           <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -449,16 +461,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-          <folding>
-            <element signature="e#25#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2779">
+        <state relative-caret-position="339">
           <caret line="1171" column="114" selection-start-line="1171" selection-start-column="114" selection-end-line="1171" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="140">
+            <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
