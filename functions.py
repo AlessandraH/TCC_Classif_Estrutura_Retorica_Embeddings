@@ -20,6 +20,7 @@ from sklearn import neighbors
 from sklearn.naive_bayes import MultinomialNB, GaussianNB, BernoulliNB
 from sklearn.tree import DecisionTreeClassifier
 from gensim.models import KeyedVectors
+from sklearn.feature_extraction import DictVectorizer
 
 pontuacao = ['.', ',', ' ', '"', '!', '(', ')', '-', '=', '+', '/', '*', ';', ':', '[', ']', '{', '}', '$', '#', '@',
              '%', '&', '?']

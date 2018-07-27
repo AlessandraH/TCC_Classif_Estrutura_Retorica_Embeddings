@@ -7,24 +7,15 @@ from sklearn.svm import SVC
 import functions as f
 
 corpora = ['corpus/output366.json', 'corpus/output466.json', 'corpus/output832.json']
+
 for corpus in corpora:
+
+    # LENDO CORPUS/SENTENÇAS
     print("Reading ", corpus)
     _, _, data, labels, _ = f.loadFromJson(corpus)
     X_sentences, X_prev, X_next, X_pos, Y_sentences, _ = f.abstracts_to_sentences(data, labels)
 
-    if corpora == 'corpus/output466.json':
-        del X_sentences[206]
-        del X_prev[206]
-        del X_next[206]
-        del X_pos[206]
-        del Y_sentences[206]
-    elif corpora == 'corpus/output832.json':
-        del X_sentences[572]
-        del X_prev[572]
-        del X_next[572]
-        del X_pos[572]
-        del Y_sentences[572]
-
+    # EXTRAINDO TF-IDF E SELECIONANDO OS 100 MELHORES
     vectorizer = TfidfVectorizer(ngram_range=(1, 1))
     selector = f.SelectKBest(f.chi2, k=100)
     X_sentences = vectorizer.fit_transform(X_sentences)
@@ -34,11 +25,13 @@ for corpus in corpora:
     X_prev = selector.transform(X_prev)
     X_next = selector.transform(X_next)
 
+    # SEPARANDO CONJUNTO DE TREINO E TESTE
     X_train, X_test, y_train, y_test = train_test_split(X_sentences, Y_sentences, test_size=0.1, random_state=0)
 
     tuned_parameters = [{'kernel': ['rbf'], 'gamma': [1e-3, 1e-4], 'C': [1, 10, 100, 1000]},
                         {'kernel': ['linear'], 'C': [1, 10, 100, 1000]}]
 
+    # MÉTRICA A SER MAXIMIZADA
     # scores = ['precision', 'recall']
     scores = ['f1']
 

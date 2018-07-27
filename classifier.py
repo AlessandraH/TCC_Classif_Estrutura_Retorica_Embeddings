@@ -1163,16 +1163,13 @@ for corpus in corpora:
     X_prev = selector.transform(X_prev)
     X_next = selector.transform(X_next)
 
+    dv = f.DictVectorizer(sparse=False)
     if corpus == 'corpus/output366.json':
-        dataset = arff.load(open('azport_features/azfeatures366n.arff', 'r'))
+        azport = dv.fit_transform(f.json.load(open('azport_features/azfeatures366.json', 'r'), encoding='cp1252'))
     elif corpus == 'corpus/output466.json':
-        dataset = arff.load(open('azport_features/azfeatures466n.arff', 'r'))
+        azport = dv.fit_transform(f.json.load(open('azport_features/azfeatures466.json', 'r'), encoding='cp1252'))
     else:
-        dataset = arff.load(open('azport_features/azfeatures832n.arff', 'r'))
-
-    X_data = f.np.array(dataset['data'])
-    azport = X_data[:, :-1].astype(f.np.float)
-    Y_labels = X_data[:, -1]
+        azport = dv.fit_transform(f.json.load(open('azport_features/azfeatures832.json', 'r'), encoding='cp1252'))
 
     X_sentences_c = f.hstack(
         [azport, X_sentences_we, X_sentences, X_prev, X_next, f.np.expand_dims(f.np.array(X_pos), -1)])
