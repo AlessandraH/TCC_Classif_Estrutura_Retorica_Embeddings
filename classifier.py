@@ -1,7 +1,25 @@
 # -*- coding: utf-8 -*-
-import functions as f
-import warnings
 import arff
+import functions as f
+import numpy as np
+import time
+import warnings
+
+import sklearn_crfsuite
+from sklearn_crfsuite import scorers
+from sklearn_crfsuite import metrics
+from collections import defaultdict
+from sklearn.metrics import confusion_matrix, classification_report
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.cross_validation import cross_val_predict
+from sklearn.feature_selection import SelectKBest, chi2
+from scipy.sparse import hstack
+from sklearn.svm import SVC
+from sklearn import neighbors
+from sklearn.naive_bayes import MultinomialNB, GaussianNB, BernoulliNB
+from sklearn.tree import DecisionTreeClassifier
+from gensim.models import KeyedVectors
+from sklearn.feature_extraction import DictVectorizer
 
 
 def sent2features2(i, azport, we, tfidf, pos):
@@ -85,10 +103,10 @@ def sent2features(i, azport, we, tfidf, tfidf_prev, tfidf_next, pos):
         'voice': azport[i][5],
         'modal': azport[i][6],
         'history': azport[i][7],
-        'we': f.np.sum(we[i]),
-        'tfidf': f.np.sum(tfidf[i]),
-        'tfidf_prev': f.np.sum(tfidf_prev[i]),
-        'tfidf_next': f.np.sum(tfidf_next[i]),
+        'we': np.sum(we[i]),
+        'tfidf': np.sum(tfidf[i]),
+        'tfidf_prev': np.sum(tfidf_prev[i]),
+        'tfidf_next': np.sum(tfidf_next[i]),
         'pos': pos[i],
     }
 
@@ -102,6 +120,103 @@ def sent2features(i, azport, we, tfidf, tfidf_prev, tfidf_next, pos):
 
 def abstract2features(abstract, azport, we, tfidf, tfidf_prev, tfidf_next, pos, c):
     return [sent2features(c + i, azport, we, tfidf, tfidf_prev, tfidf_next, pos) for i in range(len(abstract))]
+
+
+def cross_val_classification(classifier, X, y, cv):
+    classifier = classifier.fit(X, y)
+    pred = cross_val_predict(classifier, X, y, cv=cv)
+    print("Classification_report:")
+    print(classification_report(y, pred))
+    print(confusion_matrix(y, pred))
+    print("")
+
+
+def cross_val_crf(classifier, X, y, cv):
+    classifier = classifier.fit(X, Y_crf)
+    pred = cross_val_predict(classifier, X, y, cv=cv)
+    print("Classification_report:")
+    labels = list(classifier.classes_)
+    metrics.flat_f1_score(y, pred, average='weighted', labels=labels)
+    sorted_labels = sorted(labels, key=lambda name: (name[1:], name[0]))
+    print(metrics.flat_classification_report(y, pred, labels=sorted_labels, digits=2))
+    print("")
+
+
+def ten_cross_val_manual_folded(classifier, azport_features, word_embeddings, X, y, prev, next, pos, abstract_length):
+    azport_splitted = []
+    we_splitted = []
+    X_splitted = []
+    y_splitted = []
+    prev_splitted = []
+    next_splitted = []
+    pos_splitted = []
+
+    split_idx = round(len(abstract_length) * 0.1)
+
+    c = 0
+    for i in range(1, 10):
+        split_idx_jump = np.sum(abstract_length[(i-1) * split_idx: i * split_idx])
+
+        azport_splitted.append(azport_features[c: c + split_idx_jump])
+        we_splitted.append(word_embeddings[c: c + split_idx_jump])
+        X_splitted.append(X[c: c + split_idx_jump])
+        y_splitted.append(y[c: c + split_idx_jump])
+        prev_splitted.append(prev[c: c + split_idx_jump])
+        next_splitted.append(next[c: c + split_idx_jump])
+        pos_splitted.append(pos[c: c + split_idx_jump])
+        c += split_idx_jump
+    azport_splitted.append(azport_features[c:])
+    we_splitted.append(word_embeddings[c:])
+    X_splitted.append(X[c:])
+    y_splitted.append(y[c:])
+    prev_splitted.append(prev[c:])
+    next_splitted.append(next[c:])
+    pos_splitted.append(pos[c:])
+
+    azport_splitted = np.array(azport_splitted)
+    we_splitted = np.array(we_splitted)
+    X_splitted = np.array(X_splitted)
+    y_splitted = np.array(y_splitted)
+    prev_splitted = np.array(prev_splitted)
+    next_splitted = np.array(next_splitted)
+
+    for i in range(10):
+        azport_features_test = azport_splitted[i]
+        word_embeddings_test = we_splitted[i]
+        X_test = X_splitted[i]
+        y_test = y_splitted[i]
+        prev_test = prev_splitted[i]
+        next_test = next_splitted[i]
+        pos_test = pos_splitted[i]
+
+        azport_features_train = np.array([[x for x in (azport_splitted[y] for y in range(10) if y != i)]])
+        word_embeddings_train = np.array([x for x in (we_splitted[y] for y in range(10) if y != i)])
+        X_train = np.array([x for x in (X_splitted[y] for y in range(10) if y != i)])
+        y_train = np.array([x for x in (y_splitted[y] for y in range(10) if y != i)])
+        prev_train = np.array([x for x in (prev_splitted[y] for y in range(10) if y != i)])
+        next_train = np.array([x for x in (next_splitted[y] for y in range(10) if y != i)])
+        pos_train = np.array([x for x in (pos_splitted[y] for y in range(10) if y != i)])
+
+        # print("AOI")
+        # print(len(azport_features_train))
+        # print(azport_features.shape)
+        # print(type(azport_features))
+        # print(azport_features_train.shape)
+        # print(word_embeddings_train.shape)
+        # print(X_train.shape)
+        # print(y_train.shape)
+        # print(prev_train.shape)
+        # print(next_train.shape)
+        # print(pos_train.shape)
+
+        X_train_sentences = np.hstack([azport_features_train, word_embeddings_train, X_train, prev_train, next_train, np.expand_dims(np.array(pos_train), -1)])
+        X_test_sentences = np.hstack([azport_features_test, word_embeddings_test, X_test, prev_test, next_test, np.expand_dims(np.array(pos_test), -1)])
+        classifier.fit(X_train_sentences, y_train)
+        pred = classifier.predict(X_test_sentences)
+        print("Classification_report:")
+        print(classification_report(y_test, pred))
+        print(confusion_matrix(y_test, pred))
+        print("")
 
 
 warnings.filterwarnings("ignore")
@@ -128,16 +243,16 @@ model_name = 'cbow_s50.txt'
 # model_name = 'glove_s600.txt'
 # model_name = 'glove_s1000.txt'
 
-model_size = 50
 ngrama = 1
 kchi = 100
 cross_val = 10
 
-print(f.time.asctime(f.time.localtime(f.time.time())))
+print(time.asctime(time.localtime(time.time())))
 
 print("Reading model embedding")
-model = f.KeyedVectors.load_word2vec_format(fname=model_name, unicode_errors="ignore")
+model = KeyedVectors.load_word2vec_format(fname=model_name, unicode_errors="ignore")
 vocabulary = model.vocab
+model_size = model.vector_size
 
 corpora = ['corpus/output366.json', 'corpus/output466.json', 'corpus/output832.json']
 for corpus in corpora:
@@ -161,12 +276,15 @@ for corpus in corpora:
         del X_pos[572]
         del Y_sentences[572]
 
-    X_sentences_we = f.extract_features_we_media(X_sentences, model, model_size, vocabulary)
-    # X_sentences_we = []
-
     print("Extracting tfidf and chi2")
-    vectorizer = f.TfidfVectorizer(ngram_range=(1, ngrama))
-    selector = f.SelectKBest(f.chi2, k=kchi)
+    vectorizer = TfidfVectorizer(ngram_range=(1, ngrama))
+    selector = SelectKBest(chi2, k=kchi)
+
+    vectorizer.fit(X_sentences)
+
+    # X_sentences_we = f.extract_features_we_media(X_sentences, model, model_size, vocabulary)
+    X_sentences_we = f.extract_features_we_media_pond(X_sentences, vectorizer, model, model_size, vocabulary)
+    # X_sentences_we = []
 
     X_sentences = vectorizer.fit_transform(X_sentences)
     X_prev = vectorizer.transform(X_prev)
@@ -175,7 +293,35 @@ for corpus in corpora:
     X_prev = selector.transform(X_prev)
     X_next = selector.transform(X_next)
 
-    dv = f.DictVectorizer(sparse=False)
+    if corpus == 'corpus/output366.json':
+        dataset = arff.load(open(azfeat366, 'r'))
+    elif corpus == 'corpus/output466.json':
+        dataset = arff.load(open(azfeat466, 'r'))
+    else:
+        dataset = arff.load(open(azfeat832, 'r'))
+
+    X_data = np.array(dataset['data'])
+    """ Delete last column -> labels """
+    azport = X_data[:, 0:-1]
+
+    X_pos_crf = X_pos.copy()
+    X_pos_crf.append(0)
+
+    X_crf = []
+    c = 0
+    lengths = []
+    for a in abstracts:
+        X_crf.append(abstract2features2(a, azport, X_sentences_we, X_sentences, X_pos_crf, c))
+        c += len(a)
+        lengths.append(len(a))
+    Y_crf = [abstract2labels(a) for a in abstracts]
+
+    print("CRF 2.0")
+    clf = sklearn_crfsuite.CRF(algorithm='lbfgs', c1=0.1, c2=0.1,
+                                 max_iterations=100, all_possible_transitions=True)
+    cross_val_crf(clf, X_crf, Y_crf, cross_val)
+
+    dv = DictVectorizer(sparse=False)
     if corpus == 'corpus/output366.json':
         azport = dv.fit_transform(f.json.load(open('azport_features/azfeatures366.json', 'r'), encoding='cp1252'))
     elif corpus == 'corpus/output466.json':
@@ -183,49 +329,56 @@ for corpus in corpora:
     else:
         azport = dv.fit_transform(f.json.load(open('azport_features/azfeatures832.json', 'r'), encoding='cp1252'))
 
-    X_sentences_c = f.hstack([azport, X_sentences_we, X_sentences, X_prev, X_next, f.np.expand_dims(f.np.array(X_pos), -1)])
-    # X_sentences_c = f.hstack([X_sentences_we, X_sentences, X_prev, X_next, f.np.expand_dims(f.np.array(X_pos), -1)])
-    # X_sentences_c = f.hstack([X_sentences, X_prev, X_next, f.np.expand_dims(f.np.array(X_pos), -1)])
-    # X_sentences_c = f.hstack([azport, X_sentences, X_prev, X_next, f.np.expand_dims(f.np.array(X_pos), -1)])
+    X_sentences_c = hstack([azport, X_sentences_we, X_sentences, X_prev, X_next, np.expand_dims(np.array(X_pos), -1)])
+    # X_sentences_c = f.hstack([X_sentences_we, X_sentences, X_prev, X_next, np.expand_dims(np.array(X_pos), -1)])
+    # X_sentences_c = f.hstack([X_sentences, X_prev, X_next, np.expand_dims(np.array(X_pos), -1)])
+    # X_sentences_c = f.hstack([azport, X_sentences, X_prev, X_next, np.expand_dims(np.array(X_pos), -1)])
     X_sentences_c = X_sentences_c.todense()
-    # X_sentences_c = f.np.concatenate((X_sentences_we, azport), axis=1)
+    # X_sentences_c = np.concatenate((X_sentences_we, azport), axis=1)
     # X_sentences_c = X_sentences_we
     # X_sentences_c = azport
 
+    # print("X_sentences_C")
+    # print(X_sentences_c.shape)
+    # print(type(X_sentences_c))
+    # print("AZPort")
+    # print(azport.shape)
+    # print(type(azport))
+    # print("X_sentences_WE")
+    # print(X_sentences_we.shape)
+    # print(type(X_sentences_we))
+    # print("X_sentences")
+    # print(X_sentences.shape)
+    # print(type(X_sentences))
+    # print("X_previous")
+    # print(X_prev.shape)
+    # print(type(X_prev))
+    # print("X_next")
+    # print(X_next.shape)
+    # print(type(X_next))
+    # print("X_positions")
+    # print(np.expand_dims(np.array(X_pos), -1).shape)
+
     print("SVM RBF")
-    clf = f.SVC(kernel='rbf', C=1000, gamma=0.001)
-    clf = clf.fit(X_sentences_c, Y_sentences)
-    pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
-    print("Classification_report:")
-    print(f.classification_report(Y_sentences, pred))
-    print(f.confusion_matrix(Y_sentences, pred))
-    print("")
+    clf = SVC(kernel='rbf', C=1000, gamma=0.001)
+    # cross_val_classification(clf, X_sentences_c, Y_sentences, cross_val)
+    ten_cross_val_manual_folded(clf, azport, X_sentences_we, X_sentences, Y_sentences, X_prev, X_next, X_pos, lengths)
+    continue
 
     print("SVM linear")
     if corpus == 'corpus/output466.json':
         clf = f.SVC(kernel='linear', C=1000)
     else:
         clf = f.SVC(kernel='linear', C=100)
-    clf = clf.fit(X_sentences_c, Y_sentences)
-    pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
-    print("Classification_report:")
-    print(f.classification_report(Y_sentences, pred))
-    print(f.confusion_matrix(Y_sentences, pred))
-    print("")
+    cross_val_classification(clf, X_sentences_c, Y_sentences, cross_val)
 
     print("KNN")
     clf = f.neighbors.KNeighborsClassifier(n_neighbors=3, weights='uniform')
-    clf = clf.fit(X_sentences_c, Y_sentences)
-    pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
-    print("Classification_report:")
-    print(f.classification_report(Y_sentences, pred))
-    print(f.confusion_matrix(Y_sentences, pred))
-    print("")
+    cross_val_classification(clf, X_sentences_c, Y_sentences, cross_val)
 
     print("NB Gaussian")
     clf = f.GaussianNB()
-    # clf = clf.fit(X_sentences_c, Y_sentences)
-    clf = clf.partial_fit(X_sentences_c, Y_sentences, f.np.unique(Y_sentences))
+    clf = clf.partial_fit(X_sentences_c, Y_sentences, np.unique(Y_sentences))
     pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
     print("Classification_report:")
     print(f.classification_report(Y_sentences, pred))
@@ -234,69 +387,47 @@ for corpus in corpora:
 
     print("NB Bernoulli")
     clf = f.BernoulliNB()
-    clf = clf.fit(X_sentences_c, Y_sentences)
-    pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
-    print("Classification_report:")
-    print(f.classification_report(Y_sentences, pred))
-    print(f.confusion_matrix(Y_sentences, pred))
-    print("")
+    cross_val_classification(clf, X_sentences_c, Y_sentences, cross_val)
 
     print("DT")
     clf = f.DecisionTreeClassifier(random_state=0)
-    clf = clf.fit(X_sentences_c, Y_sentences)
-    pred = f.cross_val_predict(clf, X_sentences_c, Y_sentences, cv=cross_val)
-    print("Classification_report:")
-    print(f.classification_report(Y_sentences, pred))
-    print(f.confusion_matrix(Y_sentences, pred))
+    cross_val_classification(clf, X_sentences_c, Y_sentences, cross_val)
 
-    if corpus == 'corpus/output366.json':
-        dataset = arff.load(open(azfeat366, 'r'))
-    elif corpus == 'corpus/output466.json':
-        dataset = arff.load(open(azfeat466, 'r'))
-    else:
-        dataset = arff.load(open(azfeat832, 'r'))
+    """ CRF """
+    # if corpus == 'corpus/output366.json':
+    #     dataset = arff.load(open(azfeat366, 'r'))
+    # elif corpus == 'corpus/output466.json':
+    #     dataset = arff.load(open(azfeat466, 'r'))
+    # else:
+    #     dataset = arff.load(open(azfeat832, 'r'))
+    #
+    # X_data = np.array(dataset['data'])
+    # """ Elimina última coluna/labels """
+    # azport = X_data[:, 0:-1]
+    #
+    # X_pos.append(0)
+    # Y_crf = [abstract2labels(a) for a in abstracts]
+    #
+    # print("CRF")
+    # X_crf = []
+    # c = 0
+    # for a in abstracts:
+    #     X_crf.append(abstract2features(a, azport, X_sentences_we, X_sentences, X_prev, X_next, X_pos, c))
+    #     c += len(a)
+    #
+    # clf = sklearn_crfsuite.CRF(algorithm='lbfgs', c1=0.1, c2=0.1,
+    #                              max_iterations=100, all_possible_transitions=True)
+    # cross_val_crf(classifier, X_crf, Y_crf, cross_val)
+    #
+    # print("CRF 2.0")
+    # X_crf = []
+    # c = 0
+    # for a in abstracts:
+    #     X_crf.append(abstract2features2(a, azport, X_sentences_we, X_sentences, X_pos, c))
+    #     c += len(a)
+    #
+    # clf = sklearn_crfsuite.CRF(algorithm='lbfgs', c1=0.1, c2=0.1,
+    #                              max_iterations=100, all_possible_transitions=True)
+    # cross_val_crf(classifier, X_crf, Y_crf, cross_val)
 
-    X_data = f.np.array(dataset['data'])
-    azport = X_data[:, 0:-1]
-
-    X_pos.append(0)
-
-    X_crf = []
-    c = 0
-    for a in abstracts:
-        X_crf.append(abstract2features(a, azport, X_sentences_we, X_sentences, X_prev, X_next, X_pos, c))
-        c += len(a)
-    Y_crf = [abstract2labels(a) for a in abstracts]
-
-    print("")
-    print("CRF")
-    clf = f.sklearn_crfsuite.CRF(algorithm='lbfgs', c1=0.1, c2=0.1,
-                                 max_iterations=100, all_possible_transitions=True)
-    clf = clf.fit(X_crf, Y_crf)
-    pred = f.cross_val_predict(clf, X_crf, Y_crf, cv=10)
-    print("Classification_report:")
-    labels = list(clf.classes_)
-    f.metrics.flat_f1_score(Y_crf, pred, average='weighted', labels=labels)
-    sorted_labels = sorted(labels, key=lambda name: (name[1:], name[0]))
-    print(f.metrics.flat_classification_report(Y_crf, pred, labels=sorted_labels, digits=2))
-
-    X_crf = []
-    c = 0
-    for a in abstracts:
-        X_crf.append(abstract2features2(a, azport, X_sentences_we, X_sentences, X_pos, c))
-        c += len(a)
-    Y_crf = [abstract2labels(a) for a in abstracts]
-
-    print("CRF 2.0")
-    clf = f.sklearn_crfsuite.CRF(algorithm='lbfgs', c1=0.1, c2=0.1,
-                                 max_iterations=100, all_possible_transitions=True)
-    clf = clf.fit(X_crf, Y_crf)
-    pred = f.cross_val_predict(clf, X_crf, Y_crf, cv=cross_val)
-    print("Classification_report:")
-    labels = list(clf.classes_)
-    f.metrics.flat_f1_score(Y_crf, pred, average='weighted', labels=labels)
-    sorted_labels = sorted(labels, key=lambda name: (name[1:], name[0]))
-    print(f.metrics.flat_classification_report(Y_crf, pred, labels=sorted_labels, digits=2))
-    print("")
-
-print(f.time.asctime(f.time.localtime(f.time.time())))
+print(time.asctime(time.localtime(time.time())))

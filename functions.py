@@ -1,29 +1,10 @@
 # -*- coding: utf-8 -*-
 
 import warnings
-import time
 import json
 
 import numpy as np
-import sklearn_crfsuite
-
-from sklearn_crfsuite import scorers
-from sklearn_crfsuite import metrics
-from collections import defaultdict
-from sklearn.metrics import confusion_matrix, classification_report
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.cross_validation import cross_val_predict
-from sklearn.feature_selection import SelectKBest, chi2
-from scipy.sparse import hstack
-from sklearn.svm import SVC
-from sklearn import neighbors
-from sklearn.naive_bayes import MultinomialNB, GaussianNB, BernoulliNB
-from sklearn.tree import DecisionTreeClassifier
-from gensim.models import KeyedVectors
-from sklearn.feature_extraction import DictVectorizer
-
-pontuacao = ['.', ',', ' ', '"', '!', '(', ')', '-', '=', '+', '/', '*', ';', ':', '[', ']', '{', '}', '$', '#', '@',
-             '%', '&', '?']
+import operator
 
 
 def to_sentences(abstracts, senteces_max=None):
@@ -58,7 +39,6 @@ def to_sentences(abstracts, senteces_max=None):
 
 
 def loadFromJson(file):
-    data = []
     with open(file, 'r') as f:
         data = json.load(f, encoding='cp1252')
 
@@ -66,7 +46,6 @@ def loadFromJson(file):
 
 
 def loadJson(file):
-    data = []
     with open(file, 'r') as f:
         data = json.load(f, encoding='cp1252')
 
@@ -105,21 +84,45 @@ def div(n):
     return n[0]/n[1]
 
 
-def extract_features_we_media_pond(X_sentences, model, model_size, vocabulary):
-    # TODO media ponderada
+def extract_features_we_media_pond(X_sentences, vectorizer, model, model_size, vocabulary):
     features = []
+
+    total_words = 0
+    words_in_embeddings = 0
+
+    idfs = vectorizer.idf_
+    vec_vocab = vectorizer.vocabulary_
+
     for s in X_sentences:
-        n = 0
+        total_weight = 0
         sentence_feature = [0] * model_size
         sentences = str(s).split()
         for word in sentences:
             if len(word) > 2 and word in vocabulary:
-                n += 1
-                word_feature = model[word]
+                total_words += 1
+                words_in_embeddings += 1
+                if word not in vec_vocab.keys():
+                    word_idf = 1
+                else:
+                    word_idf = idfs[vec_vocab[word]]
+                total_weight += word_idf
+                word_idf_list = [word_idf] * model_size
+                word_feature = list(map(operator.mul, model[word], word_idf_list))
                 sentence_feature = list(map(sum, zip(sentence_feature, word_feature)))
-        divisor = [n] * model_size
+            elif len(word) > 2:
+                total_words += 1
+        if total_weight == 0:
+            total_weight = 1
+        divisor = [total_weight] * model_size
         sentence_feature = list(map(div, zip(sentence_feature, divisor)))
         features.append(sentence_feature)
+
+    print("")
+    print("Total words in embedding model: %d" % words_in_embeddings)
+    print("Total words in abstract: %d" % total_words)
+    print("Words present in embedding model: %.2f" % (words_in_embeddings/total_words))
+    print("")
+
     return np.array(features)
 
 
