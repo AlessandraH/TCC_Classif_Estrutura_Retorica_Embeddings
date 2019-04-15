@@ -142,81 +142,109 @@ def cross_val_crf(classifier, X, y, cv):
     print("")
 
 
-def ten_cross_val_manual_folded(classifier, azport_features, word_embeddings, X, y, prev, next, pos, abstract_length):
-    azport_splitted = []
-    we_splitted = []
-    X_splitted = []
-    y_splitted = []
-    prev_splitted = []
-    next_splitted = []
-    pos_splitted = []
+def ten_cross_val_manual_folded(classifier, azport_features, word_embeddings, X, y, prev, next, pos, abstract_length, cv=10):
+    azport_copy = azport_features.copy()
+    we_copy = word_embeddings.copy()
+    X_copy = X.copy().toarray()
+    y_copy = y.copy()
+    prev_copy = prev.copy().toarray()
+    next_copy = next.copy().toarray()
+    pos_copy = pos.copy()
 
+    idx_jumps = []
     split_idx = round(len(abstract_length) * 0.1)
+    for i in range(1, cv):
+        idx_jumps.append(np.sum(abstract_length[(i-1) * split_idx: i * split_idx]))
+    idx_jumps.append(np.sum(abstract_length[(cv - 1) * split_idx:]))
 
-    c = 0
-    for i in range(1, 10):
-        split_idx_jump = np.sum(abstract_length[(i-1) * split_idx: i * split_idx])
+    for i in range(cv):
+        azport_features_train = []
+        word_embeddings_train = []
+        X_train = []
+        y_train = []
+        prev_train = []
+        next_train = []
+        pos_train = []
 
-        azport_splitted.append(azport_features[c: c + split_idx_jump])
-        we_splitted.append(word_embeddings[c: c + split_idx_jump])
-        X_splitted.append(X[c: c + split_idx_jump])
-        y_splitted.append(y[c: c + split_idx_jump])
-        prev_splitted.append(prev[c: c + split_idx_jump])
-        next_splitted.append(next[c: c + split_idx_jump])
-        pos_splitted.append(pos[c: c + split_idx_jump])
-        c += split_idx_jump
-    azport_splitted.append(azport_features[c:])
-    we_splitted.append(word_embeddings[c:])
-    X_splitted.append(X[c:])
-    y_splitted.append(y[c:])
-    prev_splitted.append(prev[c:])
-    next_splitted.append(next[c:])
-    pos_splitted.append(pos[c:])
+        azport_features_test = []
+        word_embeddings_test = []
+        X_test = []
+        y_test = []
+        prev_test = []
+        next_test = []
+        pos_test = []
 
-    azport_splitted = np.array(azport_splitted)
-    we_splitted = np.array(we_splitted)
-    X_splitted = np.array(X_splitted)
-    y_splitted = np.array(y_splitted)
-    prev_splitted = np.array(prev_splitted)
-    next_splitted = np.array(next_splitted)
+        for idx_val, jump_val in enumerate(idx_jumps):
+            print(idx_val, jump_val)
+            if idx_val == i:
+                azport_features_test = np.array([x for x in (azport_copy[y] for y in range(int(jump_val)))])
+                word_embeddings_test = np.array([x for x in (we_copy[y] for y in range(int(jump_val)))])
+                X_test = np.array([x for x in (X_copy[y] for y in range(int(jump_val)))])
+                y_test = y_copy[: int(jump_val)]
+                prev_test = np.array([x for x in (prev_copy[y] for y in range(int(jump_val)))])
+                next_test = np.array([x for x in (next_copy[y] for y in range(int(jump_val)))])
+                pos_test = y_copy[: int(jump_val)]
+            else:
+                azport_features_train.append(np.array([x for x in (azport_copy[y] for y in range(int(jump_val)))]))
+                word_embeddings_train.append(np.array([x for x in (we_copy[y] for y in range(int(jump_val)))]))
+                X_train.append(np.array([x for x in (X_copy[y] for y in range(int(jump_val)))]))
+                y_train.append(y_copy[y] for y in range(int(jump_val)))
+                prev_train.append(np.array([x for x in (prev_copy[y] for y in range(int(jump_val)))]))
+                next_train.append(np.array([x for x in (next_copy[y] for y in range(int(jump_val)))]))
+                pos_train.append(pos_copy[y] for y in range(int(jump_val)))
 
-    for i in range(10):
-        azport_features_test = azport_splitted[i]
-        word_embeddings_test = we_splitted[i]
-        X_test = X_splitted[i]
-        y_test = y_splitted[i]
-        prev_test = prev_splitted[i]
-        next_test = next_splitted[i]
-        pos_test = pos_splitted[i]
+            azport_copy = np.delete(azport_copy, [x for x in range(int(jump_val))], axis=0)
+            we_copy = np.delete(we_copy, [x for x in range(int(jump_val))], axis=0)
+            X_copy = np.delete(X_copy, [x for x in range(int(jump_val))], axis=0)
+            y_copy = y_copy[int(jump_val):]
+            prev_copy = np.delete(prev_copy, [x for x in range(int(jump_val))], axis=0)
+            next_copy = np.delete(next_copy, [x for x in range(int(jump_val))], axis=0)
+            pos_copy = pos_copy[int(jump_val):]
 
-        azport_features_train = np.array([[x for x in (azport_splitted[y] for y in range(10) if y != i)]])
-        word_embeddings_train = np.array([x for x in (we_splitted[y] for y in range(10) if y != i)])
-        X_train = np.array([x for x in (X_splitted[y] for y in range(10) if y != i)])
-        y_train = np.array([x for x in (y_splitted[y] for y in range(10) if y != i)])
-        prev_train = np.array([x for x in (prev_splitted[y] for y in range(10) if y != i)])
-        next_train = np.array([x for x in (next_splitted[y] for y in range(10) if y != i)])
-        pos_train = np.array([x for x in (pos_splitted[y] for y in range(10) if y != i)])
+            print("SHAPES")
+            print(azport_copy.shape)
+            print(we_copy.shape)
+            print(X_copy.shape)
+            print(np.array(y_copy).shape)
+            print(prev_copy.shape)
+            print(next_copy.shape)
+            print(np.array(pos_copy).shape)
+            print("")
 
-        # print("AOI")
-        # print(len(azport_features_train))
-        # print(azport_features.shape)
-        # print(type(azport_features))
-        # print(azport_features_train.shape)
-        # print(word_embeddings_train.shape)
-        # print(X_train.shape)
-        # print(y_train.shape)
-        # print(prev_train.shape)
-        # print(next_train.shape)
-        # print(pos_train.shape)
+        azport_features_train = np.array(azport_features_train)
+        word_embeddings_train = np.array(word_embeddings_train)
+        X_train = np.array(X_train)
+        prev_train = np.array(prev_train)
+        next_train = np.array(next_train)
 
-        X_train_sentences = np.hstack([azport_features_train, word_embeddings_train, X_train, prev_train, next_train, np.expand_dims(np.array(pos_train), -1)])
-        X_test_sentences = np.hstack([azport_features_test, word_embeddings_test, X_test, prev_test, next_test, np.expand_dims(np.array(pos_test), -1)])
-        classifier.fit(X_train_sentences, y_train)
-        pred = classifier.predict(X_test_sentences)
-        print("Classification_report:")
-        print(classification_report(y_test, pred))
-        print(confusion_matrix(y_test, pred))
         print("")
+        print("train")
+        print(azport_features_train.shape)
+        print(word_embeddings_train.shape)
+        print(X_train.shape)
+        print(np.array(y_train).shape)
+        print(prev_train.shape)
+        print(next_train.shape)
+        print(np.array(pos_train).shape)
+        print("")
+        print("")
+        print("test")
+        print(azport_features_test.shape)
+        print(word_embeddings_test.shape)
+        print(X_test.shape)
+        print(np.array(y_test).shape)
+        print(prev_test.shape)
+        print(next_test.shape)
+        print(np.array(pos_test).shape)
+
+        # X_train_sentences = np.hstack([azport_features_train, word_embeddings_train, X_train, prev_train, next_train, np.expand_dims(np.array(pos_train), -1)])
+        # X_test_sentences = np.hstack([azport_features_test, word_embeddings_test, X_test, prev_test, next_test, np.expand_dims(np.array(pos_test), -1)])
+        # classifier.fit(X_train_sentences, y_train)
+        # pred = classifier.predict(X_test_sentences)
+        # print("Classification_report:")
+        # print(classification_report(y_test, pred))
+        # print(confusion_matrix(y_test, pred))
+        # print("")
 
 
 warnings.filterwarnings("ignore")
