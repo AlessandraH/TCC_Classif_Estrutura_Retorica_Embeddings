@@ -9,6 +9,7 @@ import sklearn_crfsuite
 from sklearn_crfsuite import scorers
 from sklearn_crfsuite import metrics
 from collections import defaultdict
+from sklearn import metrics as skmetrics
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cross_validation import cross_val_predict
@@ -86,6 +87,7 @@ def sent2features2(i, azport, we, tfidf, pos):
 
 
 def abstract2features2(abstract, azport, we, tfidf, pos, c):
+    """TODO: PARA CADA COMBINAÇÃO DE FEATURES"""
     return [sent2features2(c + i, azport, we, tfidf, pos) for i in range(len(abstract))]
 
 
@@ -142,107 +144,178 @@ def cross_val_crf(classifier, X, y, cv):
     print("")
 
 
-def ten_cross_val_manual_folded(classifier, vec, sel, azport_features, word_embeddings, X, y, prev, next, pos, abstract_length, cv=10):
+def is_empty(obj):
+    if isinstance(obj, list):
+        return len(obj) == 0
+    else:
+        return True
+
+
+def ten_cross_val_manual_folded(classifier, vec, sel, azport_features, word_embeddings, X, y, prev, next, pos, abstract_length, _cv=10, _labels=['B', 'C', 'G', 'M', 'O', 'P', 'R']):
     idx_jumps = []
     split_idx = round(len(abstract_length) * 0.1)
-    for i in range(1, cv):
+    for i in range(1, _cv):
         idx_jumps.append(np.sum(abstract_length[(i-1) * split_idx: i * split_idx]))
-    idx_jumps.append(np.sum(abstract_length[(cv - 1) * split_idx:]))
+    idx_jumps.append(np.sum(abstract_length[(_cv - 1) * split_idx:]))
 
-    for i in range(cv):
+    precision_sum = [0] * (len(_labels) + 1)
+    recall_sum = [0] * (len(_labels) + 1)
+    f1_sum = [0] * (len(_labels) + 1)
+
+    for i in range(_cv):
         azport_copy = azport_features.copy()
         we_copy = word_embeddings.copy()
         X_copy = X.copy()
-        y_copy = y.copy()
         prev_copy = prev.copy()
         next_copy = next.copy()
         pos_copy = pos.copy()
+        y_copy = y.copy()
 
         azport_features_train = []
         word_embeddings_train = []
         X_train = []
-        y_train = []
         prev_train = []
         next_train = []
         pos_train = []
+        y_train = []
 
         azport_features_test = []
         word_embeddings_test = []
         X_test = []
-        y_test = []
         prev_test = []
         next_test = []
         pos_test = []
+        y_test = []
 
+        """ TRAIN AND TEST SPLIT """
         for idx_val, jump_val in enumerate(idx_jumps):
             if idx_val == i:
                 for j in range(int(jump_val)):
-                    azport_features_test.append(azport_copy[j])
-                    word_embeddings_test.append(we_copy[j])
-                X_test = X_copy[: int(jump_val)]
+                    if not is_empty(azport):
+                        azport_features_test.append(azport_copy[j])
+                    if not is_empty(word_embeddings):
+                        word_embeddings_test.append(we_copy[j])
+                if not is_empty(X):
+                    X_test = X_copy[: int(jump_val)]
+                    prev_test = prev_copy[: int(jump_val)]
+                    next_test = next_copy[: int(jump_val)]
+                    pos_test = pos_copy[: int(jump_val)]
                 y_test = y_copy[: int(jump_val)]
-                prev_test = prev_copy[: int(jump_val)]
-                next_test = next_copy[: int(jump_val)]
-                pos_test = pos_copy[: int(jump_val)]
             else:
                 for j in range(int(jump_val)):
-                    azport_features_train.append(azport_copy[j])
-                    word_embeddings_train.append(we_copy[j])
-                    X_train.append(X_copy[j])
+                    if not is_empty(azport):
+                        azport_features_train.append(azport_copy[j])
+                    if not is_empty(word_embeddings):
+                        word_embeddings_train.append(we_copy[j])
+                    if not is_empty(X):
+                        X_train.append(X_copy[j])
+                        prev_train.append(prev_copy[j])
+                        next_train.append(next_copy[j])
+                        pos_train.append(pos_copy[j])
                     y_train.append(y_copy[j])
-                    prev_train.append(prev_copy[j])
-                    next_train.append(next_copy[j])
-                    pos_train.append(pos_copy[j])
-            azport_copy = np.delete(azport_copy, [x for x in range(int(jump_val))], axis=0)
-            we_copy = np.delete(we_copy, [x for x in range(int(jump_val))], axis=0)
-            X_copy = X_copy[int(jump_val):]
+            if not is_empty(azport):
+                azport_copy = np.delete(azport_copy, [x for x in range(int(jump_val))], axis=0)
+            if not is_empty(word_embeddings):
+                we_copy = np.delete(we_copy, [x for x in range(int(jump_val))], axis=0)
+            if not is_empty(X):
+                X_copy = X_copy[int(jump_val):]
+                prev_copy = prev_copy[int(jump_val):]
+                next_copy = next_copy[int(jump_val):]
+                pos_copy = pos_copy[int(jump_val):]
             y_copy = y_copy[int(jump_val):]
-            prev_copy = prev_copy[int(jump_val):]
-            next_copy = next_copy[int(jump_val):]
-            pos_copy = pos_copy[int(jump_val):]
 
-        azport_features_train = np.array(azport_features_train)
-        word_embeddings_train = np.array(word_embeddings_train)
+        if not is_empty(azport):
+            azport_features_train = np.array(azport_features_train)
+            azport_features_test = np.array(azport_features_test)
+        if not is_empty(word_embeddings):
+            word_embeddings_train = np.array(word_embeddings_train)
+            word_embeddings_test = np.array(word_embeddings_test)
 
-        azport_features_test = np.array(azport_features_test)
-        word_embeddings_test = np.array(word_embeddings_test)
+        if not is_empty(X):
+            """ GETTING TF-IDFs """
+            X_train = vec.fit_transform(X_train)
+            prev_train = vec.transform(prev_train)
+            next_train = vec.transform(next_train)
+            X_test = vec.transform(X_test)
+            prev_test = vec.transform(prev_test)
+            next_test = vec.transform(next_test)
 
-        X_train = vec.fit_transform(X_train)
-        prev_train = vec.transform(prev_train)
-        next_train = vec.transform(next_train)
-        X_test = vec.transform(X_test)
-        prev_test = vec.transform(prev_test)
-        next_test = vec.transform(next_test)
+            """ SELECTING TOP 100 BY CHI2 """
+            X_train = sel.fit_transform(X_train, y_train)
+            prev_train = sel.transform(prev_train)
+            next_train = sel.transform(next_train)
+            X_test = sel.transform(X_test)
+            prev_test = sel.transform(prev_test)
+            next_test = sel.transform(next_test)
 
-        X_train = sel.fit_transform(X_train, y_train)
-        prev_train = sel.transform(prev_train)
-        next_train = sel.transform(next_train)
-        X_test = sel.transform(X_test)
-        prev_test = sel.transform(prev_test)
-        next_test = sel.transform(next_test)
+        if not is_empty(azport) and not is_empty(word_embeddings) and X:
+            """ JOINING FEATURES: AZPORT + WE + TF-IDF """
+            X_train_sentences = hstack([azport_features_train, word_embeddings_train, X_train, prev_train, next_train, np.expand_dims(np.array(pos_train), -1)])
+            X_test_sentences = hstack([azport_features_test, word_embeddings_test, X_test, prev_test, next_test, np.expand_dims(np.array(pos_test), -1)])
+        elif not is_empty(word_embeddings) and not is_empty(X):
+            """ JOINING FEATURES: WE + TF-IDF"""
+            X_train_sentences = hstack([word_embeddings_train, X_train, prev_train, next_train, np.expand_dims(np.array(pos_train), -1)])
+            X_test_sentences = hstack([word_embeddings_test, X_test, prev_test, next_test, np.expand_dims(np.array(pos_test), -1)])
+        elif not is_empty(azport) and not is_empty(X):
+            """ JOINING FEATURES: AZPORT + TF-IDF """
+            X_train_sentences = hstack([azport_features_train, X_train, prev_train, next_train, np.expand_dims(np.array(pos_train), -1)])
+            X_test_sentences = hstack([azport_features_test, X_test, prev_test, next_test, np.expand_dims(np.array(pos_test), -1)])
+        elif not is_empty(azport) and not is_empty(word_embeddings):
+            """ JOINING FEATURES: AZPORT + WE """
+            X_train_sentences = np.concatenate([azport_features_train, word_embeddings_train])
+            X_test_sentences = np.concatenate([azport_features_test, word_embeddings_test])
+        elif not is_empty(X):
+            """ JOINING FEATURES: TF-IDF """
+            X_train_sentences = hstack([X_train, prev_train, next_train, np.expand_dims(np.array(pos_train), -1)])
+            X_test_sentences = hstack([X_test, prev_test, next_test, np.expand_dims(np.array(pos_test), -1)])
+        elif not is_empty(word_embeddings):
+            """ JOINING FEATURES: WE """
+            X_train_sentences = word_embeddings_train.copy()
+            X_test_sentences = word_embeddings_test.copy()
+        else:
+            """ JOINING FEATURES: AZPORT """
+            X_train_sentences = azport_features_train.copy()
+            X_test_sentences = azport_features_test.copy()
 
-        X_train_sentences = hstack([azport_features_train, word_embeddings_train, X_train, prev_train, next_train, np.expand_dims(np.array(pos_train), -1)])
-        X_test_sentences = hstack([azport_features_test, word_embeddings_test, X_test, prev_test, next_test, np.expand_dims(np.array(pos_test), -1)])
+        """ TRAINING AND PREDICTING """
         classifier.fit(X_train_sentences, y_train)
         pred = classifier.predict(X_test_sentences)
+
+        # print("Classification_report: %d" % i)
+        # print(classification_report(y_test, pred))
+        # print(confusion_matrix(y_test, pred))
         # print("")
-        # print(type(pred))
-        # print("")
-        # print(dir(pred))
-        # print("")
-        # print(pred)
-        # print("")
-        # teste = classification_report(y_test, pred)
-        # print("")
-        # print(type(teste))
-        # print("")
-        # print(dir(teste))
-        # print("")
-        # break
-        print("Classification_report:")
-        print(classification_report(y_test, pred))
-        print(confusion_matrix(y_test, pred))
-        print("")
+
+        (precision_cl, recall_cl, f1score_cl, support_cl) = skmetrics.precision_recall_fscore_support(y_test, pred, average=None, labels=_labels)
+        (precision_tot, recall_tot, f1score_tot, support_tot) = skmetrics.precision_recall_fscore_support(y_test, pred, average='weighted', labels=_labels)
+
+        precision_cl = precision_cl.tolist()
+        recall_cl = recall_cl.tolist()
+        f1score_cl = f1score_cl.tolist()
+
+        precision_cl.append(precision_tot)
+        recall_cl.append(recall_tot)
+        f1score_cl.append(f1score_tot)
+
+        precision_sum = list(map(sum, zip(precision_sum, precision_cl)))
+        recall_sum = list(map(sum, zip(recall_sum, recall_cl)))
+        f1_sum = list(map(sum, zip(f1_sum, f1score_cl)))
+
+    """ DIVIDING BY K (K-FOLD CV) """
+    divisor = [_cv] * (len(_labels) + 1)
+    precision_avg = list(map(f.div, zip(precision_sum, divisor)))
+    recall_avg = list(map(f.div, zip(recall_sum, divisor)))
+    f1_avg = list(map(f.div, zip(f1_sum, divisor)))
+
+    space = " "
+    print("Classification_report (FINAL CV):")
+    print(space*13 + "precision" + space*4 + "recall" + space*2 + "f1-score")
+    print("")
+    for idx_lab, lab in enumerate(_labels):
+        print(space*10 + "%s" % lab + space*7 + "%.2f" % precision_avg[int(idx_lab)] + space*6 + "%.2f" % recall_avg[int(idx_lab)] + space*6 + "%.2f" % f1_avg[int(idx_lab)])
+    print("")
+    print("avg / total" + space*7 + "%.2f" % precision_avg[-1] + space*6 + "%.2f" % recall_avg[-1] + space*6 + "%.2f" % f1_avg[-1])
+    print("")
 
 
 warnings.filterwarnings("ignore")
@@ -358,6 +431,7 @@ for corpus in corpora:
     cross_val_crf(clf, X_crf, Y_crf, cross_val)
     """ CRF END """
 
+    """ READING AZPORT FEATURES FOR NON-CRF """
     dv = DictVectorizer(sparse=False)
     if corpus == 'corpus/output366.json':
         azport = dv.fit_transform(f.json.load(open('azport_features/azfeatures366.json', 'r'), encoding='cp1252'))
@@ -366,19 +440,43 @@ for corpus in corpora:
     else:
         azport = dv.fit_transform(f.json.load(open('azport_features/azfeatures832.json', 'r'), encoding='cp1252'))
 
-    X_sentences_c = hstack([azport, X_sentences_we, X_sentences_transformed, X_prev_transformed, X_next_transformed, np.expand_dims(np.array(X_pos), -1)])
-    # X_sentences_c = f.hstack([X_sentences_we, X_sentences_transformed, X_prev_transformed, X_next_transformed, np.expand_dims(np.array(X_pos), -1)])
-    # X_sentences_c = f.hstack([X_sentences_transformed, X_prev_transformed, X_next_transformed, np.expand_dims(np.array(X_pos), -1)])
-    # X_sentences_c = f.hstack([azport, X_sentences_transformed, X_prev_transformed, X_next_transformed, np.expand_dims(np.array(X_pos), -1)])
-    X_sentences_c = X_sentences_c.todense()
+    """ JOINING FEATURES: AZPORT + WE + TF-IDF 
+        uncomment for 'cross_val_classification' use """
+    # X_sentences_c = hstack([azport, X_sentences_we, X_sentences_transformed, X_prev_transformed, X_next_transformed, np.expand_dims(np.array(X_pos), -1)])
+    # X_sentences_c = X_sentences_c.todense()
+
+    """ JOINING FEATURES: WE + TF-IDF 
+        uncomment for 'cross_val_classification' use """
+    # X_sentences_c = hstack([X_sentences_we, X_sentences_transformed, X_prev_transformed, X_next_transformed, np.expand_dims(np.array(X_pos), -1)])
+    # X_sentences_c = X_sentences_c.todense()
+
+    """ JOINING FEATURES: TF-IDF 
+        uncomment for 'cross_val_classification' use """
+    # X_sentences_c = hstack([X_sentences_transformed, X_prev_transformed, X_next_transformed, np.expand_dims(np.array(X_pos), -1)])
+    # X_sentences_c = X_sentences_c.todense()
+
+    """ JOINING FEATURES: AZPORT + TF-IDF 
+        uncomment for 'cross_val_classification' use """
+    # X_sentences_c = hstack([azport, X_sentences_transformed, X_prev_transformed, X_next_transformed, np.expand_dims(np.array(X_pos), -1)])
+    # X_sentences_c = X_sentences_c.todense()
+
+    """ JOINING FEATURES: AZPORT + WE 
+        uncomment for 'cross_val_classification' use """
     # X_sentences_c = np.concatenate((X_sentences_we, azport), axis=1)
+
+    """ JOINING FEATURES: WE 
+        uncomment for 'cross_val_classification' use """
     # X_sentences_c = X_sentences_we
+
+    """ JOINING FEATURES: AZPORT 
+        uncomment for 'cross_val_classification' use """
     # X_sentences_c = azport
 
     print("SVM RBF")
     clf = SVC(kernel='rbf', C=1000, gamma=0.001)
     # cross_val_classification(clf, X_sentences_c, Y_sentences, cross_val)
-    ten_cross_val_manual_folded(clf, vectorizer, selector, azport, X_sentences_we, X_sentences, Y_sentences, X_prev, X_next, X_pos, lengths)
+    # ten_cross_val_manual_folded(clf, vectorizer, selector, azport, X_sentences_we, X_sentences, Y_sentences, X_prev, X_next, X_pos, lengths)
+    ten_cross_val_manual_folded(clf, vectorizer, selector, [], X_sentences_we, X_sentences, Y_sentences, X_prev, X_next, X_pos, lengths)
     continue
 
     print("SVM linear")
