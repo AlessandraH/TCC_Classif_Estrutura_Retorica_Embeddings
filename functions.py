@@ -90,6 +90,7 @@ def extract_features_we_media_pond(X_sentences, vectorizer, model, model_size, v
     total_words = 0
     words_in_embeddings = 0
 
+    vectorizer.fit(X_sentences)
     idfs = vectorizer.idf_
     vec_vocab = vectorizer.vocabulary_
 
