@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="587" column="29" lean-forward="true" selection-start-line="587" selection-start-column="29" selection-end-line="587" selection-end-column="29" />
+            <state relative-caret-position="528">
+              <caret line="588" lean-forward="true" selection-start-line="588" selection-end-line="588" />
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
@@ -152,20 +152,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TCC_Classif_Estrutura_Retorica_Embeddings" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -337,7 +324,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.13119073" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -472,8 +458,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="587" column="29" lean-forward="true" selection-start-line="587" selection-start-column="29" selection-end-line="587" selection-end-column="29" />
+        <state relative-caret-position="528">
+          <caret line="588" lean-forward="true" selection-start-line="588" selection-end-line="588" />
           <folding>
             <element signature="e#24#35#0" expanded="true" />
           </folding>

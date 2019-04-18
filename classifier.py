@@ -584,8 +584,8 @@ azfeat832 = 'azport_features/azfeatures832.arff'
 # model_name = 'glove_s600.txt'
 
 # model_name = 'cbow_s1000.txt'
-model_name = 'skip_s1000.txt'
-# model_name = 'glove_s1000.txt'
+# model_name = 'skip_s1000.txt'
+model_name = 'glove_s1000.txt'
 
 ngrama = 1
 kchi = 100
