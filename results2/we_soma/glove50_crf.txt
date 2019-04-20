@@ -1,0 +1,318 @@
+Reading  corpus/output366.json
+CRF 2.0 : AZPORT + WE + TFIDF
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.55      0.53      0.54        77
+          C       0.26      0.25      0.26        20
+          G       0.38      0.33      0.35        36
+          M       0.22      0.22      0.22        45
+          O       0.00      0.00      0.00         6
+          P       0.49      0.49      0.49        65
+          R       0.50      0.56      0.52       117
+
+avg / total       0.44      0.45      0.45       366
+
+
+CRF 2.0 : AZPORT + WE
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.58      0.55      0.56        77
+          C       0.24      0.25      0.24        20
+          G       0.41      0.39      0.40        36
+          M       0.21      0.22      0.22        45
+          O       0.00      0.00      0.00         6
+          P       0.48      0.49      0.49        65
+          R       0.52      0.55      0.53       117
+
+avg / total       0.45      0.46      0.45       366
+
+
+CRF 2.0 : WE + TFIDF
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.51      0.55      0.52        77
+          C       0.25      0.30      0.27        20
+          G       0.28      0.22      0.25        36
+          M       0.27      0.27      0.27        45
+          O       0.00      0.00      0.00         6
+          P       0.48      0.45      0.46        65
+          R       0.48      0.50      0.49       117
+
+avg / total       0.42      0.42      0.42       366
+
+
+CRF 2.0 : AZPORT + TFIDF
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.74      0.68      0.71        77
+          C       0.27      0.20      0.23        20
+          G       0.56      0.50      0.53        36
+          M       0.32      0.24      0.28        45
+          O       0.00      0.00      0.00         6
+          P       0.66      0.62      0.63        65
+          R       0.53      0.68      0.60       117
+
+avg / total       0.55      0.56      0.55       366
+
+
+CRF 2.0 : AZPORT
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.70      0.65      0.68        77
+          C       0.29      0.25      0.27        20
+          G       0.52      0.47      0.49        36
+          M       0.26      0.16      0.19        45
+          O       0.00      0.00      0.00         6
+          P       0.60      0.60      0.60        65
+          R       0.52      0.66      0.58       117
+
+avg / total       0.52      0.53      0.52       366
+
+
+CRF 2.0 : TFIDF
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.70      0.69      0.69        77
+          C       0.00      0.00      0.00        20
+          G       0.64      0.25      0.36        36
+          M       0.50      0.04      0.08        45
+          O       0.00      0.00      0.00         6
+          P       0.85      0.68      0.75        65
+          R       0.50      0.93      0.65       117
+
+avg / total       0.58      0.59      0.53       366
+
+
+CRF 2.0 : WE
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.50      0.53      0.52        77
+          C       0.26      0.25      0.26        20
+          G       0.23      0.22      0.23        36
+          M       0.24      0.29      0.26        45
+          O       0.00      0.00      0.00         6
+          P       0.46      0.45      0.45        65
+          R       0.44      0.41      0.43       117
+
+avg / total       0.40      0.39      0.39       366
+
+
+Reading  corpus/output466.json
+CRF 2.0 : AZPORT + WE + TFIDF
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.98      0.99      0.99       179
+          C       0.44      0.40      0.42        20
+          G       0.94      0.92      0.93        36
+          M       0.81      0.81      0.81        59
+          O       0.00      0.00      0.00         1
+          P       0.91      0.87      0.89        68
+          R       0.82      0.86      0.84       102
+
+avg / total       0.89      0.89      0.89       465
+
+
+CRF 2.0 : AZPORT + WE
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.98      0.99      0.99       179
+          C       0.45      0.45      0.45        20
+          G       0.94      0.89      0.91        36
+          M       0.82      0.80      0.81        59
+          O       0.00      0.00      0.00         1
+          P       0.91      0.87      0.89        68
+          R       0.81      0.86      0.84       102
+
+avg / total       0.89      0.89      0.89       465
+
+
+CRF 2.0 : WE + TFIDF
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.64      0.66      0.65       179
+          C       0.26      0.35      0.30        20
+          G       0.18      0.17      0.17        36
+          M       0.29      0.17      0.22        59
+          O       0.00      0.00      0.00         1
+          P       0.43      0.38      0.40        68
+          R       0.42      0.52      0.47       102
+
+avg / total       0.46      0.47      0.46       465
+
+
+CRF 2.0 : AZPORT + TFIDF
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.99      1.00      1.00       179
+          C       0.50      0.40      0.44        20
+          G       1.00      1.00      1.00        36
+          M       0.95      0.92      0.93        59
+          O       0.00      0.00      0.00         1
+          P       0.94      0.91      0.93        68
+          R       0.83      0.89      0.86       102
+
+avg / total       0.92      0.92      0.92       465
+
+
+CRF 2.0 : AZPORT
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.99      1.00      1.00       179
+          C       0.44      0.40      0.42        20
+          G       1.00      1.00      1.00        36
+          M       0.95      0.92      0.93        59
+          O       0.00      0.00      0.00         1
+          P       0.94      0.93      0.93        68
+          R       0.83      0.87      0.85       102
+
+avg / total       0.92      0.92      0.92       465
+
+
+CRF 2.0 : TFIDF
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.64      0.97      0.77       179
+          C       0.80      0.20      0.32        20
+          G       0.00      0.00      0.00        36
+          M       0.38      0.19      0.25        59
+          O       0.00      0.00      0.00         1
+          P       0.71      0.53      0.61        68
+          R       0.50      0.53      0.51       102
+
+avg / total       0.54      0.60      0.54       465
+
+
+CRF 2.0 : WE
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.62      0.60      0.61       179
+          C       0.23      0.25      0.24        20
+          G       0.21      0.19      0.20        36
+          M       0.33      0.27      0.30        59
+          O       0.00      0.00      0.00         1
+          P       0.35      0.35      0.35        68
+          R       0.42      0.48      0.45       102
+
+avg / total       0.45      0.45      0.45       465
+
+
+Reading  corpus/output832.json
+CRF 2.0 : AZPORT + WE + TFIDF
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.92      0.87      0.90       256
+          C       0.43      0.40      0.42        40
+          G       0.72      0.71      0.71        72
+          M       0.65      0.68      0.67       104
+          O       0.00      0.00      0.00         7
+          P       0.75      0.75      0.75       133
+          R       0.69      0.74      0.72       219
+
+avg / total       0.75      0.75      0.75       831
+
+
+CRF 2.0 : AZPORT + WE
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.92      0.88      0.90       256
+          C       0.47      0.40      0.43        40
+          G       0.72      0.69      0.71        72
+          M       0.63      0.65      0.64       104
+          O       0.00      0.00      0.00         7
+          P       0.74      0.77      0.75       133
+          R       0.70      0.75      0.72       219
+
+avg / total       0.75      0.75      0.75       831
+
+
+CRF 2.0 : WE + TFIDF
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.63      0.73      0.67       256
+          C       0.45      0.35      0.39        40
+          G       0.32      0.18      0.23        72
+          M       0.32      0.31      0.31       104
+          O       0.00      0.00      0.00         7
+          P       0.62      0.55      0.58       133
+          R       0.52      0.57      0.54       219
+
+avg / total       0.52      0.53      0.52       831
+
+
+CRF 2.0 : AZPORT + TFIDF
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.93      0.86      0.90       256
+          C       0.63      0.42      0.51        40
+          G       0.80      0.74      0.77        72
+          M       0.67      0.68      0.68       104
+          O       0.00      0.00      0.00         7
+          P       0.85      0.77      0.81       133
+          R       0.69      0.86      0.76       219
+
+avg / total       0.79      0.79      0.78       831
+
+
+CRF 2.0 : AZPORT
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.93      0.87      0.90       256
+          C       0.71      0.50      0.59        40
+          G       0.79      0.76      0.77        72
+          M       0.64      0.65      0.65       104
+          O       0.00      0.00      0.00         7
+          P       0.83      0.77      0.80       133
+          R       0.71      0.84      0.77       219
+
+avg / total       0.79      0.78      0.78       831
+
+
+CRF 2.0 : TFIDF
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.64      0.91      0.75       256
+          C       0.56      0.12      0.20        40
+          G       0.71      0.07      0.13        72
+          M       0.45      0.13      0.21       104
+          O       0.00      0.00      0.00         7
+          P       0.84      0.65      0.74       133
+          R       0.52      0.75      0.61       219
+
+avg / total       0.61      0.61      0.56       831
+
+
+CRF 2.0 : WE
+Classification_report:
+             precision    recall  f1-score   support
+
+          B       0.55      0.68      0.61       256
+          C       0.46      0.33      0.38        40
+          G       0.28      0.21      0.24        72
+          M       0.29      0.26      0.27       104
+          O       0.00      0.00      0.00         7
+          P       0.46      0.39      0.42       133
+          R       0.46      0.47      0.46       219
+
+avg / total       0.45      0.46      0.45       831
+
+
