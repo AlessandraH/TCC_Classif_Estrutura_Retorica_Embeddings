@@ -44,51 +44,6 @@ Classification_report:
 avg / total       0.50      0.54      0.50       366
 
 
-CRF 2.0 : AZPORT + TFIDF
-Classification_report:
-             precision    recall  f1-score   support
-
-          B       0.74      0.68      0.71        77
-          C       0.27      0.20      0.23        20
-          G       0.56      0.50      0.53        36
-          M       0.32      0.24      0.28        45
-          O       0.00      0.00      0.00         6
-          P       0.66      0.62      0.63        65
-          R       0.53      0.68      0.60       117
-
-avg / total       0.55      0.56      0.55       366
-
-
-CRF 2.0 : AZPORT
-Classification_report:
-             precision    recall  f1-score   support
-
-          B       0.70      0.65      0.68        77
-          C       0.29      0.25      0.27        20
-          G       0.52      0.47      0.49        36
-          M       0.26      0.16      0.19        45
-          O       0.00      0.00      0.00         6
-          P       0.60      0.60      0.60        65
-          R       0.52      0.66      0.58       117
-
-avg / total       0.52      0.53      0.52       366
-
-
-CRF 2.0 : TFIDF
-Classification_report:
-             precision    recall  f1-score   support
-
-          B       0.70      0.69      0.69        77
-          C       0.00      0.00      0.00        20
-          G       0.64      0.25      0.36        36
-          M       0.50      0.04      0.08        45
-          O       0.00      0.00      0.00         6
-          P       0.85      0.68      0.75        65
-          R       0.50      0.93      0.65       117
-
-avg / total       0.58      0.59      0.53       366
-
-
 CRF 2.0 : WE
 Classification_report:
              precision    recall  f1-score   support
@@ -146,33 +101,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.49      0.54      0.48
 
-SVM RBF : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.53      0.59      0.52
-          C       0.27      0.15      0.19
-          G       0.30      0.28      0.27
-          M       0.16      0.19      0.16
-          O       0.00      0.00      0.00
-          P       0.61      0.49      0.53
-          R       0.45      0.60      0.50
-
-avg / total       0.48      0.45      0.44
-
-SVM RBF : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.45      0.50      0.46
-          C       0.20      0.15      0.17
-          G       0.33      0.36      0.33
-          M       0.31      0.22      0.24
-          O       0.00      0.00      0.00
-          P       0.53      0.43      0.46
-          R       0.43      0.56      0.47
-
-avg / total       0.44      0.44      0.42
 
 SVM RBF : WE
 Classification_report (FINAL CV):
@@ -188,19 +116,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.41      0.43      0.38
 
-SVM RBF : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.59      0.75      0.62
-          C       0.00      0.00      0.00
-          G       0.10      0.03      0.04
-          M       0.00      0.00      0.00
-          O       0.00      0.00      0.00
-          P       0.81      0.63      0.69
-          R       0.45      0.90      0.58
-
-avg / total       0.45      0.54      0.46
 
 SVM LINEAR : AZPORT + WE + TF-IDF
 Classification_report (FINAL CV):
@@ -244,33 +159,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.49      0.46      0.44
 
-SVM LINEAR : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.46      0.64      0.51
-          C       0.15      0.07      0.10
-          G       0.20      0.21      0.20
-          M       0.17      0.17      0.16
-          O       0.00      0.00      0.00
-          P       0.64      0.59      0.60
-          R       0.44      0.48      0.45
-
-avg / total       0.45      0.44      0.43
-
-SVM LINEAR : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.48      0.48      0.46
-          C       0.20      0.20      0.20
-          G       0.32      0.32      0.31
-          M       0.29      0.29      0.27
-          O       0.00      0.00      0.00
-          P       0.53      0.42      0.45
-          R       0.43      0.54      0.47
-
-avg / total       0.46      0.43      0.42
 
 SVM LINEAR : WE
 Classification_report (FINAL CV):
@@ -286,19 +174,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.38      0.34      0.34
 
-SVM LINEAR : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.48      0.56      0.50
-          C       0.05      0.10      0.07
-          G       0.22      0.19      0.19
-          M       0.34      0.23      0.26
-          O       0.00      0.00      0.00
-          P       0.70      0.75      0.71
-          R       0.53      0.69      0.59
-
-avg / total       0.50      0.52      0.49
 
 k-NN : AZPORT + WE + TF-IDF
 Classification_report (FINAL CV):
@@ -342,33 +217,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.41      0.38      0.38
 
-k-NN : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.39      0.68      0.46
-          C       0.10      0.03      0.04
-          G       0.20      0.10      0.11
-          M       0.14      0.16      0.13
-          O       0.00      0.00      0.00
-          P       0.54      0.37      0.42
-          R       0.48      0.51      0.47
-
-avg / total       0.42      0.38      0.36
-
-k-NN : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.30      0.50      0.35
-          C       0.17      0.15      0.16
-          G       0.27      0.19      0.20
-          M       0.50      0.32      0.31
-          O       0.00      0.00      0.00
-          P       0.56      0.45      0.45
-          R       0.31      0.26      0.26
-
-avg / total       0.42      0.33      0.33
 
 k-NN : WE
 Classification_report (FINAL CV):
@@ -384,19 +232,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.35      0.29      0.30
 
-k-NN : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.48      0.65      0.51
-          C       0.10      0.10      0.10
-          G       0.05      0.03      0.04
-          M       0.04      0.05      0.05
-          O       0.00      0.00      0.00
-          P       0.91      0.36      0.50
-          R       0.40      0.69      0.49
-
-avg / total       0.43      0.42      0.39
 
 NB GAUSSSIAN : AZPORT + WE + TF-IDF
 Classification_report (FINAL CV):
@@ -440,33 +275,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.41      0.25      0.24
 
-NB GAUSSSIAN : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.36      0.19      0.23
-          C       0.39      0.41      0.34
-          G       0.14      0.49      0.20
-          M       0.26      0.31      0.26
-          O       0.00      0.00      0.00
-          P       0.60      0.55      0.55
-          R       0.32      0.07      0.10
-
-avg / total       0.40      0.27      0.26
-
-NB GAUSSSIAN : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.25      0.03      0.05
-          C       0.12      0.43      0.18
-          G       0.19      0.14      0.12
-          M       0.23      0.42      0.28
-          O       0.04      0.10      0.05
-          P       0.03      0.01      0.02
-          R       0.00      0.00      0.00
-
-avg / total       0.15      0.12      0.09
 
 NB GAUSSSIAN : WE
 Classification_report (FINAL CV):
@@ -482,19 +290,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.58      0.53      0.52
 
-NB GAUSSSIAN : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.32      0.21      0.22
-          C       0.33      0.36      0.28
-          G       0.14      0.59      0.21
-          M       0.30      0.25      0.26
-          O       0.00      0.00      0.00
-          P       0.57      0.46      0.49
-          R       0.38      0.04      0.08
-
-avg / total       0.40      0.24      0.23
 
 NB BERNOULLI : AZPORT + WE + TF-IDF
 Classification_report (FINAL CV):
@@ -538,33 +333,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.50      0.53      0.46
 
-NB BERNOULLI : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.55      0.67      0.56
-          C       0.00      0.00      0.00
-          G       0.40      0.11      0.17
-          M       0.25      0.08      0.12
-          O       0.00      0.00      0.00
-          P       0.74      0.63      0.66
-          R       0.43      0.79      0.54
-
-avg / total       0.48      0.50      0.45
-
-NB BERNOULLI : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.48      0.45      0.44
-          C       0.10      0.07      0.08
-          G       0.32      0.34      0.32
-          M       0.42      0.32      0.29
-          O       0.00      0.00      0.00
-          P       0.44      0.48      0.44
-          R       0.43      0.53      0.45
-
-avg / total       0.44      0.42      0.41
 
 NB BERNOULLI : WE
 Classification_report (FINAL CV):
@@ -580,19 +348,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.34      0.31      0.30
 
-NB BERNOULLI : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.62      0.60      0.59
-          C       0.00      0.00      0.00
-          G       0.00      0.00      0.00
-          M       0.20      0.06      0.09
-          O       0.00      0.00      0.00
-          P       0.83      0.70      0.75
-          R       0.43      0.93      0.57
-
-avg / total       0.45      0.52      0.45
 
 DT : AZPORT + WE + TF-IDF
 Classification_report (FINAL CV):
@@ -636,33 +391,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.47      0.41      0.42
 
-DT : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.47      0.48      0.45
-          C       0.15      0.07      0.10
-          G       0.28      0.22      0.20
-          M       0.27      0.27      0.25
-          O       0.00      0.00      0.00
-          P       0.64      0.62      0.59
-          R       0.49      0.56      0.49
-
-avg / total       0.49      0.44      0.44
-
-DT : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.30      0.42      0.33
-          C       0.03      0.05      0.04
-          G       0.34      0.28      0.24
-          M       0.21      0.19      0.17
-          O       0.00      0.00      0.00
-          P       0.42      0.44      0.39
-          R       0.31      0.28      0.28
-
-avg / total       0.34      0.30      0.29
 
 DT : WE
 Classification_report (FINAL CV):
@@ -678,19 +406,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.34      0.33      0.32
 
-DT : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.47      0.49      0.44
-          C       0.03      0.10      0.05
-          G       0.15      0.14      0.15
-          M       0.20      0.14      0.14
-          O       0.00      0.00      0.00
-          P       0.73      0.70      0.69
-          R       0.51      0.59      0.53
-
-avg / total       0.47      0.44      0.43
 
 Reading  corpus/output466.json
 CRF 2.0 : AZPORT + WE + TFIDF
@@ -736,51 +451,6 @@ Classification_report:
           R       0.43      0.49      0.46       102
 
 avg / total       0.56      0.58      0.55       465
-
-
-CRF 2.0 : AZPORT + TFIDF
-Classification_report:
-             precision    recall  f1-score   support
-
-          B       0.99      1.00      1.00       179
-          C       0.50      0.40      0.44        20
-          G       1.00      1.00      1.00        36
-          M       0.95      0.92      0.93        59
-          O       0.00      0.00      0.00         1
-          P       0.94      0.91      0.93        68
-          R       0.83      0.89      0.86       102
-
-avg / total       0.92      0.92      0.92       465
-
-
-CRF 2.0 : AZPORT
-Classification_report:
-             precision    recall  f1-score   support
-
-          B       0.99      1.00      1.00       179
-          C       0.44      0.40      0.42        20
-          G       1.00      1.00      1.00        36
-          M       0.95      0.92      0.93        59
-          O       0.00      0.00      0.00         1
-          P       0.94      0.93      0.93        68
-          R       0.83      0.87      0.85       102
-
-avg / total       0.92      0.92      0.92       465
-
-
-CRF 2.0 : TFIDF
-Classification_report:
-             precision    recall  f1-score   support
-
-          B       0.64      0.97      0.77       179
-          C       0.80      0.20      0.32        20
-          G       0.00      0.00      0.00        36
-          M       0.38      0.19      0.25        59
-          O       0.00      0.00      0.00         1
-          P       0.71      0.53      0.61        68
-          R       0.50      0.53      0.51       102
-
-avg / total       0.54      0.60      0.54       465
 
 
 CRF 2.0 : WE
@@ -840,33 +510,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.50      0.49      0.46
 
-SVM RBF : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.79      0.94      0.84
-          C       0.15      0.10      0.11
-          G       0.73      0.53      0.59
-          M       0.33      0.30      0.31
-          O       0.00      0.00      0.00
-          P       0.76      0.64      0.68
-          R       0.50      0.59      0.53
-
-avg / total       0.68      0.67      0.66
-
-SVM RBF : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.78      0.89      0.82
-          C       0.20      0.08      0.11
-          G       0.72      0.54      0.59
-          M       0.35      0.35      0.34
-          O       0.00      0.00      0.00
-          P       0.84      0.64      0.70
-          R       0.48      0.61      0.53
-
-avg / total       0.68      0.68      0.66
 
 SVM RBF : WE
 Classification_report (FINAL CV):
@@ -882,19 +525,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.39      0.40      0.36
 
-SVM RBF : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.47      0.93      0.59
-          C       0.05      0.07      0.06
-          G       0.00      0.00      0.00
-          M       0.00      0.00      0.00
-          O       0.00      0.00      0.00
-          P       0.79      0.44      0.54
-          R       0.39      0.25      0.21
-
-avg / total       0.42      0.45      0.37
 
 SVM LINEAR : AZPORT + WE + TF-IDF
 Classification_report (FINAL CV):
@@ -938,33 +568,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.51      0.48      0.47
 
-SVM LINEAR : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.72      0.86      0.76
-          C       0.15      0.07      0.09
-          G       0.52      0.53      0.49
-          M       0.31      0.35      0.32
-          O       0.00      0.00      0.00
-          P       0.69      0.67      0.66
-          R       0.51      0.47      0.47
-
-avg / total       0.64      0.63      0.62
-
-SVM LINEAR : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.78      0.88      0.82
-          C       0.22      0.10      0.13
-          G       0.72      0.56      0.60
-          M       0.38      0.37      0.35
-          O       0.00      0.00      0.00
-          P       0.79      0.70      0.72
-          R       0.49      0.62      0.53
-
-avg / total       0.68      0.67      0.66
 
 SVM LINEAR : WE
 Classification_report (FINAL CV):
@@ -980,19 +583,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.38      0.34      0.34
 
-SVM LINEAR : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.53      0.73      0.58
-          C       0.00      0.00      0.00
-          G       0.17      0.11      0.12
-          M       0.35      0.24      0.24
-          O       0.00      0.00      0.00
-          P       0.62      0.65      0.62
-          R       0.32      0.18      0.22
-
-avg / total       0.50      0.45      0.44
 
 k-NN : AZPORT + WE + TF-IDF
 Classification_report (FINAL CV):
@@ -1036,33 +626,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.37      0.35      0.32
 
-k-NN : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.58      0.94      0.70
-          C       0.12      0.12      0.10
-          G       0.63      0.30      0.39
-          M       0.30      0.18      0.21
-          O       0.00      0.00      0.00
-          P       0.84      0.40      0.51
-          R       0.43      0.41      0.35
-
-avg / total       0.58      0.54      0.51
-
-k-NN : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.64      0.92      0.73
-          C       0.18      0.18      0.16
-          G       0.66      0.44      0.51
-          M       0.28      0.13      0.17
-          O       0.00      0.00      0.00
-          P       0.84      0.60      0.66
-          R       0.43      0.42      0.39
-
-avg / total       0.62      0.58      0.56
 
 k-NN : WE
 Classification_report (FINAL CV):
@@ -1078,19 +641,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.36      0.33      0.32
 
-k-NN : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.44      0.91      0.57
-          C       0.08      0.10      0.08
-          G       0.17      0.09      0.11
-          M       0.17      0.16      0.11
-          O       0.00      0.00      0.00
-          P       0.70      0.21      0.31
-          R       0.29      0.20      0.15
-
-avg / total       0.39      0.40      0.33
 
 NB GAUSSSIAN : AZPORT + WE + TF-IDF
 Classification_report (FINAL CV):
@@ -1134,33 +684,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.38      0.21      0.18
 
-NB GAUSSSIAN : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.55      0.15      0.22
-          C       0.40      0.35      0.34
-          G       0.30      0.81      0.41
-          M       0.28      0.66      0.37
-          O       0.00      0.00      0.00
-          P       0.52      0.57      0.52
-          R       0.38      0.10      0.16
-
-avg / total       0.51      0.36      0.33
-
-NB GAUSSSIAN : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.70      0.07      0.13
-          C       0.15      0.80      0.24
-          G       0.20      0.98      0.33
-          M       0.38      0.37      0.37
-          O       0.10      0.10      0.10
-          P       0.90      0.59      0.70
-          R       0.05      0.01      0.02
-
-avg / total       0.53      0.30      0.26
 
 NB GAUSSSIAN : WE
 Classification_report (FINAL CV):
@@ -1176,19 +699,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.58      0.51      0.51
 
-NB GAUSSSIAN : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.30      0.04      0.07
-          C       0.05      0.12      0.07
-          G       0.16      0.77      0.25
-          M       0.23      0.41      0.26
-          O       0.00      0.00      0.00
-          P       0.48      0.31      0.34
-          R       0.32      0.07      0.11
-
-avg / total       0.38      0.21      0.18
 
 NB BERNOULLI : AZPORT + WE + TF-IDF
 Classification_report (FINAL CV):
@@ -1232,33 +742,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.50      0.48      0.41
 
-NB BERNOULLI : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.66      0.97      0.77
-          C       0.00      0.00      0.00
-          G       0.50      0.12      0.20
-          M       0.32      0.14      0.17
-          O       0.00      0.00      0.00
-          P       0.88      0.68      0.75
-          R       0.50      0.73      0.56
-
-avg / total       0.62      0.65      0.59
-
-NB BERNOULLI : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.78      0.92      0.83
-          C       0.23      0.13      0.16
-          G       0.68      0.57      0.59
-          M       0.32      0.30      0.30
-          O       0.00      0.00      0.00
-          P       0.82      0.69      0.74
-          R       0.45      0.49      0.45
-
-avg / total       0.66      0.65      0.64
 
 NB BERNOULLI : WE
 Classification_report (FINAL CV):
@@ -1274,19 +757,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.40      0.39      0.37
 
-NB BERNOULLI : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.44      0.93      0.57
-          C       0.00      0.00      0.00
-          G       0.00      0.00      0.00
-          M       0.03      0.03      0.03
-          O       0.00      0.00      0.00
-          P       0.90      0.36      0.49
-          R       0.31      0.28      0.22
-
-avg / total       0.41      0.43      0.35
 
 DT : AZPORT + WE + TF-IDF
 Classification_report (FINAL CV):
@@ -1330,33 +800,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.39      0.33      0.34
 
-DT : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.74      0.86      0.77
-          C       0.27      0.12      0.16
-          G       0.55      0.51      0.49
-          M       0.36      0.23      0.26
-          O       0.00      0.00      0.00
-          P       0.66      0.67      0.65
-          R       0.43      0.45      0.44
-
-avg / total       0.64      0.61      0.61
-
-DT : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.73      0.93      0.80
-          C       0.29      0.25      0.24
-          G       0.71      0.46      0.53
-          M       0.34      0.38      0.35
-          O       0.00      0.00      0.00
-          P       0.78      0.67      0.71
-          R       0.44      0.37      0.38
-
-avg / total       0.66      0.63      0.62
 
 DT : WE
 Classification_report (FINAL CV):
@@ -1372,19 +815,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.32      0.26      0.27
 
-DT : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.54      0.76      0.61
-          C       0.05      0.07      0.06
-          G       0.17      0.09      0.10
-          M       0.31      0.29      0.25
-          O       0.00      0.00      0.00
-          P       0.62      0.62      0.60
-          R       0.42      0.34      0.30
-
-avg / total       0.51      0.48      0.46
 
 Reading  corpus/output832.json
 CRF 2.0 : AZPORT + WE + TFIDF
@@ -1430,51 +860,6 @@ Classification_report:
           R       0.54      0.64      0.59       219
 
 avg / total       0.58      0.61      0.58       831
-
-
-CRF 2.0 : AZPORT + TFIDF
-Classification_report:
-             precision    recall  f1-score   support
-
-          B       0.93      0.86      0.90       256
-          C       0.63      0.42      0.51        40
-          G       0.80      0.74      0.77        72
-          M       0.67      0.68      0.68       104
-          O       0.00      0.00      0.00         7
-          P       0.85      0.77      0.81       133
-          R       0.69      0.86      0.76       219
-
-avg / total       0.79      0.79      0.78       831
-
-
-CRF 2.0 : AZPORT
-Classification_report:
-             precision    recall  f1-score   support
-
-          B       0.93      0.87      0.90       256
-          C       0.71      0.50      0.59        40
-          G       0.79      0.76      0.77        72
-          M       0.64      0.65      0.65       104
-          O       0.00      0.00      0.00         7
-          P       0.83      0.77      0.80       133
-          R       0.71      0.84      0.77       219
-
-avg / total       0.79      0.78      0.78       831
-
-
-CRF 2.0 : TFIDF
-Classification_report:
-             precision    recall  f1-score   support
-
-          B       0.64      0.91      0.75       256
-          C       0.56      0.12      0.20        40
-          G       0.71      0.07      0.13        72
-          M       0.45      0.13      0.21       104
-          O       0.00      0.00      0.00         7
-          P       0.84      0.65      0.74       133
-          R       0.52      0.75      0.61       219
-
-avg / total       0.61      0.61      0.56       831
 
 
 CRF 2.0 : WE
@@ -1534,33 +919,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.50      0.53      0.48
 
-SVM RBF : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.64      0.75      0.68
-          C       0.32      0.18      0.23
-          G       0.56      0.43      0.48
-          M       0.36      0.27      0.28
-          O       0.00      0.00      0.00
-          P       0.73      0.57      0.63
-          R       0.50      0.65      0.55
-
-avg / total       0.58      0.58      0.56
-
-SVM RBF : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.64      0.74      0.68
-          C       0.47      0.24      0.30
-          G       0.60      0.43      0.49
-          M       0.54      0.22      0.27
-          O       0.00      0.00      0.00
-          P       0.71      0.55      0.61
-          R       0.49      0.73      0.57
-
-avg / total       0.61      0.58      0.57
 
 SVM RBF : WE
 Classification_report (FINAL CV):
@@ -1576,19 +934,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.40      0.44      0.39
 
-SVM RBF : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.50      0.81      0.59
-          C       0.03      0.03      0.03
-          G       0.00      0.00      0.00
-          M       0.03      0.01      0.02
-          O       0.00      0.00      0.00
-          P       0.80      0.63      0.69
-          R       0.42      0.64      0.49
-
-avg / total       0.43      0.50      0.44
 
 SVM LINEAR : AZPORT + WE + TF-IDF
 Classification_report (FINAL CV):
@@ -1632,33 +977,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.51      0.47      0.47
 
-SVM LINEAR : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.63      0.78      0.68
-          C       0.23      0.24      0.22
-          G       0.51      0.39      0.43
-          M       0.24      0.26      0.21
-          O       0.00      0.00      0.00
-          P       0.67      0.68      0.67
-          R       0.48      0.46      0.44
-
-avg / total       0.55      0.53      0.52
-
-SVM LINEAR : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.64      0.74      0.68
-          C       0.48      0.24      0.30
-          G       0.60      0.42      0.48
-          M       0.54      0.22      0.27
-          O       0.00      0.00      0.00
-          P       0.74      0.54      0.62
-          R       0.49      0.74      0.58
-
-avg / total       0.62      0.59      0.57
 
 SVM LINEAR : WE
 Classification_report (FINAL CV):
@@ -1674,19 +992,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.43      0.41      0.40
 
-SVM LINEAR : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.49      0.72      0.57
-          C       0.23      0.19      0.20
-          G       0.42      0.21      0.26
-          M       0.29      0.12      0.13
-          O       0.00      0.00      0.00
-          P       0.69      0.69      0.68
-          R       0.41      0.41      0.40
-
-avg / total       0.49      0.47      0.45
 
 k-NN : AZPORT + WE + TF-IDF
 Classification_report (FINAL CV):
@@ -1730,33 +1035,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.41      0.37      0.36
 
-k-NN : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.50      0.77      0.59
-          C       0.16      0.17      0.16
-          G       0.28      0.25      0.26
-          M       0.23      0.17      0.18
-          O       0.00      0.00      0.00
-          P       0.70      0.45      0.54
-          R       0.46      0.40      0.41
-
-avg / total       0.49      0.47      0.45
-
-k-NN : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.47      0.67      0.54
-          C       0.10      0.09      0.07
-          G       0.37      0.32      0.34
-          M       0.34      0.31      0.29
-          O       0.00      0.00      0.00
-          P       0.62      0.51      0.56
-          R       0.44      0.37      0.38
-
-avg / total       0.48      0.45      0.44
 
 k-NN : WE
 Classification_report (FINAL CV):
@@ -1772,19 +1050,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.36      0.33      0.32
 
-k-NN : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.38      0.72      0.47
-          C       0.03      0.03      0.03
-          G       0.19      0.14      0.15
-          M       0.23      0.12      0.14
-          O       0.00      0.00      0.00
-          P       0.76      0.36      0.47
-          R       0.34      0.31      0.31
-
-avg / total       0.41      0.38      0.35
 
 NB GAUSSSIAN : AZPORT + WE + TF-IDF
 Classification_report (FINAL CV):
@@ -1828,33 +1093,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.41      0.20      0.17
 
-NB GAUSSSIAN : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.54      0.07      0.12
-          C       0.22      0.58      0.29
-          G       0.14      0.77      0.23
-          M       0.23      0.39      0.28
-          O       0.00      0.00      0.00
-          P       0.50      0.25      0.32
-          R       0.34      0.06      0.10
-
-avg / total       0.45      0.23      0.20
-
-NB GAUSSSIAN : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.23      0.01      0.02
-          C       0.09      0.53      0.15
-          G       0.32      0.14      0.18
-          M       0.17      0.26      0.20
-          O       0.02      0.20      0.04
-          P       0.30      0.03      0.05
-          R       0.00      0.00      0.00
-
-avg / total       0.21      0.09      0.07
 
 NB GAUSSSIAN : WE
 Classification_report (FINAL CV):
@@ -1870,19 +1108,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.53      0.49      0.48
 
-NB GAUSSSIAN : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.54      0.06      0.11
-          C       0.13      0.50      0.20
-          G       0.13      0.76      0.22
-          M       0.25      0.37      0.27
-          O       0.00      0.00      0.00
-          P       0.41      0.18      0.24
-          R       0.26      0.04      0.07
-
-avg / total       0.40      0.19      0.16
 
 NB BERNOULLI : AZPORT + WE + TF-IDF
 Classification_report (FINAL CV):
@@ -1926,33 +1151,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.46      0.50      0.45
 
-NB BERNOULLI : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.61      0.78      0.68
-          C       0.00      0.00      0.00
-          G       0.66      0.23      0.33
-          M       0.37      0.25      0.26
-          O       0.00      0.00      0.00
-          P       0.80      0.70      0.73
-          R       0.48      0.68      0.54
-
-avg / total       0.58      0.58      0.54
-
-NB BERNOULLI : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.61      0.71      0.65
-          C       0.46      0.31      0.35
-          G       0.53      0.46      0.48
-          M       0.36      0.39      0.36
-          O       0.00      0.00      0.00
-          P       0.67      0.58      0.61
-          R       0.52      0.54      0.52
-
-avg / total       0.58      0.56      0.56
 
 NB BERNOULLI : WE
 Classification_report (FINAL CV):
@@ -1968,19 +1166,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.33      0.33      0.31
 
-NB BERNOULLI : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.46      0.81      0.57
-          C       0.00      0.00      0.00
-          G       0.15      0.03      0.06
-          M       0.15      0.05      0.07
-          O       0.00      0.00      0.00
-          P       0.79      0.62      0.69
-          R       0.41      0.54      0.45
-
-avg / total       0.42      0.48      0.42
 
 DT : AZPORT + WE + TF-IDF
 Classification_report (FINAL CV):
@@ -2024,33 +1209,6 @@ Classification_report (FINAL CV):
 
 avg / total       0.42      0.40      0.40
 
-DT : AZPORT + TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.61      0.72      0.65
-          C       0.32      0.21      0.23
-          G       0.34      0.34      0.33
-          M       0.33      0.30      0.29
-          O       0.00      0.00      0.00
-          P       0.62      0.60      0.61
-          R       0.48      0.52      0.48
-
-avg / total       0.53      0.52      0.51
-
-DT : AZPORT
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.56      0.65      0.60
-          C       0.16      0.15      0.14
-          G       0.47      0.38      0.39
-          M       0.31      0.34      0.29
-          O       0.00      0.00      0.00
-          P       0.54      0.52      0.52
-          R       0.46      0.43      0.43
-
-avg / total       0.50      0.48      0.48
 
 DT : WE
 Classification_report (FINAL CV):
@@ -2066,17 +1224,4 @@ Classification_report (FINAL CV):
 
 avg / total       0.29      0.25      0.26
 
-DT : TF-IDF
-Classification_report (FINAL CV):
-             precision    recall  f1-score
-
-          B       0.52      0.70      0.58
-          C       0.21      0.10      0.12
-          G       0.37      0.25      0.28
-          M       0.25      0.16      0.18
-          O       0.00      0.00      0.00
-          P       0.66      0.66      0.65
-          R       0.38      0.37      0.37
-
-avg / total       0.47      0.46      0.45
 

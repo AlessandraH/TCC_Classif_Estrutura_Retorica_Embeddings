@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13816">
-              <caret line="628" column="25" lean-forward="true" selection-start-line="628" selection-start-column="25" selection-end-line="628" selection-end-column="25" />
+            <state relative-caret-position="818">
+              <caret line="628" column="25" selection-start-line="628" selection-start-column="25" selection-end-line="628" selection-end-column="25" />
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
@@ -85,57 +85,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we/w2v_cbow600.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we/w2v_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we/w2v_skipgram50.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we/w2v_skipgram100.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we/w2v_skipgram300.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we/w2v_skipgram600.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we/w2v_skipgram1000.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+tfidf/w2v_cbow50.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+tfidf/w2v_cbow100.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+tfidf/w2v_cbow300.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+tfidf/w2v_cbow600.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+tfidf/w2v_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+tfidf/w2v_skipgram50.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+tfidf/w2v_skipgram100.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+tfidf/w2v_skipgram300.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+tfidf/w2v_skipgram600.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+tfidf/w2v_skipgram1000.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_cbow50.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_cbow100.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_cbow300.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_cbow600.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_skipgram50.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_skipgram100.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_skipgram300.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_skipgram600.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_skipgram1000.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_cbow50.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_cbow100.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_cbow300.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_cbow600.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_skipgram50.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_skipgram100.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_skipgram300.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_skipgram600.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_skipgram1000.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow50.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow100.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow300.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow600.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow1000.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_skipgram50.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_skipgram100.txt" />
-        <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_skipgram300.txt" />
         <option value="$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_skipgram600.txt" />
         <option value="$PROJECT_DIR$/svm.py" />
         <option value="$PROJECT_DIR$/gridsearchcv_svm.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/functions.py" />
         <option value="$PROJECT_DIR$/classifier.py" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/glove600.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/glove1000.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/w2v_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/w2v_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/w2v_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/w2v_cbow600.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/w2v_cbow1000.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/w2v_skip50.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/w2v_skip100.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/w2v_skip300.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/w2v_skip600.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/w2v_skip1000.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/wang_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/wang_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/wang_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/wang_cbow600.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/wang_cbow1000.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/wang_skip50.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/wang_skip100.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/wang_skip300.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_ponderada/wang_skip600.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/glove50.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/glove100.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/glove300.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/glove600.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/glove1000.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/w2v_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/w2v_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/w2v_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/w2v_cbow600.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/w2v_cbow1000.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/w2v_skip50.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/w2v_skip100.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/w2v_skip300.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/w2v_skip600.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/w2v_skip1000.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/wang_cbow50.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/wang_cbow100.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/wang_cbow300.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/wang_cbow600.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/wang_cbow1000.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/wang_skip50.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/wang_skip100.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/wang_skip300.txt" />
+        <option value="$PROJECT_DIR$/results2/we_media_simples/wang_skip600.txt" />
       </list>
     </option>
   </component>
@@ -337,9 +337,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13119073" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13119073" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -360,99 +359,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+tfidf/w2v_skipgram50.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+tfidf/w2v_skipgram100.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+tfidf/w2v_skipgram300.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+tfidf/w2v_skipgram600.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+tfidf/w2v_skipgram1000.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_cbow50.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_cbow100.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_cbow300.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_cbow600.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_cbow1000.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_skipgram50.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_skipgram100.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_skipgram300.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_skipgram600.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport/w2v_skipgram1000.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_cbow50.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_cbow100.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_cbow300.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_cbow600.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_cbow1000.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_skipgram50.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_skipgram100.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_skipgram300.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_skipgram600.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we media/we+azport+tfidf/w2v_skipgram1000.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow50.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow100.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow300.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow600.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_cbow1000.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_skipgram50.txt" />
-    <entry file="file://$USER_HOME$/venv/Lib/site-packages/gensim/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="859" selection-start-line="859" selection-end-line="859" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_skipgram100.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_skipgram300.txt" />
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we soma/we/wang_skipgram600.txt" />
-    <entry file="file://$PROJECT_DIR$/svm.py" />
-    <entry file="file://$PROJECT_DIR$/gridsearchcv_svm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="180">
-            <caret line="9" column="27" selection-end-line="9" selection-end-column="75" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/we_media/we+azport+tfidf/wang2vec_cbow50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2100" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/we_media/we/glove_1000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/azport+tfidf.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/tfidf.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/gs_tfidf_svm.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-396" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/svm_gridSearch/gs_tfidf_rbf.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1513" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/azport+tfidf/azport+tfidf.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8800">
-          <caret line="400" column="42" lean-forward="true" selection-start-line="400" selection-start-column="42" selection-end-line="400" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teste.txt" />
     <entry file="file://$PROJECT_DIR$/corpus/output366.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -470,22 +376,359 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13816">
-          <caret line="628" column="25" lean-forward="true" selection-start-line="628" selection-start-column="25" selection-end-line="628" selection-end-column="25" />
-          <folding>
-            <element signature="e#24#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1738">
           <caret line="83" column="18" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
           <folding>
             <element signature="e#25#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/glove600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="1225" selection-start-line="1225" selection-end-line="1225" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/glove1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="1241" selection-start-line="1241" selection-end-line="1241" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/w2v_cbow50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/w2v_cbow100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/w2v_cbow300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/w2v_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/w2v_cbow1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/w2v_skip50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="1240" selection-start-line="1240" selection-end-line="1240" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/w2v_skip100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/w2v_skip300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+          <caret line="181" selection-start-line="181" selection-end-line="181" />
+          <caret line="239" selection-start-line="239" selection-end-line="239" />
+          <caret line="297" selection-start-line="297" selection-end-line="297" />
+          <caret line="355" selection-start-line="355" selection-end-line="355" />
+          <caret line="413" selection-start-line="413" selection-end-line="413" />
+          <caret line="537" selection-start-line="537" selection-end-line="537" />
+          <caret line="595" selection-start-line="595" selection-end-line="595" />
+          <caret line="653" selection-start-line="653" selection-end-line="653" />
+          <caret line="711" selection-start-line="711" selection-end-line="711" />
+          <caret line="769" selection-start-line="769" selection-end-line="769" />
+          <caret line="827" selection-start-line="827" selection-end-line="827" />
+          <caret line="951" selection-start-line="951" selection-end-line="951" />
+          <caret line="1009" selection-start-line="1009" selection-end-line="1009" />
+          <caret line="1067" selection-start-line="1067" selection-end-line="1067" />
+          <caret line="1125" selection-start-line="1125" selection-end-line="1125" />
+          <caret line="1183" selection-start-line="1183" selection-end-line="1183" />
+          <caret line="1241" selection-start-line="1241" selection-end-line="1241" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/w2v_skip600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/w2v_skip1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/wang_cbow50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/wang_cbow100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/wang_cbow300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/wang_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/wang_cbow1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/wang_skip50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/wang_skip100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/wang_skip300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_ponderada/wang_skip600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/glove50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/glove100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/glove300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/glove600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/glove1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/w2v_cbow50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="120" column="13" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/w2v_cbow100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/w2v_cbow300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/w2v_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/w2v_cbow1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/w2v_skip50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/w2v_skip100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/w2v_skip300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/w2v_skip600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/w2v_skip1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/wang_cbow50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/wang_cbow100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/wang_cbow300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/wang_cbow600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/wang_cbow1000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/wang_skip50.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/wang_skip100.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/wang_skip300.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/we_media_simples/wang_skip600.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results2/azport_tfidf.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18937" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="818">
+          <caret line="628" column="25" selection-start-line="628" selection-start-column="25" selection-end-line="628" selection-end-column="25" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
